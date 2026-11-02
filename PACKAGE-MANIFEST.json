@@ -136,7 +136,7 @@
       "sourceSha256": "f4cacf765d7ecaf5a6c712207cbdbb0095d2ee94f6041575c7c9f8a48141c8d9"
     },
     "renderer/README.md": {
-      "packageSha256": "f11f091b02f8bdfb3da45c6a8f0b6bdaccd7070eda9afe4e4dbe0971f97b72d0",
+      "packageSha256": "3c0414b390a71c38e31bc7157f02d2a758de19dd1e07d83c6b9ff05e01ce37fd",
       "reason": "release documentation, approved license policy, deterministic distribution or regression coverage; runtime bytes unchanged",
       "sourceSha256": "0556a9f250dba86720d7d5daa17a9b72f02fe640081a644745a8766afbdfa078"
     },
@@ -170,6 +170,11 @@
       "reason": "release documentation, approved license policy, deterministic distribution or regression coverage; runtime bytes unchanged",
       "sourceSha256": null
     },
+    "scripts/package-renderer.py": {
+      "packageSha256": "81cfa904f71da56f8edfd0e197ded19fab265f4c1b5e27eb511b5a3ecd6b9088",
+      "reason": "release documentation, approved license policy, deterministic distribution or regression coverage; runtime bytes unchanged",
+      "sourceSha256": "efdf05eec1a3bfee8f9b18e721b8ec2347ce26d3754060260c5bd5540b2c4e70"
+    },
     "scripts/qa/audit-phase3-licenses.py": {
       "packageSha256": "ea6f56684fca6307c5f2757f269dd3b363d716cfdbff84bd0a0c02d5144065bf",
       "reason": "release documentation, approved license policy, deterministic distribution or regression coverage; runtime bytes unchanged",
@@ -194,6 +199,11 @@
       "packageSha256": "57daf09cae7565cd36ba0c8de5b3ed7cc59424099634a4eea0f0272974718456",
       "reason": "release documentation, approved license policy, deterministic distribution or regression coverage; runtime bytes unchanged",
       "sourceSha256": "48e80c6be68da0c1a925e82db285adbcd0146ed75fb4a61a37bc5394146aba6c"
+    },
+    "tests/test_standalone_package.py": {
+      "packageSha256": "d5540cb0809f5aac9699c152e59808ef5c300ab438f5437dd70ea8a4e5b3aca3",
+      "reason": "release documentation, approved license policy, deterministic distribution or regression coverage; runtime bytes unchanged",
+      "sourceSha256": "1398eb96d68420b9987d25c25506234b23d48a1afa8515faedd61eb521c8af63"
     }
   },
   "files": {
@@ -297,7 +307,7 @@
     "plugins/chatui/skills/chatui/scripts/render_force.py": "29635671519c684d233780e2e3e629f6930e6978e9a2feedbdc49df0046dfa05",
     "renderer/.gitignore": "340d07e0d2b538d8ce4cab4441dc1b29dea384d4ea0955110ff32f10ae1d9b96",
     "renderer/.npmrc": "a3909ac0447c469fda12c57374993be70f47ce73e49fd3124678c7c047f2214d",
-    "renderer/README.md": "f11f091b02f8bdfb3da45c6a8f0b6bdaccd7070eda9afe4e4dbe0971f97b72d0",
+    "renderer/README.md": "3c0414b390a71c38e31bc7157f02d2a758de19dd1e07d83c6b9ff05e01ce37fd",
     "renderer/RENDERER.md": "f0b325d4d29736e7134c99694ca310898515b9e48ad76c752889ab7e6dbbb39a",
     "renderer/app/chatgpt-auth.ts": "4265a2e7c2dcb3a6f4b7026f762bf5b6e4caec76cc13c0a45987ee9a9f2e42cc",
     "renderer/app/globals.css": "89539d3ff960c8c8b46655588d13c4784fba0124f3f2d0fdffc3172108d736b0",
@@ -608,7 +618,7 @@
     "scripts/build_component_templates.py": "9b61e1a64e8e726aa5006edac849c2323716d192fe40c24d79075645b0a0631a",
     "scripts/offline_final_identity.py": "b3f0333dfb16aa3167a5f66b15de3066bd6581abac99346a6ecb0261658cf44b",
     "scripts/package-distribution.py": "c4113ce59ba46b909560e98d2813eba97afb4f7977934903499e71b782e81202",
-    "scripts/package-renderer.py": "efdf05eec1a3bfee8f9b18e721b8ec2347ce26d3754060260c5bd5540b2c4e70",
+    "scripts/package-renderer.py": "81cfa904f71da56f8edfd0e197ded19fab265f4c1b5e27eb511b5a3ecd6b9088",
     "scripts/package.py": "508e1dac7e709c07243fdb264dde7d3c4a9c2bdad2093534404b2b16f2d0f1c0",
     "scripts/qa/audit-phase3-licenses.py": "ea6f56684fca6307c5f2757f269dd3b363d716cfdbff84bd0a0c02d5144065bf",
     "scripts/qa/package-phase2b.py": "cb74d88fc18399cff016fabb7980efcdf31e9e72b6704301db0cf2138cf18942",
@@ -654,7 +664,7 @@
     "tests/test_release_candidate_gate.py": "9415bc9fdf6c1b19f62047735dbefda513cdce221d642852af3ded047d0ca7a7",
     "tests/test_release_inventory.py": "c3231489ca259a60ad0f5bfd06c3f26d19d8fbe65d6070ae74601a832552348c",
     "tests/test_release_privacy.py": "271999cf727876e80646e69de5b785dbacc39d3cfcd7d7affabda671eee383ef",
-    "tests/test_standalone_package.py": "1398eb96d68420b9987d25c25506234b23d48a1afa8515faedd61eb521c8af63"
+    "tests/test_standalone_package.py": "d5540cb0809f5aac9699c152e59808ef5c300ab438f5437dd70ea8a4e5b3aca3"
   },
   "licenseDecision": "MIT for original contributions, copyright Jess(T o X); third-party licenses unchanged; user approved",
   "publicationCleanup": {

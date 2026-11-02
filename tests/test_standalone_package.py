@@ -32,6 +32,9 @@ class StandaloneSourceTests(unittest.TestCase):
 
     def test_archive_relative_markdown_links_are_self_contained(self):
         entries = packaging.source_entries()
+        self.assertEqual(entries['LICENSE'], (ROOT / 'LICENSE').read_bytes())
+        self.assertEqual(entries['THIRD_PARTY_NOTICES.md'], (ROOT / 'THIRD_PARTY_NOTICES.md').read_bytes())
+        self.assertIn(b'not the complete ChatUI Source distribution', entries['README.md'])
         broken = []
         for name, content in entries.items():
             if not name.endswith('.md'):

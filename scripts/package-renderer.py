@@ -36,6 +36,22 @@ def source_entries() -> dict[str, bytes]:
     # Keep operational documentation available even outside the monorepo.
     for name, path in selected_files('documents'):
         entries[name] = checked_bytes(path, name)
+    # Current documentation links must retain the actual approved license and
+    # notices in this older Renderer-only archive as well as the full Source ZIP.
+    for name, path in selected_files('source'):
+        if name in ('LICENSE', 'NOTICE.txt', 'THIRD_PARTY_NOTICES.md'):
+            entries[name] = checked_bytes(path, name)
+    entries['README.md'] = (
+        '# Standalone Renderer source subset\n\n'
+        'This legacy archive contains Renderer sources and documentation, not the complete ChatUI Source distribution. '
+        'Use [Renderer instructions](renderer/README.md) for its local build. '
+        'Full-project commands in the included documentation require the complete Source ZIP described in '
+        '[distribution instructions](docs/release-preparation/DISTRIBUTION.md). '
+        'This subset does not include the full root test harness or its PACKAGE-MANIFEST.\n\n'
+        'Original contributions: [MIT](LICENSE), Copyright (c) 2026 Jess(T o X). '
+        'See [third-party notices](THIRD_PARTY_NOTICES.md) and [current scope](docs/release-preparation/RELEASE-NOTES.md). '
+        'No deployment or installed ChatGPT connection is provided.\n'
+    ).encode()
     entries['docs/source-allowlist.json'] = (PROJECT_ROOT / 'scripts' / 'release-allowlist.json').read_bytes()
     for name, content in entries.items():
         try:
