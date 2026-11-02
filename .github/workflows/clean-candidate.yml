@@ -32,7 +32,22 @@ jobs:
           node --version
           npm --version
           python3 --version
+      - name: Install official Ubuntu CJK fonts
+        run: |
+          sudo apt-get update
+          sudo apt-get install --yes --no-install-recommends fonts-noto-cjk=1:20230817+repack1-3 fontconfig
+          fc-cache -f
+          dpkg-query -W fonts-noto-cjk fontconfig
       - name: Install pinned Python dependencies
         run: python3 -m pip install --disable-pip-version-check -r requirements-phase3.txt
+      - name: Verify runtime dependencies and actual font coverage
+        env:
+          MPLCONFIGDIR: ${{ runner.temp }}/chatui-matplotlib
+        run: |
+          python3 -c "import sys; assert sys.version_info[:2] == (3, 12), sys.version"
+          python3 -m pip check
+          python3 .github/scripts/check-runtime.py
       - name: Full release verification including original input integrity
+        env:
+          MPLCONFIGDIR: ${{ runner.temp }}/chatui-matplotlib
         run: python3 scripts/reproduce-package.py

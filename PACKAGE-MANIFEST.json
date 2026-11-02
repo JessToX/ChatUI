@@ -497,7 +497,8 @@
     "tests/test_release_inventory.py": "c3231489ca259a60ad0f5bfd06c3f26d19d8fbe65d6070ae74601a832552348c",
     "tests/test_release_privacy.py": "271999cf727876e80646e69de5b785dbacc39d3cfcd7d7affabda671eee383ef",
     "tests/test_standalone_package.py": "1398eb96d68420b9987d25c25506234b23d48a1afa8515faedd61eb521c8af63",
-    ".github/workflows/clean-candidate.yml": "5199c48684d7e7a0b5cb978d71eda4e498cf95cfc2fe6474e9dbdf6fc4f9253b"
+    ".github/workflows/clean-candidate.yml": "efb9e8dd85bd9e3a281336f8ef3b20a5c93308888d1c50838a690933bfda10f1",
+    ".github/scripts/check-runtime.py": "c82c0981591aea84233a361095e8259b12b8792ffead0f0da05974b0f0991ea4"
   },
   "licenseDecision": "MIT for original contributions, copyright Jess(T o X); third-party licenses unchanged; user approved",
   "sourceCommit": "69c9fc07fcd2588480c64612d765ce5044bdd2be",
@@ -514,6 +515,7 @@
     ],
     "description": "public support/limitations updated; development Git history excluded; product bytes unchanged",
     "ci": "Exact private trial branch only; full reproduction gate; no deploy or secrets",
-    "dependencyRepair": "six1.15.0 to1.16.0: modern meta-path importer; no product/resource changes"
+    "dependencyRepair": "six1.15.0 to1.16.0: modern meta-path importer; no product/resource changes",
+    "linuxEnvironment": "Ubuntu official CJK fonts plus pinned dependency imports and actual glyph coverage preflight; full original tests unchanged"
   }
 }
