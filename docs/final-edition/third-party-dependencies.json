@@ -8364,7 +8364,7 @@
     },
     {
       "name": "six",
-      "version": "1.15.0",
+      "version": "1.16.0",
       "license": "MIT",
       "role": "optional static-force PNG/SVG adapter acceptance environment; not shipped code"
     }

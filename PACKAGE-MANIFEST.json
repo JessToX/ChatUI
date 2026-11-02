@@ -52,7 +52,7 @@
     "NOTICE.txt": "591899aa7bcadb99cf103ca754ffb7a5771a53bdab263578239bc4d563ee89f0",
     "PACKAGE-README.md": "cf8374118aadaa6be798f2f1a6633ab35d24f18a93421a2ae4d3f06fc2fa4fd7",
     "README.md": "8729af30722189d4933c6bab01ee38f1b4f8d56d0df5f0e52cba970f6b78fed0",
-    "THIRD_PARTY_NOTICES.md": "7c3666aaca2bb019b42483a32f46a51b2fcd8fea6c717030f8be4e880dd8ea2f",
+    "THIRD_PARTY_NOTICES.md": "3004daac495513c85281c4b77bd27f974ad0a998017745373f78b0faa933088e",
     "docs/ENGINEERING.md": "b868f271a034c4eac5469ec7899064bf0d131833838b4e7bcdab82d93877bb5c",
     "docs/acceptance-v0.9.0.md": "9be0c5f77b99b42e0d152177e2371e940534edc001d7ae963f00134bc1933b09",
     "docs/feature-completeness/continuation-stimuli.json": "4916e58121e8eb92b2c1f92acd5e11c2952885bfab632282b9a5977ab59537ce",
@@ -68,7 +68,7 @@
     "docs/final-edition/release-and-archive-checklist.md": "3d1111c01d51175242657c0adada5e8fa9a6c261992de19b12423a309a42955c",
     "docs/final-edition/release-candidate.md": "cf13c684e9482f05753d44e7b044a383df87201851266700982197a3c31e89c5",
     "docs/final-edition/security-and-limitations.md": "2f634da8a121f5c036f680668f93ce88d0ec4aeec73c83c2c15e4148a8745ebf",
-    "docs/final-edition/third-party-dependencies.json": "a333e7576517bbbd789de5d21781afa4b94b44d603615c94dde9c3b3438a1224",
+    "docs/final-edition/third-party-dependencies.json": "bea4d258e766d5d1cbb3f4818cf29617b9095082a433936de4bf8b1334dc21e0",
     "docs/installation.md": "4af738584feaf06e5e775940e36e351bef945b5ce3dadb006525d5840d8fd944",
     "docs/native-ui-iteration-1/SCENE-CONTRACT.md": "82a0745a5f2606cc960540e4d1d6a5bb908719ea644aff77ef336100f53b846c",
     "docs/release-preparation/FORCE-RESTORE-CONTRACT.md": "0ca7351f5aad6263133d5e2ac3b72eaac3d1972488a04691ff3bd972e3608bca",
@@ -448,7 +448,7 @@
     "renderer/vendor/shadcn-tailwind-4.13.0.LICENSE.md": "1564074e13439397221ffd522e2e504d56561994a23d371aa5e3ad43e4f5423f",
     "renderer/vendor/shadcn-tailwind-4.13.0.css": "bc7d83425702955b4cb67cb14ede9d603f9d912376d57a2d81d661094d2a782a",
     "renderer/vite.config.ts": "6f6d890794fbe23f3e35cceb327f49d5977432a5aaf715e040a6408932da395b",
-    "requirements-phase3.txt": "d06512f2bbd95fae696844545a97eced9007b32e93ba51a010215396aac82bfa",
+    "requirements-phase3.txt": "3da36d446f68724280cedaf07721a7044aa5b5d8736c9648d7fd0e828f552dd0",
     "scripts/build_component_templates.py": "9b61e1a64e8e726aa5006edac849c2323716d192fe40c24d79075645b0a0631a",
     "scripts/offline_final_identity.py": "b3f0333dfb16aa3167a5f66b15de3066bd6581abac99346a6ecb0261658cf44b",
     "scripts/package-renderer.py": "efdf05eec1a3bfee8f9b18e721b8ec2347ce26d3754060260c5bd5540b2c4e70",
@@ -513,6 +513,7 @@
       "docs/release-preparation/LICENSE-MIT-DRAFT.txt"
     ],
     "description": "public support/limitations updated; development Git history excluded; product bytes unchanged",
-    "ci": "Exact private trial branch only; full reproduction gate; no deploy or secrets"
+    "ci": "Exact private trial branch only; full reproduction gate; no deploy or secrets",
+    "dependencyRepair": "six1.15.0 to1.16.0: modern meta-path importer; no product/resource changes"
   }
 }

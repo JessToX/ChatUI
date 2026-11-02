@@ -94,7 +94,7 @@ The Source ZIP ships manifests/lockfiles and the code that imports dependencies;
 | `packaging` | 26.3 | Apache-2.0 OR BSD-2-Clause |
 | `pyparsing` | 3.3.2 | MIT |
 | `python-dateutil` | 2.9.0.post0 | Apache-2.0 OR BSD-3-Clause |
-| `six` | 1.15.0 | MIT |
+| `six` | 1.16.0 | MIT |
 
 ## Compiler and generated-resource notices
 

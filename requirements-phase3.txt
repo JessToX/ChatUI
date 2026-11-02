@@ -11,4 +11,4 @@ kiwisolver==1.4.7
 packaging==26.3
 pyparsing==3.3.2
 python-dateutil==2.9.0.post0
-six==1.15.0
+six==1.16.0
