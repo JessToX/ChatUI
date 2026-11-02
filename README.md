@@ -2,7 +2,7 @@
 
 ChatUI 由 **Jess(T o X)** 制作，是独立、非官方项目，与 OpenAI 不存在隶属、赞助或背书关系。相关商标属于各自权利人。
 
-本包是经过清理的**候选源码**，尚未发布。拟发布标签、插件元数据 **1.0.0** 与 Renderer 内部版本 **1.6.1-iteration.1** 是不同身份；见[版本与发行说明草稿](docs/release-preparation/RELEASE-NOTES.md)。原开发仓库的 Git 历史、账户配置、凭据和私人验收证据不在发行附件中。
+本包是经过清理的**本地候选源码**，尚未发布。拟发布标签、插件元数据 **1.0.0** 与 Renderer 内部版本 **1.6.1-iteration.1** 是不同身份；见[版本与发行说明草稿](docs/release-preparation/RELEASE-NOTES.md)。原开发仓库的 Git 历史、账户配置、凭据和私人验收证据不在发行附件中。
 
 ChatUI 将讲解、公式、图形和局部交互组合在一起。保留六个工具：`render_html`、`render_response`、`render_document`、`render_component`、`render_explanation`、`render_incline_forces`。工具成功返回不等于实际界面或全产品验收通过。
 

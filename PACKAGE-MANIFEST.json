@@ -16,7 +16,7 @@
       "sourceSha256": null
     },
     "README.md": {
-      "packageSha256": "84e86487b4de522faeec3cb22d02c35f565a2fc2ae1cf9ab65201e89ba33e997",
+      "packageSha256": "e0129c8287f148e34d146eb360e7d6b73331fcf9ce9a5e9764a2b8020ec71af6",
       "reason": "release documentation, approved license policy, deterministic distribution or regression coverage; runtime bytes unchanged",
       "sourceSha256": "7f17c588cfa6fc6f104ba74fb7d5ce83a2ee6674fb9d34eed68b91dea0289e74"
     },
@@ -213,7 +213,7 @@
     "LICENSE": "b60bfbb38592da8958f442d88baa1f25b151a925d5bc0de4b2bb221028df5c0d",
     "NOTICE.txt": "591899aa7bcadb99cf103ca754ffb7a5771a53bdab263578239bc4d563ee89f0",
     "PACKAGE-README.md": "aa3f416367d15f2d3e3432c8cb3994ee259e1a19abe92132b758fab1b0b01558",
-    "README.md": "84e86487b4de522faeec3cb22d02c35f565a2fc2ae1cf9ab65201e89ba33e997",
+    "README.md": "e0129c8287f148e34d146eb360e7d6b73331fcf9ce9a5e9764a2b8020ec71af6",
     "THIRD_PARTY_NOTICES.md": "68c272bdbc3121aef8a5b048a4e701c6e0c3620925bed10ce509ccacc3d477c8",
     "docs/ENGINEERING.md": "3eb960ab2cdb7e2ba3b6f613ab9333558fe8ea23a006fb872aa91b1ed7d6a845",
     "docs/acceptance-v0.9.0.md": "c91c1068a2e29fd3ddf8933ce99b2273e32f0dd6398a35a0daa5cc77dc31d17d",
