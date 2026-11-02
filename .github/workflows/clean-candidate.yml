@@ -1,9 +1,15 @@
 name: ChatUI clean candidate verification
 on:
   push:
-    branches: [ci/clean-root-v5-20261102]
+    # The temporary acceptance branch is push-only; do not open PRs from it.
+    branches: [main, ci/clean-root-v5-20261102]
+  pull_request:
+    branches: [main]
 permissions:
   contents: read
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event_name }}-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
   verify:
     runs-on: ubuntu-24.04
