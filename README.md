@@ -27,7 +27,7 @@ python3 scripts/reproduce-package.py
 
 脚本执行根目录与 Renderer 的 locked `npm ci`、组件和 Python/Renderer 回归、类型、lint、build、生成一致性及许可证检查。缺少依赖、跳过测试、源文件与清单不符都会失败。生成的 hosting 配置仅是不可部署的公开占位；不要复制私人账户配置或提供密钥。
 
-已验证产品基线的选择性包通过组件92、Python159、Renderer472；本次清理文档后的候选必须重新完整验证，以实际结果为准。完整开发树的另一次云 CI 覆盖范围不同，不能当成本公开包的同一验证。包内不包含云工作流；需要单独核对精确候选的真实 CI 结果，不能声称本包云 CI 已通过。
+已验证产品基线的选择性包通过组件92、Python159、Renderer472；本次清理文档后的候选必须重新完整验证，以实际结果为准。完整开发树的另一次云 CI 覆盖范围不同，不能当成本公开包的同一验证。候选包含仅针对指定私有验证分支的云工作流；必须以该精确提交的实际运行结果为准，不能继承旧源码 CI 结论。
 
 工程说明见 [Renderer](renderer/README.md)、[验证说明](docs/release-preparation/VALIDATION.md)。[包清单](PACKAGE-MANIFEST.json)记录来源与清理差异；来源提交号是追溯信息，不表示公开包与其全部字节相同。
 

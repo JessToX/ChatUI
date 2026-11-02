@@ -51,7 +51,7 @@
     "LICENSE": "b60bfbb38592da8958f442d88baa1f25b151a925d5bc0de4b2bb221028df5c0d",
     "NOTICE.txt": "591899aa7bcadb99cf103ca754ffb7a5771a53bdab263578239bc4d563ee89f0",
     "PACKAGE-README.md": "cf8374118aadaa6be798f2f1a6633ab35d24f18a93421a2ae4d3f06fc2fa4fd7",
-    "README.md": "4ec869bbe67c2d3aab8fa9e34ab54025bcf7f0921779e062fd3847396d1ea6ea",
+    "README.md": "8729af30722189d4933c6bab01ee38f1b4f8d56d0df5f0e52cba970f6b78fed0",
     "THIRD_PARTY_NOTICES.md": "7c3666aaca2bb019b42483a32f46a51b2fcd8fea6c717030f8be4e880dd8ea2f",
     "docs/ENGINEERING.md": "b868f271a034c4eac5469ec7899064bf0d131833838b4e7bcdab82d93877bb5c",
     "docs/acceptance-v0.9.0.md": "9be0c5f77b99b42e0d152177e2371e940534edc001d7ae963f00134bc1933b09",
@@ -496,7 +496,8 @@
     "tests/test_release_candidate_gate.py": "9415bc9fdf6c1b19f62047735dbefda513cdce221d642852af3ded047d0ca7a7",
     "tests/test_release_inventory.py": "c3231489ca259a60ad0f5bfd06c3f26d19d8fbe65d6070ae74601a832552348c",
     "tests/test_release_privacy.py": "271999cf727876e80646e69de5b785dbacc39d3cfcd7d7affabda671eee383ef",
-    "tests/test_standalone_package.py": "1398eb96d68420b9987d25c25506234b23d48a1afa8515faedd61eb521c8af63"
+    "tests/test_standalone_package.py": "1398eb96d68420b9987d25c25506234b23d48a1afa8515faedd61eb521c8af63",
+    ".github/workflows/clean-candidate.yml": "5199c48684d7e7a0b5cb978d71eda4e498cf95cfc2fe6474e9dbdf6fc4f9253b"
   },
   "licenseDecision": "MIT for original contributions, copyright Jess(T o X); third-party licenses unchanged; user approved",
   "sourceCommit": "69c9fc07fcd2588480c64612d765ce5044bdd2be",
@@ -511,6 +512,7 @@
       "docs/release-preparation/RELEASE-CANDIDATE.md",
       "docs/release-preparation/LICENSE-MIT-DRAFT.txt"
     ],
-    "description": "public support/limitations updated; development Git history excluded; product bytes unchanged"
+    "description": "public support/limitations updated; development Git history excluded; product bytes unchanged",
+    "ci": "Exact private trial branch only; full reproduction gate; no deploy or secrets"
   }
 }

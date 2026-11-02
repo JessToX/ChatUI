@@ -1,0 +1,38 @@
+name: ChatUI clean candidate verification
+on:
+  push:
+    branches: [ci/clean-root-v5-20261102]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    env:
+      PYTHONUTF8: '1'
+      PYTHONDONTWRITEBYTECODE: '1'
+      NPM_CONFIG_AUDIT: 'false'
+      NPM_CONFIG_FUND: 'false'
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+          fetch-depth: 1
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1
+        with:
+          node-version: '24.20.0'
+          package-manager-cache: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0
+        with:
+          python-version: '3.12'
+      - name: Record candidate identity
+        run: |
+          git rev-parse HEAD
+          git rev-parse 'HEAD^{tree}'
+          node --version
+          npm --version
+          python3 --version
+      - name: Install pinned Python dependencies
+        run: python3 -m pip install --disable-pip-version-check -r requirements-phase3.txt
+      - name: Full release verification including original input integrity
+        run: python3 scripts/reproduce-package.py
