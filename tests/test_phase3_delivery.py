@@ -130,7 +130,15 @@ class Phase3DeliveryTests(unittest.TestCase):
             self.assertEqual((ROOT / name).read_bytes(), content, 'License inventory must be regenerated after lock changes')
         record = licenses.audit()
         self.assertTrue(all(row['license'] and row['version'] for lock in record['locks'] for row in lock['packages']))
-        self.assertIn('许可选择待用户决定', generated['THIRD_PARTY_NOTICES.md'].decode())
+        notice = generated['THIRD_PARTY_NOTICES.md'].decode()
+        license_text = (ROOT / 'LICENSE').read_text()
+        self.assertIn('MIT License', license_text)
+        self.assertIn('Copyright (c) 2026 Jess(T o X)', license_text)
+        self.assertIn('Original ChatUI contributions are licensed under MIT', notice)
+        self.assertIn('Copyright (c) 2026 Jess(T o X)', notice)
+        self.assertIn('Third-party code and assets retain their original licenses', notice)
+        self.assertNotIn('许可选择待用户决定', notice)
+        self.assertNotIn('project-level licensing remains pending', notice)
 
     def test_review_gate_rejects_partial_browser_and_different_engineering_archives(self):
         partial = {'status': 'PASS', 'checks': [{'mode': mode, 'name': 'slice', 'status': 'PASS',

@@ -1,5 +1,7 @@
 # ChatUI Offline Final Edition — Release Notes / Candidate
 
+> **历史阶段记录，非当前安装/发布指南。** 下文版本、许可待定、CI/宿主状态及审批范围仅反映当时，不能作为当前结论。当前原创许可已为 MIT / Jess(T o X)，当前版本与范围见[发行说明草稿](../release-preparation/RELEASE-NOTES.md)。保留原阶段事实，不继承旧测试为新候选通过。
+
 **DRAFT — NOT PUBLISHED**。Portable Plugin / Codex overlay **1.0.0**；Renderer / package-lock / MCP serverInfo **1.6.0**。源码包含 `83db0b5b` 的 Quiz 公开输出隔离和 `6639b8a3` 的每次交付身份绑定。最终 SHA 在 Source 的 `RC-SOURCE-MANIFEST.json` 和 Review 的 `RELEASE-NOTES.md`/`acceptance.json` 中绑定；本源码文档不嵌入包含自身的最终 commit 或 ZIP hash。
 
 ## 本地交付

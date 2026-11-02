@@ -1,0 +1,6 @@
+ChatUI offline Gallery
+Original contributions: MIT, Copyright (c) 2026 Jess(T o X). See LICENSE.
+Third-party material retains its own copyrights and licenses; the project MIT
+does not relicense it. See gallery/THIRD_PARTY_NOTICES.md for the full notices.
+This artifact contains fixed synthetic demonstrations and no account binding,
+credentials, Git history, installed dependencies or private acceptance logs.

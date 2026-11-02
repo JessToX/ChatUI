@@ -64,7 +64,7 @@ def outputs(root=ROOT):
     python_rows = '\n'.join(f"| `{row['name']}` | {row['version']} | {row['license']} |" for row in record['pythonInstallDependencies'])
     text = f'''# ChatUI local RC third-party notices
 
-This is a local Release Candidate, not a published release. **许可选择待用户决定**: the repository has no project-level LICENSE. Public access to source does not grant an open-source license. The notices below apply to the identified third-party material, not to the whole ChatUI project.
+This is a local Release Candidate, not a published release. Original ChatUI contributions are licensed under MIT; Copyright (c) 2026 Jess(T o X). See [LICENSE](LICENSE). Third-party code and assets retain their original licenses and copyright notices; the root MIT license does not relicense them.
 
 ## Shipped code and generated artifacts
 

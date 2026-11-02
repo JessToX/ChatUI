@@ -2,7 +2,7 @@
 
 ChatUI 由 **Jess(T o X)** 制作，是独立、非官方项目，与 OpenAI 不存在隶属、赞助或背书关系。相关商标属于各自权利人。
 
-本包是经过清理的**本地候选源码**，尚未发布。整体功能验收、真实宿主目标与精确制品 CI 完成后，仍需最终发布核对；候选或预览标签不能替代完成门禁。Plugin / Codex overlay **1.0.0**，Renderer / lockfile / MCP serverInfo **1.6.1-iteration.1**。没有迁入原开发仓库的 Git 历史、账户配置、凭据或私人验收证据。
+本包是经过清理的**候选源码**，尚未发布。拟发布标签、插件元数据 **1.0.0** 与 Renderer 内部版本 **1.6.1-iteration.1** 是不同身份；见[版本与发行说明草稿](docs/release-preparation/RELEASE-NOTES.md)。原开发仓库的 Git 历史、账户配置、凭据和私人验收证据不在发行附件中。
 
 ChatUI 将讲解、公式、图形和局部交互组合在一起。保留六个工具：`render_html`、`render_response`、`render_document`、`render_component`、`render_explanation`、`render_incline_forces`。工具成功返回不等于实际界面或全产品验收通过。
 
@@ -16,7 +16,7 @@ python3 -m http.server 4173 --bind 127.0.0.1 --directory renderer/public
 
 ## 安装与验证
 
-使用 Node.js 24.20.0 / npm 12.0.2 与 Python 3.9 或更高版本。在独立虚拟环境安装固定 Python 依赖，然后从全新解包目录或克隆目录运行：
+完整步骤见[安装与运行](docs/installation.md)：离线 Gallery 不需 npm 或密钥；源码验证使用 Node.js 24.20.0 / npm 12.0.2。已验环境为 macOS/Python 3.9.6 与 Ubuntu 24.04/Python 3.12；其他组合不由此保证兼容。Linux 完整绘图测试需先按指南安装中文字体。在独立虚拟环境安装固定依赖，再从全新解包目录或克隆目录运行：
 
 ```sh
 python3 -m venv /tmp/chatui-preview-venv
@@ -27,7 +27,7 @@ python3 scripts/reproduce-package.py
 
 脚本执行根目录与 Renderer 的 locked `npm ci`、组件和 Python/Renderer 回归、类型、lint、build、生成一致性及许可证检查。缺少依赖、跳过测试、源文件与清单不符都会失败。生成的 hosting 配置仅是不可部署的公开占位；不要复制私人账户配置或提供密钥。
 
-已验证产品基线的选择性包通过组件92、Python159、Renderer472；本次清理文档后的候选必须重新完整验证，以实际结果为准。完整开发树的另一次云 CI 覆盖范围不同，不能当成本公开包的同一验证。候选包含仅针对指定私有验证分支的云工作流；必须以该精确提交的实际运行结果为准，不能继承旧源码 CI 结论。
+文档整理前的精确基线 `a90c8d3f03a567db99186b25d144b017564158cc` 已通过 main push 云 CI，组件92、Python159、Renderer472，零跳过。当前工作流支持 main push、向 main 的 pull_request，以及临时验收分支 push；实际 PR 事件仍未验。新提交必须有自己的验证记录，不能继承基线 CI 结论。完整开发树的旧测试计数也不等于本发行范围。
 
 工程说明见 [Renderer](renderer/README.md)、[验证说明](docs/release-preparation/VALIDATION.md)。[包清单](PACKAGE-MANIFEST.json)记录来源与清理差异；来源提交号是追溯信息，不表示公开包与其全部字节相同。
 
@@ -45,4 +45,4 @@ python3 scripts/reproduce-package.py
 
 原创贡献按 [MIT License](LICENSE) 授权，署名 **Jess(T o X)**。第三方代码和素材保留各自许可证与版权，详见 [THIRD_PARTY_NOTICES](THIRD_PARTY_NOTICES.md) 和 [NOTICE](NOTICE.txt)。两枚来源未确认的原主图标已排除，替换为本项目简单几何占位图；不宣称原图标已清权。
 
-本候选不包含旧开发历史、内部验收记录或部署承诺。实际公开仍须另行批准。
+源码与 Gallery ZIP 不是安装程序，也不提供可直接使用的 ChatGPT 服务或账户连接。接入须使用用户自己的服务、账户与权限，见[接入边界](docs/installation.md#连接-chatgpt)。附件生成与校验见[发行材料](docs/release-preparation/DISTRIBUTION.md)。实际公开仍须最终确认。

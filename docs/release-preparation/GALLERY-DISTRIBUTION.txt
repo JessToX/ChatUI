@@ -1,0 +1,20 @@
+ChatUI offline Gallery — local release candidate, not published
+
+Open gallery/index.html directly, or from this directory run:
+  python3 -m http.server 4173 --bind 127.0.0.1 --directory gallery
+Then open http://127.0.0.1:4173/index.html. Stop the local server with Ctrl-C.
+
+No npm install, model API key, MCP connection or remote font is required.
+This is a fixed synthetic demonstration, not a ChatGPT plugin installer or
+proof of live model behavior. Use gallery/README.md for controls and limits.
+Automatic copy may be unavailable; use the complete selectable manual text.
+
+Original contributions: MIT, Copyright (c) 2026 Jess(T o X). See LICENSE.
+Third-party copyrights and licenses remain unchanged; see NOTICE.txt and
+gallery/THIRD_PARTY_NOTICES.md. The inner gallery/SHA256SUMS covers the
+generated gallery files. The companion release.json binds this entire archive
+to its exact source commit; outer SHA256SUMS verifies the downloaded archive.
+
+Supported first-release host target: ordinary Chrome ChatGPT web. Native
+macOS ChatGPT and other browser/system combinations remain unverified.
+This offline demonstration is separate from that bounded live-host evidence.

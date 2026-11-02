@@ -1,5 +1,7 @@
 # ChatUI Final Edition — Phase 3 本地候选验收
 
+> **历史阶段记录，非当前安装/发布指南。** 下文版本、许可待定、CI/宿主状态及审批范围仅反映当时，不能作为当前结论。当前原创许可已为 MIT / Jess(T o X)，当前版本与范围见[发行说明草稿](../release-preparation/RELEASE-NOTES.md)。保留原阶段事实，不继承旧测试为新候选通过。
+
 日期：2026-10-11。授权起点 `49cb452f47008a9f89002cace50c34d862a07d4f`；分支 `codex/final-edition`。本轮仅执行最终整理、工程强化、离线验收和本地 RC 打包。**Local RC ≠ Published Release ≠ Host Validated ≠ GitHub Archived**。
 
 候选结论以本轮最终 SHA 的工程、实际 ZIP 双模式浏览器及交付验证共同裁决：全部离线硬门槛 PASS 才是 **RC READY — OFFLINE VERIFIED WITH DECLARED LIMITATIONS**；未解释的安全、数学、正文、兼容、构建或包完整性失败则为 **RC BLOCKED**。本文不能替代提交后结果记录。

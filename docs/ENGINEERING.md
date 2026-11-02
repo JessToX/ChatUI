@@ -1,5 +1,9 @@
 # 工程导航与维护入口
 
+当前维护请先核对实际 HEAD 和工作树。干净候选的版本/范围见[发行说明草稿](release-preparation/RELEASE-NOTES.md)，验证命令见[验证入口](release-preparation/VALIDATION.md)，发行附件见[发行材料](release-preparation/DISTRIBUTION.md)。当前根 MIT 仅覆盖原创贡献；main/PR 工作流已经配置。
+
+> **以下全部是旧开发阶段的保全记录。** 旧 refs、包、许可待定、CI 状态和待审批操作不代表当前仓库状态，也不是可直接执行的计划。
+
 ## 当前维护基线（2026-10-27 核对）
 
 长期源码入口为本 Git 主线。整合前 HEAD 为 `64de415678943f75a0a347be849faf85f923bc2f`；2026-10-26 的维护文档、复制状态修复及回归测试已选择性整合；提交与同步状态以实际 Git 记录为准。维护时先检查 `git status --short --branch` 与 `git rev-parse HEAD`；HEAD 不包含未提交变化，不能单凭提交号识别当前测试对象。

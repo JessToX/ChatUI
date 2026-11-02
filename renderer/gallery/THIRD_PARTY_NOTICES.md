@@ -10,7 +10,7 @@ The offline Document Gallery uses generated MathML, the existing ChatUI composit
 | esbuild | 0.28.2 | MIT | Build bundler; no library runtime in Gallery. |
 | DOMPurify | 3.4.16 | MPL-2.0 OR Apache-2.0; Apache notice selected below | Embedded only in sibling response resources in the Source ZIP; absent from this Document Gallery. |
 
-ChatUI project-level licensing remains pending the user's decision. These third-party notices do not grant a license to the whole project.
+Original ChatUI contributions are licensed under MIT; Copyright (c) 2026 Jess(T o X). The distribution includes the full project LICENSE. Third-party code and assets retain their original licenses and copyright notices; the root MIT license does not relicense them.
 
 ## KaTeX
 

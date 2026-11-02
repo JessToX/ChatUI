@@ -1,5 +1,7 @@
 # Rich Document v1 Release Candidate Hardening
 
+> **历史阶段记录，非当前安装/发布指南。** 下文版本、许可待定、CI/宿主状态及审批范围仅反映当时，不能作为当前结论。当前原创许可已为 MIT / Jess(T o X)，当前版本与范围见[发行说明草稿](release-preparation/RELEASE-NOTES.md)。保留原阶段事实，不继承旧测试为新候选通过。
+
 下文保留 RC4 时点的历史报告。历史证据仅在 monorepo 留存，不属于此源码包，也不作为当前 B1 证明；当前工程检查见 [B1](final-edition/b1.md)。
 
 **结论：READY WITH DOCUMENTED LIMITATIONS。** 候选版本 Rich Document v1 RC4；拟发布插件 0.10.0，documentVersion 1，Renderer API/package 仍为 1.5.0。隔离诊断版本 1.5.1-rc.4 不是生产 package 版本。生产默认 Skill、routing、部署与受众均未修改。此结论仅覆盖本轮三项 hardening，不授权部署。

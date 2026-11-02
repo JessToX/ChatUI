@@ -1,5 +1,7 @@
 # ChatUI 后续发行与归档清单 — 各项需单独批准
 
+> **历史阶段记录，非当前安装/发布指南。** 下文版本、许可待定、CI/宿主状态及审批范围仅反映当时，不能作为当前结论。当前原创许可已为 MIT / Jess(T o X)，当前版本与范围见[发行说明草稿](../release-preparation/RELEASE-NOTES.md)。保留原阶段事实，不继承旧测试为新候选通过。
+
 当前是 [本地 RC](release-candidate.md)。**Local RC ≠ Published Release ≠ Host Validated ≠ GitHub Archived**。本文件不执行任何外部动作，不能把打勾或测试 PASS 当作自动授权。
 
 | 决定 / 动作 | 批准前准备 | 独立批准要求 |

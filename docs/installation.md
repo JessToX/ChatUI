@@ -1,37 +1,65 @@
-# ChatUI 0.9.0／Renderer 1.5.0：运行、更新、回滚
+# 安装、运行与连接边界
 
-## 当前边界
+当前交付是源码和离线 Gallery，不是安装程序或已部署的 ChatGPT 插件。版本含义与已验范围见[发行说明草稿](release-preparation/RELEASE-NOTES.md)。以下命令从解压后的对应目录执行，不需要项目作者的账户或配置。
 
-源码和包不等于线上更新。查看 [acceptance-v0.9.0.md](acceptance-v0.9.0.md) 的实际记录。未完成原 Site 发布、原私人插件更新、连接刷新与新聊天验收前，不宣称完整 V2 已上线。
+## 离线 Gallery
 
-## 本地运行
+解压 Gallery 附件，在 `ChatUI-Gallery/` 中直接打开 `gallery/index.html`，或运行：
 
-1. Node.js 24；根目录及 `renderer/` 分别 `npm ci --ignore-scripts`。
-2. 根目录执行 `npm run test:components`；Renderer 执行 `npm test`、`npx tsc --noEmit --incremental false`、`npm run lint`、`npm run build`。
-3. 首次纯本地构建若缺少绑定，可复制 `renderer/hosting.example.json` 到 `.openai/hosting.json`。占位绑定绝不能发布，也不能覆盖已有真实绑定。
-4. 静态预览：根目录执行 `python3 -m http.server 8765 --bind 127.0.0.1 --directory renderer/public`，打开 `http://127.0.0.1:8765/preview.html`。构建后服务可在 Renderer 目录 `npm start`。预览不会调用模型或发送消息到 ChatGPT。
-5. 源码改动后通过 `generate:widget`／`generate:preview` 生成资源，不手改生成文件；`npm run build` 已包含这两步。
+```sh
+python3 -m http.server 4173 --bind 127.0.0.1 --directory gallery
+```
 
-## 沿用原身份更新
+浏览器打开 `http://127.0.0.1:4173/index.html`，结束时按 Ctrl-C。从源码目录预览时，将 `--directory gallery` 改成 `--directory renderer/public/gallery`。Gallery 是固定公开合成输入；不调用模型、MCP、CDN 或远程字体，不会连接 ChatGPT。无需 npm、Python 绘图库或 API 密钥；Python 在这里仅用于可选的静态 HTTP 服务。
 
-1. **先成套备份。** 保留旧插件包、匹配 Renderer 源码／真实部署版本、原 App 与 Site 身份和当前访问范围。设备本地基线备份在 `.local/backups/pre-html-v2-2026-10-07/`；私人部署信息不放入发行包。
-2. **更新原 Renderer Site。** 使用原 Site 的受支持发布通道及真实绑定；保留所有权和访问范围。不创建新 Site，不发布占位项目 ID，不自行改为公开访问。通道不可用则停止线上操作，明确记录为未完成。
-3. **更新原私人插件。** 上传 `dist/chatui-0.9.0.zip` 到现有插件的更新通道，保持原插件 ID 和 `.app.json` App 连接。发布前读回当前 release，处理并发冲突；发布后读回 Skill、manifest、App 绑定和版本。不要创建同名替代插件。
-4. **刷新工具目录。** 直接自定义 MCP 连接使用官方 Refresh；已发布插件按其版本更新流程更新。确认工具列表新增 `render_html`、保留 `render_response` 及旧工具，两个主入口使用 `ui://chatui/response-v2.html`。
-5. **新聊天验收。** 显式 `render_html` 后，在独立新聊天测试普通隐式回答，以及“继续／为什么／改成表格／补充代码／考考我”和纯文本例外。逐项记录实际工具选择、结果、真实 DOM、错误、重复正文和计时，不能用 Connected 状态或本地通过代替。
-6. `global-preference.txt` 仅作可选参考。若需更新，精确替换原 ChatUI 段落并保留其他指令；本次未自动修改账户偏好。
+## 完整源码验证
 
-普通回答走 `render_html`；复杂交互及复杂公式整轮走 `render_response`；简单确认或明确纯文本／Markdown 保持原生。Skill 能指导选择，不能保证自动调用率。
+使用 Node.js **24.20.0** / npm **12.0.2**。完整验证已在 macOS/Python **3.9.6** 与 Ubuntu **24.04**/Python **3.12** 执行；建议 Linux 对齐 CI 的 Python 3.12。其他 Python、操作系统和 Node 主版本尚不作保证。
 
-## 成套回滚
+Ubuntu 24.04 上完整绘图回归需要官方 Noto CJK 字体和 fontconfig；这些是系统依赖，不捆绑进 ZIP：
 
-- 如果新服务／资源或真实宿主验收失败，先撤销新默认规则或恢复旧 Skill，再将原 Site 恢复到匹配的 Renderer 1.4.0 部署，恢复原插件 0.8.0；保证规则不会要求不存在的 `render_html`。
-- 全过程保持同一插件／App／Site 身份和原访问范围。回滚后刷新目录，在新聊天检查旧 `render_response` 可用以及旧组件行为。
-- 本地源码恢复用备份 `source.tgz` 在独立目录检查，不盲目覆盖用户后续修改。线上回滚优先使用原 Site 的已验证历史部署，而不是占位配置重新发布。
-- 若曾编辑全局偏好，只还原本次精确 ChatUI 段落，不覆盖用户之后的其他修改。卸载也仅影响 ChatUI，不删除用户聊天或其他插件。
+```sh
+sudo apt-get update
+sudo apt-get install --yes --no-install-recommends fonts-noto-cjk=1:20230817+repack1-3 fontconfig
+fc-cache -f
+```
 
-## 包与隐私
+上述固定字体版本对应当前 Ubuntu 24.04 CI；其他发行版请按其官方包源安装覆盖中文标签的字体，不能把安装成功代替预检。macOS 验证使用系统 PingFang 字体。字体缺失会明确失败，不删除中文断言。Ubuntu 包来源见[官方软件包页](https://packages.ubuntu.com/noble/fonts-noto-cjk)。
 
-插件 ZIP 只含 manifest、原 App 连接、Skill、可信组件资产、去个人化示例与脚本；Renderer 包只含源码、锁文件、vendor kit 和预构建资源。均不包含凭据、`.openai` 私人部署绑定、环境文件、依赖目录、构建缓存、聊天记录或用户截图。无需额外模型 API 密钥。
+在全新源码解压目录执行；虚拟环境放在源码外，避免污染严格输入清单：
 
-官方流程：[工具与结果](https://developers.openai.com/plugins/reference)、[MCP App UI](https://developers.openai.com/plugins/build/chatgpt-ui)、[连接与刷新](https://developers.openai.com/plugins/deploy/connect-chatgpt)。
+```sh
+python3 -m venv ../chatui-verification-venv
+. ../chatui-verification-venv/bin/activate
+python3 -m pip install -r requirements-phase3.txt
+python3 -m pip check
+PYTHONDONTWRITEBYTECODE=1 python3 .github/scripts/check-runtime.py
+PYTHONDONTWRITEBYTECODE=1 python3 scripts/reproduce-package.py
+```
+
+字体预检调用实际绘图适配器的字体解析路径。完整脚本执行两个 locked `npm ci`、组件/Python/Renderer 测试、类型、lint、build、生成、元数据、许可及原始输入保真检查。它拒绝已有 `renderer/.openai`、额外文件、软链接或清单不符；已有开发目录请保留并改用新副本，不删除自己的配置来凑通过。脚本只为干净副本生成不可部署的公开 hosting 占位。
+
+## Renderer 开发预览
+
+以下仅为开发入口，完整验收仍用上面的新副本流程。在源码 `renderer/` 中：
+
+```sh
+npm ci --ignore-scripts --no-audit --no-fund
+node scripts/prepare-local-config.mjs
+npm run build
+npm start
+```
+
+`npm start` 使用本地 Wrangler，绑定 `127.0.0.1`；端口以启动输出为准，结束按 Ctrl-C。静态样例也可直接用根 README 的 HTTP 命令。配置助手只在缺失时创建 `renderer/.openai/hosting.json`，保留现有文件/软链接；不要手工覆盖真实绑定。此本地预览不证明远程 MCP 身份认证或真实宿主验收。
+
+## 连接 ChatGPT
+
+源码包含六工具 MCP 实现，但发行附件不包含托管服务、已配置的官方 Tunnel、凭据或可用的账户 App 绑定。`plugins/chatui/.app.json` 是不可用的公开占位；不要直接把源码 ZIP 当可安装连接。针对任意新用户环境的一键部署/接入流程尚未验证，本指南不虚构这样的承诺。
+
+开发者使用自己管理的环境：先准备合规的 MCP 端点与认证，再通过 ChatGPT 的官方自定义 MCP 接入流程选择该端点，核对发现的工具及 UI 元数据，在新会话测试实际卡片与模型可见结果。官方文档允许 HTTPS 端点或用于私有开发测试的 Secure MCP Tunnel，具体账户/工作区政策以页面为准；公开插件目录提交与 GitHub 源码发行是不同流程。参见[官方连接与测试指南](https://developers.openai.com/plugins/deploy/connect-chatgpt)和[服务端要求](https://developers.openai.com/plugins/build/mcp-server)。
+
+账户、端点及凭据由使用者自行配置；不要把密钥填进聊天、提交到 Git、写入前端或发行包。离线预览不需要模型 API 密钥；官方 Tunnel 或自己的托管/认证服务可能另需凭据，不能把“离线无需密钥”理解成连接完全无需认证。生产部署必须保留服务端身份验证，不能公开一个信任任意身份请求头的服务；公开 hosting 占位不可部署。
+
+## 更新和回退
+
+保留已验源码/附件 SHA256 和相应服务版本。先在隔离目录验证新候选，再由服务所有者按其托管平台受支持流程更新。GitHub Release 不会自动更新 ChatGPT 连接；资源或工具元数据变化后按官方流程刷新并重验。回退服务时须核对旧服务能否读取新 URI，不能保证旧缓存和新会话自动兼容。当前版本与已知限制见[主 README](../README.md)，不要沿用旧阶段的私人 Site、插件编号或发布命令。

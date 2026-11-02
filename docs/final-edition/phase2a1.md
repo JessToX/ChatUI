@@ -1,5 +1,7 @@
 # Phase 2A.1 — Intellectual UI 定向精修
 
+> **历史阶段记录，非当前安装/发布指南。** 下文版本、许可待定、CI/宿主状态及审批范围仅反映当时，不能作为当前结论。当前原创许可已为 MIT / Jess(T o X)，当前版本与范围见[发行说明草稿](../release-preparation/RELEASE-NOTES.md)。保留原阶段事实，不继承旧测试为新候选通过。
+
 日期：2026-10-11。分支 `codex/final-edition`，起点 `91a79f01811fbb17d533c3cc17ab799df4597961`，B1 数值安全基线 `145232f2c4f6efefa701557fe560eddc7e6d1b35`。历史 [Phase 2A 报告](phase2a.md)与 `output/playwright/phase2a/` 的 59 张截图保留原件；本轮只实施获批四项精修。现行规则见 [Intellectual UI 规范](intellectual-ui-ux-spec.md)。
 
 ## 1. 最终提交与证据门槛

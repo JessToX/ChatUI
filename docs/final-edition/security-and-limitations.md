@@ -1,5 +1,7 @@
 # Offline Final Edition — Security / Limitations
 
+> **历史阶段记录，非当前安装/发布指南。** 下文版本、许可待定、CI/宿主状态及审批范围仅反映当时，不能作为当前结论。当前原创许可已为 MIT / Jess(T o X)，当前版本与范围见[发行说明草稿](../release-preparation/RELEASE-NOTES.md)。保留原阶段事实，不继承旧测试为新候选通过。
+
 本地候选状态：**HOST NOT VERIFIED / RELEASE NOT PUBLISHED**。离线 Gallery 是固定输入的本地模拟宿主，不能证明真实 ChatGPT 模型消费字段、交付顺序、连接或部署安全。
 
 ## Quiz 数据边界

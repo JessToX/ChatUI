@@ -1,5 +1,7 @@
 # Phase 2A — Intellectual UX 与三个可运行原型
 
+> **历史阶段记录，非当前安装/发布指南。** 下文版本、许可待定、CI/宿主状态及审批范围仅反映当时，不能作为当前结论。当前原创许可已为 MIT / Jess(T o X)，当前版本与范围见[发行说明草稿](../release-preparation/RELEASE-NOTES.md)。保留原阶段事实，不继承旧测试为新候选通过。
+
 日期：2026-10-11。授权起点 `145232f2c4f6efefa701557fe560eddc7e6d1b35`，分支 `codex/final-edition`。本轮完成 G01/G04/G05 真实纵向原型及 G06 原生对照，仅供本地视觉审核。设计依据见 [Intellectual UI / UX 规范](intellectual-ui-ux-spec.md)、[B1](b1.md)及 [Rich Document 契约](../rich-document-v1-spec.md)。
 
 ## 1. 结论与证据身份

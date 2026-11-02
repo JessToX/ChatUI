@@ -1,5 +1,7 @@
 # 待批准的生产迁移
 
+> **历史阶段记录，非当前安装/发布指南。** 下文版本、许可待定、CI/宿主状态及审批范围仅反映当时，不能作为当前结论。当前原创许可已为 MIT / Jess(T o X)，当前版本与范围见[发行说明草稿](../release-preparation/RELEASE-NOTES.md)。保留原阶段事实，不继承旧测试为新候选通过。
+
 下文保留 RC4 时点的待审提案，不是当前实施指令。历史证据及补丁仅在 monorepo 留存，不属于此源码包，也不作为当前 B1 证明；当前工程检查见 [B1](../final-edition/b1.md)。Phase 1 已在隔离候选分支修正 overlay 元数据，下文原始元数据不一致描述仍记录当时状态；没有因此批准或执行生产迁移。
 
 本目录是可审阅补丁，不会自动应用。`production.patch` 精确变更两个生产 Skill、agent 默认提示、插件／旧 overlay 元数据、统一契约参考和生产 MCP 入口。运行前先 `git apply --check docs/rich-document-v1-production-migration/production.patch`。批准后才应用、运行完整验证、打包生产插件并部署到既有生产绑定；不能使用隔离站点或占位 hosting 配置替代生产绑定。
