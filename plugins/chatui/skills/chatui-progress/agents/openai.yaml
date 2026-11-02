@@ -1,0 +1,6 @@
+interface:
+  display_name: "ChatUI Progress"
+  short_description: "在统一回答中核对并呈现真实进度、阶段包含关系和时间线"
+  default_prompt: "根据已确认的数量、分母和阶段更新进展，用 render_response 统一说明；未知数据不编造，条件改变使用新快照。"
+policy:
+  allow_implicit_invocation: true

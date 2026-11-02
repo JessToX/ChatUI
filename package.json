@@ -1,0 +1,14 @@
+{
+  "name": "chatui-component-tests",
+  "private": true,
+  "description": "Development-only DOM behavior checks for bundled ChatUI components.",
+  "scripts": {
+    "test:components": "node --test tests/test_*.mjs"
+  },
+  "devDependencies": {
+    "jsdom": "30.1.1"
+  },
+  "engines": {
+    "node": "^24.20.0"
+  }
+}

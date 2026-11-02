@@ -1,0 +1,1388 @@
+{
+  "status": "SYNTHETIC_RUNTIME_PREVIEW",
+  "cases": [
+    {
+      "title": "几何与面积",
+      "prompt": "一个梯形上底 3 cm、下底 7 cm、高 4 cm。解释面积为什么这样算，让我改变高度，图上的标注与算式一起变。",
+      "provenance": "POST_FREEZE_AUTHORED_EXAMPLE_NOT_NL_HOST_ACCEPTANCE",
+      "result": {
+        "structuredContent": {
+          "schemaVersion": 1,
+          "contentId": "generated-view-post-freeze-0",
+          "facts": {},
+          "blocks": [
+            {
+              "kind": "scene",
+              "id": "trapezoid",
+              "description": "将两个全等梯形拼接，可得到底为两底之和、高相同的平行四边形。一个梯形占其面积的一半。这里只探索高度，题设两底保持不变。",
+              "givens": {
+                "upper": 3,
+                "lower": 7
+              },
+              "state": {
+                "height": {
+                  "type": "number",
+                  "value": 4,
+                  "min": 1,
+                  "max": 6,
+                  "step": 0.1
+                }
+              },
+              "derived": {
+                "area": {
+                  "type": "number",
+                  "expr": {
+                    "op": "div",
+                    "args": [
+                      {
+                        "op": "mul",
+                        "args": [
+                          {
+                            "op": "add",
+                            "args": [
+                              {
+                                "ref": "upper"
+                              },
+                              {
+                                "ref": "lower"
+                              }
+                            ]
+                          },
+                          {
+                            "ref": "height"
+                          }
+                        ]
+                      },
+                      2
+                    ]
+                  }
+                },
+                "top": {
+                  "type": "number",
+                  "expr": {
+                    "op": "sub",
+                    "args": [
+                      240,
+                      {
+                        "op": "mul",
+                        "args": [
+                          {
+                            "ref": "height"
+                          },
+                          30
+                        ]
+                      }
+                    ]
+                  }
+                }
+              },
+              "root": {
+                "kind": "layout",
+                "id": "geo-layout",
+                "direction": "row",
+                "children": [
+                  {
+                    "kind": "drawing",
+                    "id": "geo-picture",
+                    "description": "平行的两底分别为 3 cm 与 7 cm，竖向虚线表示高度。图中高度随参数变化。",
+                    "viewBox": {
+                      "width": 480,
+                      "height": 300
+                    },
+                    "marks": [
+                      {
+                        "kind": "path",
+                        "id": "outline",
+                        "tone": "blue",
+                        "fill": "soft",
+                        "commands": [
+                          {
+                            "op": "M",
+                            "x": 80,
+                            "y": 240
+                          },
+                          {
+                            "op": "L",
+                            "x": 150,
+                            "y": {
+                              "ref": "top"
+                            }
+                          },
+                          {
+                            "op": "L",
+                            "x": 240,
+                            "y": {
+                              "ref": "top"
+                            }
+                          },
+                          {
+                            "op": "L",
+                            "x": 290,
+                            "y": 240
+                          },
+                          {
+                            "op": "Z"
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "line",
+                        "id": "altitude",
+                        "tone": "orange",
+                        "dashed": true,
+                        "x1": 150,
+                        "y1": 240,
+                        "x2": 150,
+                        "y2": {
+                          "ref": "top"
+                        }
+                      },
+                      {
+                        "kind": "text",
+                        "id": "upper-label",
+                        "x": 195,
+                        "y": {
+                          "op": "sub",
+                          "args": [
+                            {
+                              "ref": "top"
+                            },
+                            12
+                          ]
+                        },
+                        "parts": [
+                          {
+                            "ref": "upper"
+                          },
+                          " cm"
+                        ],
+                        "anchor": "middle"
+                      },
+                      {
+                        "kind": "text",
+                        "id": "lower-label",
+                        "x": 185,
+                        "y": 268,
+                        "parts": [
+                          {
+                            "ref": "lower"
+                          },
+                          " cm"
+                        ],
+                        "anchor": "middle"
+                      },
+                      {
+                        "kind": "text",
+                        "id": "height-label",
+                        "x": 315,
+                        "y": 160,
+                        "parts": [
+                          "h = ",
+                          {
+                            "ref": "height"
+                          },
+                          " cm"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "layout",
+                    "id": "geo-details",
+                    "direction": "column",
+                    "children": [
+                      {
+                        "kind": "text",
+                        "id": "area-reading",
+                        "parts": [
+                          "面积 ",
+                          {
+                            "ref": "area"
+                          },
+                          " cm²"
+                        ],
+                        "style": "metric"
+                      },
+                      {
+                        "kind": "formula",
+                        "id": "area-equation",
+                        "parts": [
+                          "A = (",
+                          {
+                            "ref": "upper"
+                          },
+                          " + ",
+                          {
+                            "ref": "lower"
+                          },
+                          ") × ",
+                          {
+                            "ref": "height"
+                          },
+                          " ÷ 2 = ",
+                          {
+                            "ref": "area"
+                          },
+                          " cm²"
+                        ]
+                      },
+                      {
+                        "kind": "control",
+                        "id": "height-slider",
+                        "control": "range",
+                        "state": "height",
+                        "label": "探索高度（cm）"
+                      },
+                      {
+                        "kind": "control",
+                        "id": "height-input",
+                        "control": "number",
+                        "state": "height",
+                        "label": "精确高度（1–6 cm）"
+                      },
+                      {
+                        "kind": "button",
+                        "id": "geo-reset",
+                        "label": "恢复初始值",
+                        "action": {
+                          "type": "reset"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "viewVersion": 1
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "将两个全等梯形拼接，可得到底为两底之和、高相同的平行四边形。一个梯形占其面积的一半。这里只探索高度，题设两底保持不变。\nupper = 3\nlower = 7\n平行的两底分别为 3 cm 与 7 cm，竖向虚线表示高度。图中高度随参数变化。\n3 cm\n7 cm\nh = 4 cm\n面积 20 cm²\nA = (3 + 7) × 4 ÷ 2 = 20 cm²\n探索高度（cm）：4\n精确高度（1–6 cm）：4\n以上为初始视图快照；控件只改变当前视图内的探索值，重挂载恢复初始值。"
+          }
+        ]
+      }
+    },
+    {
+      "title": "因果与反事实",
+      "prompt": "冷饮杯外壁的水从哪里来？用因果关系解释，再让我比较杯壁低于露点和不低于露点的情形，不要编造湿度或温度。",
+      "provenance": "POST_FREEZE_AUTHORED_EXAMPLE_NOT_NL_HOST_ACCEPTANCE",
+      "result": {
+        "structuredContent": {
+          "schemaVersion": 1,
+          "contentId": "generated-view-post-freeze-1",
+          "facts": {},
+          "blocks": [
+            {
+              "kind": "scene",
+              "id": "condensation",
+              "description": "水来自杯外空气中的水蒸气。杯壁温度低于邻近空气露点时，水蒸气可在表面凝结；这不是水穿过杯壁。对比只改变露点条件，不假定具体温湿度。",
+              "givens": {
+                "source": "空气中的水蒸气"
+              },
+              "state": {
+                "belowDewPoint": {
+                  "type": "boolean",
+                  "value": true
+                }
+              },
+              "derived": {
+                "outcome": {
+                  "type": "string",
+                  "expr": {
+                    "op": "if",
+                    "args": [
+                      {
+                        "ref": "belowDewPoint"
+                      },
+                      "表面发生凝结",
+                      "不满足此凝结条件"
+                    ]
+                  }
+                }
+              },
+              "root": {
+                "kind": "layout",
+                "id": "cause-layout",
+                "direction": "column",
+                "children": [
+                  {
+                    "kind": "drawing",
+                    "id": "cause-picture",
+                    "description": "空气水蒸气经过杯壁的温度条件，决定是否满足表面凝结条件。",
+                    "viewBox": {
+                      "width": 600,
+                      "height": 240
+                    },
+                    "marks": [
+                      {
+                        "kind": "rect",
+                        "id": "vapour-box",
+                        "x": 12,
+                        "y": 60,
+                        "width": 170,
+                        "height": 100,
+                        "tone": "blue",
+                        "fill": "soft"
+                      },
+                      {
+                        "kind": "text",
+                        "id": "vapour-label",
+                        "x": 97,
+                        "y": 105,
+                        "parts": [
+                          "空气中的"
+                        ],
+                        "anchor": "middle"
+                      },
+                      {
+                        "kind": "text",
+                        "id": "vapour-label2",
+                        "x": 97,
+                        "y": 135,
+                        "parts": [
+                          "水蒸气"
+                        ],
+                        "anchor": "middle"
+                      },
+                      {
+                        "kind": "arrow",
+                        "id": "first-arrow",
+                        "x1": 187,
+                        "y1": 110,
+                        "x2": 226,
+                        "y2": 110,
+                        "tone": "neutral"
+                      },
+                      {
+                        "kind": "rect",
+                        "id": "condition-box",
+                        "x": 235,
+                        "y": 60,
+                        "width": 140,
+                        "height": 100,
+                        "tone": "orange",
+                        "fill": "soft"
+                      },
+                      {
+                        "kind": "text",
+                        "id": "condition-label",
+                        "x": 305,
+                        "y": 103,
+                        "parts": [
+                          "杯壁温度"
+                        ],
+                        "anchor": "middle"
+                      },
+                      {
+                        "kind": "text",
+                        "id": "condition-label2",
+                        "x": 305,
+                        "y": 132,
+                        "parts": [
+                          "与露点比较"
+                        ],
+                        "anchor": "middle"
+                      },
+                      {
+                        "kind": "arrow",
+                        "id": "second-arrow",
+                        "x1": 380,
+                        "y1": 110,
+                        "x2": 418,
+                        "y2": 110
+                      },
+                      {
+                        "kind": "rect",
+                        "id": "result-box",
+                        "x": 426,
+                        "y": 60,
+                        "width": 160,
+                        "height": 100,
+                        "tone": "green",
+                        "fill": "soft"
+                      },
+                      {
+                        "kind": "text",
+                        "id": "result-label",
+                        "x": 506,
+                        "y": 105,
+                        "parts": [
+                          "表面凝结"
+                        ],
+                        "anchor": "middle"
+                      },
+                      {
+                        "kind": "text",
+                        "id": "result-label2",
+                        "x": 506,
+                        "y": 135,
+                        "parts": [
+                          "条件是否成立"
+                        ],
+                        "anchor": "middle"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "layout",
+                    "id": "cause-controls",
+                    "direction": "row",
+                    "children": [
+                      {
+                        "kind": "control",
+                        "id": "dew-toggle",
+                        "control": "toggle",
+                        "state": "belowDewPoint",
+                        "label": "杯壁温度低于露点"
+                      },
+                      {
+                        "kind": "text",
+                        "id": "cause-outcome",
+                        "parts": [
+                          {
+                            "ref": "outcome"
+                          }
+                        ],
+                        "style": "metric"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "text",
+                    "id": "cause-note",
+                    "parts": [
+                      "这条因果链的水分来源：",
+                      {
+                        "ref": "source"
+                      },
+                      "。关闭条件可比较反事实，但并不表示杯壁在任何环境下都不会有水。"
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "viewVersion": 1
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "水来自杯外空气中的水蒸气。杯壁温度低于邻近空气露点时，水蒸气可在表面凝结；这不是水穿过杯壁。对比只改变露点条件，不假定具体温湿度。\nsource = 空气中的水蒸气\n空气水蒸气经过杯壁的温度条件，决定是否满足表面凝结条件。\n空气中的\n水蒸气\n杯壁温度\n与露点比较\n表面凝结\n条件是否成立\n杯壁温度低于露点：true\n表面发生凝结\n这条因果链的水分来源：空气中的水蒸气。关闭条件可比较反事实，但并不表示杯壁在任何环境下都不会有水。\n以上为初始视图快照；控件只改变当前视图内的探索值，重挂载恢复初始值。"
+          }
+        ]
+      }
+    },
+    {
+      "title": "论证结构",
+      "prompt": "检查“所有自动化都省时间；这项操作是自动化；所以这项操作省时间”的推理。保留第二个前提，再比较把“所有”改成“有些”会怎样。",
+      "provenance": "POST_FREEZE_AUTHORED_EXAMPLE_NOT_NL_HOST_ACCEPTANCE",
+      "result": {
+        "structuredContent": {
+          "schemaVersion": 1,
+          "contentId": "generated-view-post-freeze-2",
+          "facts": {},
+          "blocks": [
+            {
+              "kind": "scene",
+              "id": "argument",
+              "description": "检验的是结论能否从给定前提推出，不替前提的真实性背书。第二个前提在两种版本中保持相同。",
+              "givens": {
+                "member": "这项操作是自动化"
+              },
+              "state": {
+                "quantifier": {
+                  "type": "string",
+                  "value": "所有",
+                  "options": [
+                    "所有",
+                    "有些"
+                  ]
+                }
+              },
+              "derived": {
+                "first": {
+                  "type": "string",
+                  "expr": {
+                    "op": "if",
+                    "args": [
+                      {
+                        "op": "eq",
+                        "args": [
+                          {
+                            "ref": "quantifier"
+                          },
+                          "所有"
+                        ]
+                      },
+                      "所有自动化都省时间",
+                      "有些自动化省时间"
+                    ]
+                  }
+                },
+                "judgment": {
+                  "type": "string",
+                  "expr": {
+                    "op": "if",
+                    "args": [
+                      {
+                        "op": "eq",
+                        "args": [
+                          {
+                            "ref": "quantifier"
+                          },
+                          "所有"
+                        ]
+                      },
+                      "形式上有效：个体属于全称前提覆盖的范围。",
+                      "结论推不出：这项操作未必属于省时间的那部分。"
+                    ]
+                  }
+                }
+              },
+              "root": {
+                "kind": "layout",
+                "id": "argument-layout",
+                "direction": "column",
+                "children": [
+                  {
+                    "kind": "layout",
+                    "id": "premises",
+                    "direction": "grid",
+                    "children": [
+                      {
+                        "kind": "layout",
+                        "id": "premise-one",
+                        "direction": "column",
+                        "children": [
+                          {
+                            "kind": "text",
+                            "id": "p1-heading",
+                            "parts": [
+                              "前提一"
+                            ],
+                            "style": "heading"
+                          },
+                          {
+                            "kind": "text",
+                            "id": "p1",
+                            "parts": [
+                              {
+                                "ref": "first"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "layout",
+                        "id": "premise-two",
+                        "direction": "column",
+                        "children": [
+                          {
+                            "kind": "text",
+                            "id": "p2-heading",
+                            "parts": [
+                              "固定前提二"
+                            ],
+                            "style": "heading"
+                          },
+                          {
+                            "kind": "text",
+                            "id": "p2",
+                            "parts": [
+                              {
+                                "ref": "member"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "columns": 2
+                  },
+                  {
+                    "kind": "drawing",
+                    "id": "inference-picture",
+                    "description": "两个前提共同指向待检验的结论；箭头表示推理主张，不表示结论必然成立。",
+                    "viewBox": {
+                      "width": 540,
+                      "height": 180
+                    },
+                    "marks": [
+                      {
+                        "kind": "text",
+                        "id": "p1-symbol",
+                        "x": 100,
+                        "y": 40,
+                        "parts": [
+                          "前提一"
+                        ],
+                        "anchor": "middle"
+                      },
+                      {
+                        "kind": "text",
+                        "id": "p2-symbol",
+                        "x": 440,
+                        "y": 40,
+                        "parts": [
+                          "前提二"
+                        ],
+                        "anchor": "middle"
+                      },
+                      {
+                        "kind": "arrow",
+                        "id": "p1-edge",
+                        "x1": 125,
+                        "y1": 55,
+                        "x2": 245,
+                        "y2": 100,
+                        "tone": "blue"
+                      },
+                      {
+                        "kind": "arrow",
+                        "id": "p2-edge",
+                        "x1": 415,
+                        "y1": 55,
+                        "x2": 295,
+                        "y2": 100,
+                        "tone": "blue"
+                      },
+                      {
+                        "kind": "text",
+                        "id": "conclusion",
+                        "x": 270,
+                        "y": 140,
+                        "parts": [
+                          "这项操作省时间"
+                        ],
+                        "anchor": "middle"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "control",
+                    "id": "quantifier-select",
+                    "control": "select",
+                    "state": "quantifier",
+                    "label": "比较量词"
+                  },
+                  {
+                    "kind": "text",
+                    "id": "judgment",
+                    "parts": [
+                      {
+                        "ref": "judgment"
+                      }
+                    ],
+                    "style": "metric"
+                  },
+                  {
+                    "kind": "text",
+                    "id": "counterexample",
+                    "parts": [
+                      "反例检查：若有些自动化省时间，但这项自动化耗时更多，“有些”前提与个体前提都成立，而结论仍可为假。"
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "viewVersion": 1
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "检验的是结论能否从给定前提推出，不替前提的真实性背书。第二个前提在两种版本中保持相同。\nmember = 这项操作是自动化\n前提一\n所有自动化都省时间\n固定前提二\n这项操作是自动化\n两个前提共同指向待检验的结论；箭头表示推理主张，不表示结论必然成立。\n前提一\n前提二\n这项操作省时间\n比较量词：所有\n形式上有效：个体属于全称前提覆盖的范围。\n反例检查：若有些自动化省时间，但这项自动化耗时更多，“有些”前提与个体前提都成立，而结论仍可为假。\n以上为初始视图快照；控件只改变当前视图内的探索值，重挂载恢复初始值。"
+          }
+        ]
+      }
+    },
+    {
+      "title": "参数与变化",
+      "prompt": "假设水箱起初有 10 L 水，每分钟流入 3 L、流出 1 L，12 分钟内不溢出。让我探索任意时刻的水量，图、读数与关系式保持一致。",
+      "provenance": "POST_FREEZE_AUTHORED_EXAMPLE_NOT_NL_HOST_ACCEPTANCE",
+      "result": {
+        "structuredContent": {
+          "schemaVersion": 1,
+          "contentId": "generated-view-post-freeze-3",
+          "facts": {},
+          "blocks": [
+            {
+              "kind": "scene",
+              "id": "tank",
+              "description": "恒定净流入使水量随时间线性增加。这是已给条件下的计算模型，未包含水箱容量、流速变化或溢出。",
+              "givens": {
+                "initial": 10,
+                "inflow": 3,
+                "outflow": 1
+              },
+              "state": {
+                "time": {
+                  "type": "number",
+                  "value": 0,
+                  "min": 0,
+                  "max": 12,
+                  "step": 0.1
+                }
+              },
+              "derived": {
+                "net": {
+                  "type": "number",
+                  "expr": {
+                    "op": "sub",
+                    "args": [
+                      {
+                        "ref": "inflow"
+                      },
+                      {
+                        "ref": "outflow"
+                      }
+                    ]
+                  }
+                },
+                "volume": {
+                  "type": "number",
+                  "expr": {
+                    "op": "add",
+                    "args": [
+                      {
+                        "ref": "initial"
+                      },
+                      {
+                        "op": "mul",
+                        "args": [
+                          {
+                            "ref": "net"
+                          },
+                          {
+                            "ref": "time"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                "waterHeight": {
+                  "type": "number",
+                  "expr": {
+                    "op": "mul",
+                    "args": [
+                      {
+                        "ref": "volume"
+                      },
+                      5
+                    ]
+                  }
+                },
+                "waterY": {
+                  "type": "number",
+                  "expr": {
+                    "op": "sub",
+                    "args": [
+                      240,
+                      {
+                        "ref": "waterHeight"
+                      }
+                    ]
+                  }
+                }
+              },
+              "root": {
+                "kind": "layout",
+                "id": "tank-layout",
+                "direction": "row",
+                "children": [
+                  {
+                    "kind": "drawing",
+                    "id": "tank-picture",
+                    "description": "水柱高度按当前水量同比例变化；示意框不代表已知水箱容量。",
+                    "viewBox": {
+                      "width": 360,
+                      "height": 300
+                    },
+                    "marks": [
+                      {
+                        "kind": "rect",
+                        "id": "tank-outline",
+                        "x": 80,
+                        "y": 45,
+                        "width": 130,
+                        "height": 195,
+                        "tone": "neutral"
+                      },
+                      {
+                        "kind": "rect",
+                        "id": "water",
+                        "x": 82,
+                        "y": {
+                          "ref": "waterY"
+                        },
+                        "width": 126,
+                        "height": {
+                          "ref": "waterHeight"
+                        },
+                        "tone": "blue",
+                        "fill": "soft"
+                      },
+                      {
+                        "kind": "text",
+                        "id": "tank-volume",
+                        "x": 145,
+                        "y": 274,
+                        "parts": [
+                          {
+                            "ref": "volume"
+                          },
+                          " L"
+                        ],
+                        "anchor": "middle"
+                      },
+                      {
+                        "kind": "text",
+                        "id": "tank-time",
+                        "x": 250,
+                        "y": 95,
+                        "parts": [
+                          "t = ",
+                          {
+                            "ref": "time"
+                          },
+                          " min"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "layout",
+                    "id": "tank-details",
+                    "direction": "column",
+                    "children": [
+                      {
+                        "kind": "text",
+                        "id": "tank-reading",
+                        "parts": [
+                          {
+                            "ref": "time"
+                          },
+                          " 分钟：",
+                          {
+                            "ref": "volume"
+                          },
+                          " L"
+                        ],
+                        "style": "metric"
+                      },
+                      {
+                        "kind": "formula",
+                        "id": "tank-equation",
+                        "parts": [
+                          "V(t) = ",
+                          {
+                            "ref": "initial"
+                          },
+                          " + (",
+                          {
+                            "ref": "inflow"
+                          },
+                          " − ",
+                          {
+                            "ref": "outflow"
+                          },
+                          ") × ",
+                          {
+                            "ref": "time"
+                          },
+                          " = ",
+                          {
+                            "ref": "volume"
+                          },
+                          " L"
+                        ]
+                      },
+                      {
+                        "kind": "text",
+                        "id": "net-reading",
+                        "parts": [
+                          "净流入 ",
+                          {
+                            "ref": "net"
+                          },
+                          " L/min；初始水量 ",
+                          {
+                            "ref": "initial"
+                          },
+                          " L。"
+                        ]
+                      },
+                      {
+                        "kind": "control",
+                        "id": "time-slider",
+                        "control": "range",
+                        "state": "time",
+                        "label": "探索时间（min）"
+                      },
+                      {
+                        "kind": "control",
+                        "id": "time-number",
+                        "control": "number",
+                        "state": "time",
+                        "label": "精确时间（0–12 min）"
+                      },
+                      {
+                        "kind": "button",
+                        "id": "tank-reset",
+                        "label": "恢复初始值",
+                        "action": {
+                          "type": "reset"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "viewVersion": 1
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "恒定净流入使水量随时间线性增加。这是已给条件下的计算模型，未包含水箱容量、流速变化或溢出。\ninitial = 10\ninflow = 3\noutflow = 1\n水柱高度按当前水量同比例变化；示意框不代表已知水箱容量。\n10 L\nt = 0 min\n0 分钟：10 L\nV(t) = 10 + (3 − 1) × 0 = 10 L\n净流入 2 L/min；初始水量 10 L。\n探索时间（min）：0\n精确时间（0–12 min）：0\n以上为初始视图快照；控件只改变当前视图内的探索值，重挂载恢复初始值。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "vertical",
+      "title": "连续讲解与拖动",
+      "prompt": "底边为 8 厘米的三角形，面积怎么随高度变化？让我拖动顶点观察。",
+      "nativeText": "三角形面积 S = bh/2。这里底边固定为 8 cm，所以 S = 4h；高度每增加 1 cm，面积增加 4 cm²。第一张图的初始高度为 3 cm，面积为 12 cm²。\n\n高度指顶点到底边所在直线的垂直距离，不是斜边长度。把两块全等三角形拼成平行四边形，就得到面积 bh，因此一块占一半。下方的图只辅助观察；即使交互不可用，这段推导仍完整。第二张图是独立的比较视图。",
+      "whyPrompt": "为什么公式里要除以二？",
+      "whyText": "这是面积公式的知识点：两块全等三角形可以拼成底为 b、高为 h 的平行四边形，其面积为 bh；每块占一半。问题指向公式原理，不应自动改答成最后一次调参的原因。",
+      "currentPrompt": "按我刚才调整的条件重新计算，并与初始情况比较。",
+      "result": {
+        "structuredContent": {
+          "schemaVersion": 1,
+          "contentId": "vertical-original",
+          "facts": {
+            "base": {
+              "value": 8,
+              "unit": "cm"
+            }
+          },
+          "blocks": [
+            {
+              "kind": "scene",
+              "id": "first",
+              "title": "第一张图",
+              "description": "底边固定，沿竖直方向拖动顶点。高度是到底边的垂直距离。",
+              "givens": {
+                "base": 8
+              },
+              "state": {
+                "height": {
+                  "type": "number",
+                  "value": 3,
+                  "min": 0.5,
+                  "max": 7,
+                  "step": 0.1,
+                  "label": "高度",
+                  "unit": "cm"
+                },
+                "showGuide": {
+                  "type": "boolean",
+                  "value": true,
+                  "role": "presentation",
+                  "label": "显示辅助线"
+                }
+              },
+              "derived": {
+                "vertexY": {
+                  "type": "number",
+                  "expr": {
+                    "op": "sub",
+                    "args": [
+                      260,
+                      {
+                        "op": "mul",
+                        "args": [
+                          30,
+                          {
+                            "ref": "height"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                "area": {
+                  "type": "number",
+                  "expr": {
+                    "op": "div",
+                    "args": [
+                      {
+                        "op": "mul",
+                        "args": [
+                          {
+                            "ref": "base"
+                          },
+                          {
+                            "ref": "height"
+                          }
+                        ]
+                      },
+                      2
+                    ]
+                  }
+                }
+              },
+              "root": {
+                "kind": "layout",
+                "id": "layout",
+                "direction": "column",
+                "children": [
+                  {
+                    "kind": "drawing",
+                    "id": "figure",
+                    "description": "同一底边上，高度控制顶点位置与面积。",
+                    "viewBox": {
+                      "width": 360,
+                      "height": 300
+                    },
+                    "marks": [
+                      {
+                        "kind": "path",
+                        "id": "triangle",
+                        "tone": "blue",
+                        "fill": "soft",
+                        "commands": [
+                          {
+                            "op": "M",
+                            "x": 40,
+                            "y": 260
+                          },
+                          {
+                            "op": "L",
+                            "x": 280,
+                            "y": 260
+                          },
+                          {
+                            "op": "L",
+                            "x": 160,
+                            "y": {
+                              "ref": "vertexY"
+                            }
+                          },
+                          {
+                            "op": "Z"
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "line",
+                        "id": "height-guide",
+                        "x1": 160,
+                        "y1": 260,
+                        "x2": 160,
+                        "y2": {
+                          "ref": "vertexY"
+                        },
+                        "dashed": true
+                      },
+                      {
+                        "kind": "circle",
+                        "id": "vertex",
+                        "cx": 160,
+                        "cy": {
+                          "ref": "vertexY"
+                        },
+                        "r": 7,
+                        "tone": "blue",
+                        "fill": "solid",
+                        "drag": {
+                          "state": "height",
+                          "axis": "y",
+                          "origin": 260,
+                          "scale": -30,
+                          "label": "调整顶点高度"
+                        }
+                      },
+                      {
+                        "kind": "text",
+                        "id": "base-label",
+                        "x": 160,
+                        "y": 285,
+                        "anchor": "middle",
+                        "parts": [
+                          "底边 ",
+                          {
+                            "ref": "base"
+                          },
+                          " cm"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "formula",
+                    "id": "area-reading",
+                    "parts": [
+                      "S = ½ × ",
+                      {
+                        "ref": "base"
+                      },
+                      " × ",
+                      {
+                        "ref": "height",
+                        "precision": 2
+                      },
+                      " = ",
+                      {
+                        "ref": "area",
+                        "precision": 2
+                      },
+                      " cm²"
+                    ]
+                  },
+                  {
+                    "kind": "control",
+                    "id": "height-number",
+                    "control": "number",
+                    "state": "height",
+                    "label": "高度（cm）"
+                  },
+                  {
+                    "kind": "control",
+                    "id": "guide-toggle",
+                    "control": "toggle",
+                    "state": "showGuide",
+                    "label": "显示辅助说明"
+                  },
+                  {
+                    "kind": "text",
+                    "id": "guide-note",
+                    "when": {
+                      "ref": "showGuide"
+                    },
+                    "parts": [
+                      "图内探索不改写原始讲解。"
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "kind": "scene",
+              "id": "second",
+              "title": "第二张独立图",
+              "description": "底边固定，沿竖直方向拖动顶点。高度是到底边的垂直距离。",
+              "givens": {
+                "base": 8
+              },
+              "state": {
+                "height": {
+                  "type": "number",
+                  "value": 5,
+                  "min": 0.5,
+                  "max": 7,
+                  "step": 0.1,
+                  "label": "高度",
+                  "unit": "cm"
+                },
+                "showGuide": {
+                  "type": "boolean",
+                  "value": true,
+                  "role": "presentation",
+                  "label": "显示辅助线"
+                }
+              },
+              "derived": {
+                "vertexY": {
+                  "type": "number",
+                  "expr": {
+                    "op": "sub",
+                    "args": [
+                      260,
+                      {
+                        "op": "mul",
+                        "args": [
+                          30,
+                          {
+                            "ref": "height"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                "area": {
+                  "type": "number",
+                  "expr": {
+                    "op": "div",
+                    "args": [
+                      {
+                        "op": "mul",
+                        "args": [
+                          {
+                            "ref": "base"
+                          },
+                          {
+                            "ref": "height"
+                          }
+                        ]
+                      },
+                      2
+                    ]
+                  }
+                }
+              },
+              "root": {
+                "kind": "layout",
+                "id": "layout",
+                "direction": "column",
+                "children": [
+                  {
+                    "kind": "drawing",
+                    "id": "figure",
+                    "description": "同一底边上，高度控制顶点位置与面积。",
+                    "viewBox": {
+                      "width": 360,
+                      "height": 300
+                    },
+                    "marks": [
+                      {
+                        "kind": "path",
+                        "id": "triangle",
+                        "tone": "blue",
+                        "fill": "soft",
+                        "commands": [
+                          {
+                            "op": "M",
+                            "x": 40,
+                            "y": 260
+                          },
+                          {
+                            "op": "L",
+                            "x": 280,
+                            "y": 260
+                          },
+                          {
+                            "op": "L",
+                            "x": 160,
+                            "y": {
+                              "ref": "vertexY"
+                            }
+                          },
+                          {
+                            "op": "Z"
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "line",
+                        "id": "height-guide",
+                        "x1": 160,
+                        "y1": 260,
+                        "x2": 160,
+                        "y2": {
+                          "ref": "vertexY"
+                        },
+                        "dashed": true
+                      },
+                      {
+                        "kind": "circle",
+                        "id": "vertex",
+                        "cx": 160,
+                        "cy": {
+                          "ref": "vertexY"
+                        },
+                        "r": 7,
+                        "tone": "blue",
+                        "fill": "solid",
+                        "drag": {
+                          "state": "height",
+                          "axis": "y",
+                          "origin": 260,
+                          "scale": -30,
+                          "label": "调整顶点高度"
+                        }
+                      },
+                      {
+                        "kind": "text",
+                        "id": "base-label",
+                        "x": 160,
+                        "y": 285,
+                        "anchor": "middle",
+                        "parts": [
+                          "底边 ",
+                          {
+                            "ref": "base"
+                          },
+                          " cm"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "formula",
+                    "id": "area-reading",
+                    "parts": [
+                      "S = ½ × ",
+                      {
+                        "ref": "base"
+                      },
+                      " × ",
+                      {
+                        "ref": "height",
+                        "precision": 2
+                      },
+                      " = ",
+                      {
+                        "ref": "area",
+                        "precision": 2
+                      },
+                      " cm²"
+                    ]
+                  },
+                  {
+                    "kind": "control",
+                    "id": "height-number",
+                    "control": "number",
+                    "state": "height",
+                    "label": "高度（cm）"
+                  },
+                  {
+                    "kind": "control",
+                    "id": "guide-toggle",
+                    "control": "toggle",
+                    "state": "showGuide",
+                    "label": "显示辅助说明"
+                  },
+                  {
+                    "kind": "text",
+                    "id": "guide-note",
+                    "when": {
+                      "ref": "showGuide"
+                    },
+                    "parts": [
+                      "图内探索不改写原始讲解。"
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "viewVersion": 1
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "## 第一张图\n\n底边固定，沿竖直方向拖动顶点。高度是到底边的垂直距离。\nbase = 8\n同一底边上，高度控制顶点位置与面积。\n底边 8 cm\nS = ½ × 8 × 3 = 12 cm²\n高度（cm）：3\n显示辅助说明：true\n图内探索不改写原始讲解。\n以上为初始视图快照；控件只改变当前视图内的探索值，重挂载恢复初始值。\n\n## 第二张独立图\n\n底边固定，沿竖直方向拖动顶点。高度是到底边的垂直距离。\nbase = 8\n同一底边上，高度控制顶点位置与面积。\n底边 8 cm\nS = ½ × 8 × 5 = 20 cm²\n高度（cm）：5\n显示辅助说明：true\n图内探索不改写原始讲解。\n以上为初始视图快照；控件只改变当前视图内的探索值，重挂载恢复初始值。"
+          }
+        ]
+      }
+    }
+  ]
+}

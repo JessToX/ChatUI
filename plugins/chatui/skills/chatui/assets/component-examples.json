@@ -1,0 +1,687 @@
+{
+  "progress": {
+    "schemaVersion": 1,
+    "contentId": "example-material-coverage-v1",
+    "type": "progress",
+    "title": "资料整理进度",
+    "data": {
+      "label": "已收到的材料",
+      "value": 6,
+      "total": 10,
+      "unit": "份",
+      "note": "示例：表示材料覆盖，不代表核对或定稿完成。",
+      "details": [
+        "前六份材料已收到",
+        "其余四份仍待补充"
+      ]
+    }
+  },
+  "timeline": {
+    "schemaVersion": 1,
+    "contentId": "example-project-timeline-v1",
+    "type": "timeline",
+    "title": "项目时间线",
+    "data": {
+      "note": "示例数据；未知的时间和状态保持未知。",
+      "items": [
+        {
+          "date": "第 1 周",
+          "title": "收集初稿",
+          "detail": "已收到第一批资料。",
+          "status": "已确认",
+          "tone": "green"
+        },
+        {
+          "date": "第 2 周",
+          "title": "核对引用",
+          "detail": "部分引用仍需原始来源支持。",
+          "status": "待核实",
+          "tone": "orange"
+        },
+        {
+          "date": "时间待定",
+          "title": "形成定稿",
+          "detail": "完成核对后再确定时间。",
+          "status": "计划",
+          "tone": "blue"
+        }
+      ]
+    }
+  },
+  "profile": {
+    "schemaVersion": 1,
+    "contentId": "example-writing-profile-v1",
+    "type": "profile",
+    "title": "写作方向",
+    "data": {
+      "eyebrow": "写作风格 · 示例",
+      "name": "克制而有画面感",
+      "subtitle": "用具体动作推进，让情绪留在细节里。",
+      "tags": [
+        "短句",
+        "感官细节",
+        "稳定视角",
+        "有限解释"
+      ],
+      "summary": "这是一种可讨论的写作方向。完整正文仍保持连续段落。"
+    }
+  },
+  "comparison": {
+    "schemaVersion": 1,
+    "contentId": "example-separated-variables-v1",
+    "type": "comparison",
+    "title": "观察等式两边",
+    "data": {
+      "items": [
+        {
+          "label": "左边 · 速度变量",
+          "tone": "blue",
+          "mathLabel": "v的负二次方乘dv",
+          "math": {
+            "tag": "mrow",
+            "children": [
+              {
+                "tag": "msup",
+                "children": [
+                  {
+                    "tag": "mi",
+                    "text": "v"
+                  },
+                  {
+                    "tag": "mrow",
+                    "children": [
+                      {
+                        "tag": "mo",
+                        "text": "−"
+                      },
+                      {
+                        "tag": "mn",
+                        "text": "2"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "mi",
+                "text": "d"
+              },
+              {
+                "tag": "mi",
+                "text": "v"
+              }
+            ]
+          },
+          "detail": "只含速度变量。"
+        },
+        {
+          "label": "右边 · 时间与常数",
+          "tone": "green",
+          "mathLabel": "负k除以m乘dt",
+          "math": {
+            "tag": "mrow",
+            "children": [
+              {
+                "tag": "mo",
+                "text": "−"
+              },
+              {
+                "tag": "mfrac",
+                "children": [
+                  {
+                    "tag": "mi",
+                    "text": "k"
+                  },
+                  {
+                    "tag": "mi",
+                    "text": "m"
+                  }
+                ]
+              },
+              {
+                "tag": "mi",
+                "text": "d"
+              },
+              {
+                "tag": "mi",
+                "text": "t"
+              }
+            ]
+          },
+          "detail": "只含时间与常数。"
+        }
+      ]
+    }
+  },
+  "steps": {
+    "schemaVersion": 1,
+    "contentId": "example-solving-steps-v1",
+    "type": "steps",
+    "title": "从受力到速度关系",
+    "data": {
+      "note": "示例：可分离变量的一阶微分方程。",
+      "items": [
+        {
+          "title": "建立物理方程",
+          "mathLabel": "合力等于质量乘加速度",
+          "math": {
+            "tag": "mrow",
+            "children": [
+              {
+                "tag": "mo",
+                "text": "∑"
+              },
+              {
+                "tag": "mi",
+                "text": "F"
+              },
+              {
+                "tag": "mo",
+                "text": "="
+              },
+              {
+                "tag": "mi",
+                "text": "m"
+              },
+              {
+                "tag": "mi",
+                "text": "a"
+              }
+            ]
+          }
+        },
+        {
+          "title": "将加速度写成导数",
+          "mathLabel": "a等于dv除以dt",
+          "math": {
+            "tag": "mrow",
+            "children": [
+              {
+                "tag": "mi",
+                "text": "a"
+              },
+              {
+                "tag": "mo",
+                "text": "="
+              },
+              {
+                "tag": "mfrac",
+                "children": [
+                  {
+                    "tag": "mrow",
+                    "children": [
+                      {
+                        "tag": "mi",
+                        "text": "d"
+                      },
+                      {
+                        "tag": "mi",
+                        "text": "v"
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "mrow",
+                    "children": [
+                      {
+                        "tag": "mi",
+                        "text": "d"
+                      },
+                      {
+                        "tag": "mi",
+                        "text": "t"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "title": "分离变量并积分",
+          "detail": "先检查哪些量是常数，再分别对相应变量积分。"
+        },
+        {
+          "title": "代入初始条件",
+          "detail": "求出积分常数，并检查单位与适用范围。"
+        }
+      ]
+    }
+  },
+  "rhythm": {
+    "schemaVersion": 1,
+    "contentId": "example-scene-rhythm-v1",
+    "type": "rhythm",
+    "title": "这一版的叙事节奏",
+    "data": {
+      "items": [
+        {
+          "label": "整理行李",
+          "emphasis": "brief"
+        },
+        {
+          "label": "读到来信",
+          "emphasis": "moderate"
+        },
+        {
+          "label": "走向车站",
+          "emphasis": "brief"
+        },
+        {
+          "label": "在站台相遇",
+          "emphasis": "focus"
+        },
+        {
+          "label": "列车出发",
+          "emphasis": "moderate"
+        }
+      ]
+    }
+  },
+  "quiz": {
+    "schemaVersion": 1,
+    "contentId": "example-velocity-quiz-v1",
+    "type": "quiz",
+    "title": "两道小练习",
+    "data": {
+      "questions": [
+        {
+          "id": "top-point",
+          "prompt": "忽略空气阻力，上抛小球到最高点时，速度和加速度怎样？",
+          "options": [
+            {
+              "id": "a",
+              "label": "速度为零，加速度向下"
+            },
+            {
+              "id": "b",
+              "label": "速度和加速度都为零"
+            },
+            {
+              "id": "c",
+              "label": "速度向上，加速度为零"
+            }
+          ],
+          "correct": "a",
+          "explanation": "最高点的瞬时速度为零，重力仍使速度沿向下方向变化。"
+        },
+        {
+          "id": "signed-area",
+          "prompt": "速度—时间图的有符号面积对应哪个量？",
+          "options": [
+            {
+              "id": "a",
+              "label": "总路程"
+            },
+            {
+              "id": "b",
+              "label": "位移"
+            },
+            {
+              "id": "c",
+              "label": "加速度"
+            }
+          ],
+          "correct": "b",
+          "explanation": "将速度对时间积分得到位移；路程需要对速度的绝对值积分。"
+        }
+      ],
+      "followUpLabel": "按本次结果继续",
+      "followUp": "请根据这次实际测验结果，针对答错的概念继续简短讲解；全对时给一道迁移练习。"
+    }
+  },
+  "geometry": {
+    "schemaVersion": 1,
+    "contentId": "example-inscribed-triangle-v1",
+    "type": "geometry",
+    "title": "圆内等腰三角形",
+    "data": {
+      "radius": 3,
+      "heightRatio": 1.5,
+      "unit": "cm"
+    }
+  },
+  "answer": {
+    "schemaVersion": 1,
+    "contentId": "example-related-rates-answer-v1",
+    "type": "answer",
+    "title": "计算结果",
+    "data": {
+      "label": "核对后的结果",
+      "title": "表面积正在增加",
+      "mathLabel": "dS除以dt等于28π",
+      "math": {
+        "tag": "mrow",
+        "children": [
+          {
+            "tag": "mfrac",
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mi",
+                    "text": "d"
+                  },
+                  {
+                    "tag": "mi",
+                    "text": "S"
+                  }
+                ]
+              },
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mi",
+                    "text": "d"
+                  },
+                  {
+                    "tag": "mi",
+                    "text": "t"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "mo",
+            "text": "="
+          },
+          {
+            "tag": "mn",
+            "text": "28"
+          },
+          {
+            "tag": "mi",
+            "text": "π"
+          }
+        ]
+      },
+      "detail": "教学示例：S = 2πrh，r·dh/dt = 12、h·dr/dt = 2，因此 dS/dt = 28π mm²/s。"
+    }
+  },
+  "line-chart": {
+    "schemaVersion": 1,
+    "contentId": "example-velocity-time-v1",
+    "type": "line-chart",
+    "title": "速度随时间的变化",
+    "data": {
+      "xLabel": "时间 t",
+      "xUnit": "s",
+      "yLabel": "速度 v",
+      "yUnit": "m/s",
+      "seriesLabel": "上抛小球",
+      "tone": "green",
+      "points": [
+        {
+          "x": 0,
+          "y": 20
+        },
+        {
+          "x": 1,
+          "y": 10
+        },
+        {
+          "x": 2,
+          "y": 0
+        },
+        {
+          "x": 3,
+          "y": -10
+        },
+        {
+          "x": 4,
+          "y": -20
+        }
+      ],
+      "note": "教学示例：忽略空气阻力，取向上为正，v = 20 − 10t；负速度表示向下运动。"
+    }
+  },
+  "force-diagram": {
+    "schemaVersion": 1,
+    "contentId": "example-horizontal-force-v1",
+    "type": "force-diagram",
+    "title": "物体的受力",
+    "data": {
+      "body": "水平面上向右滑动的物体",
+      "unit": "N",
+      "axisAngle": 0,
+      "note": "示例条件：2 kg，g = 10 m/s²，无竖直加速度。只将真实外力计入合力。",
+      "forces": [
+        {
+          "id": "pull",
+          "label": "拉力",
+          "fx": 6,
+          "fy": 0,
+          "tone": "blue"
+        },
+        {
+          "id": "friction",
+          "label": "动摩擦力",
+          "fx": -2,
+          "fy": 0,
+          "tone": "orange"
+        },
+        {
+          "id": "normal",
+          "label": "支持力",
+          "fx": 0,
+          "fy": 20,
+          "tone": "green"
+        },
+        {
+          "id": "weight",
+          "label": "重力",
+          "fx": 0,
+          "fy": -20,
+          "tone": "neutral"
+        }
+      ]
+    }
+  },
+  "motion-lab": {
+    "schemaVersion": 1,
+    "contentId": "example-motion-lab-v1",
+    "type": "motion-lab",
+    "title": "速度为什么会变成负数？",
+    "data": {
+      "initialVelocity": 20,
+      "acceleration": -10,
+      "duration": 4,
+      "time": 1
+    }
+  },
+  "tabs": {
+    "schemaVersion": 1,
+    "contentId": "example-tabs-v1",
+    "type": "tabs",
+    "title": "选择观察角度",
+    "data": {
+      "items": [
+        {
+          "id": "intuitive",
+          "label": "直观理解",
+          "title": "方向与快慢分开看",
+          "body": "速度的正负表示运动方向，速度的绝对值表示运动快慢。"
+        },
+        {
+          "id": "equation",
+          "label": "方程理解",
+          "title": "在同一个正方向下比较",
+          "body": "例如取向上为正，竖直上抛可写为 v = v₀ − gt。速度过零后变负，表示物体向下运动。"
+        }
+      ]
+    }
+  },
+  "reveal-steps": {
+    "schemaVersion": 1,
+    "contentId": "example-reveal-steps-v1",
+    "type": "reveal-steps",
+    "title": "分步理解牛顿第二定律",
+    "data": {
+      "items": [
+        {
+          "title": "确定研究对象",
+          "detail": "先选定要分析的物体，只列作用在它上面的真实外力。"
+        },
+        {
+          "title": "选定坐标方向",
+          "detail": "每个力按同一套坐标分解；原力与它的分量不能重复计入。"
+        },
+        {
+          "title": "逐方向列方程",
+          "math": {
+            "tag": "mtext",
+            "text": "ΣFₓ = maₓ"
+          },
+          "mathLabel": "x方向合力等于质量乘以x方向加速度",
+          "detail": "合力决定加速度；合力为零并不意味着物体速度一定为零。"
+        }
+      ]
+    }
+  },
+  "data-table": {
+    "schemaVersion": 1,
+    "contentId": "example-data-table-v1",
+    "type": "data-table",
+    "title": "比较候选资料",
+    "data": {
+      "columns": [
+        {
+          "key": "title",
+          "label": "材料",
+          "type": "text"
+        },
+        {
+          "key": "topic",
+          "label": "主题",
+          "type": "text"
+        },
+        {
+          "key": "year",
+          "label": "年份",
+          "type": "number"
+        }
+      ],
+      "rows": [
+        {
+          "id": "a",
+          "values": {
+            "title": "示例材料甲",
+            "topic": "排水结构",
+            "year": 2020
+          }
+        },
+        {
+          "id": "b",
+          "values": {
+            "title": "示例材料乙",
+            "topic": "雨水调蓄",
+            "year": 2024
+          }
+        },
+        {
+          "id": "c",
+          "values": {
+            "title": "示例材料丙",
+            "topic": "排水结构",
+            "year": 2018
+          }
+        }
+      ],
+      "filterLabel": "筛选示例材料（虚构数据）"
+    }
+  },
+  "media-panel": {
+    "schemaVersion": 1,
+    "contentId": "example-media-panel-v1",
+    "type": "media-panel",
+    "title": "照片与解释",
+    "data": {
+      "items": [
+        {
+          "title": "从太空观察地球",
+          "body": "Apollo 17 拍摄的地球照片。用它观察行星的外观；涉及尺度或力的关系时，仍应另画带标注的示意图。",
+          "alt": "Apollo 17 拍摄的地球全景照片",
+          "caption": "Blue Marble，1972年12月7日。",
+          "imageUrl": "https://svs.gsfc.nasa.gov/vis/a030000/a030600/a030613/blue_marble_apollo_17_19721207_print.jpg",
+          "sourceUrl": "https://svs.gsfc.nasa.gov/30613",
+          "sourceLabel": "NASA：The Blue Marble From Apollo 17",
+          "credit": "NASA Johnson Space Center / Earth Science and Remote Sensing Unit"
+        }
+      ]
+    }
+  },
+  "input-form": {
+    "schemaVersion": 1,
+    "contentId": "example-input-form-v1",
+    "type": "input-form",
+    "title": "实验记录草稿",
+    "data": {
+      "fields": [
+        {
+          "id": "title",
+          "type": "text",
+          "label": "实验名称",
+          "required": true,
+          "maxLength": 80
+        },
+        {
+          "id": "samples",
+          "type": "number",
+          "label": "样本数量",
+          "min": 1,
+          "max": 100,
+          "value": 4
+        },
+        {
+          "id": "method",
+          "type": "select",
+          "label": "观察方法",
+          "required": true,
+          "options": [
+            {
+              "value": "direct",
+              "label": "直接观察"
+            },
+            {
+              "value": "compare",
+              "label": "对比记录"
+            }
+          ]
+        },
+        {
+          "id": "condition",
+          "type": "radio",
+          "label": "条件",
+          "value": "fixed",
+          "options": [
+            {
+              "value": "fixed",
+              "label": "固定题设"
+            },
+            {
+              "value": "trial",
+              "label": "当前实验"
+            }
+          ]
+        },
+        {
+          "id": "checked",
+          "type": "checkbox",
+          "label": "已核对单位",
+          "required": true
+        },
+        {
+          "id": "notes",
+          "type": "textarea",
+          "label": "观察记录",
+          "maxLength": 300
+        }
+      ],
+      "note": "提交在当前界面生成快照。"
+    }
+  }
+}

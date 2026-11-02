@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 1,
+  "contentId": "writing-focus-arrival-v1",
+  "title": "让叙事重点落在真正发生变化的地方",
+  "facts": {
+    "focus": {
+      "value": "装甲车出现",
+      "label": "叙事重点"
+    }
+  },
+  "blocks": [
+    {
+      "id": "writingStart",
+      "kind": "prose",
+      "text": "这一页分析一段虚构的出发场景，不替你把完整小说拆成卡片。先确定这段文字要让读者注意什么，再安排解释、动作与留白。",
+      "eyebrow": "写作分析 · 明确标为建议"
+    },
+    {
+      "id": "voice",
+      "kind": "component",
+      "type": "profile",
+      "title": "这一段的写作方向",
+      "data": {
+        "eyebrow": "NARRATIVE STYLE PROFILE",
+        "name": "克制，但让细节有重量",
+        "subtitle": "Restrained Prose · Concrete Detail",
+        "tags": [
+          "具体动作",
+          "稳定视角",
+          "适度留白",
+          "短句落点"
+        ],
+        "summary": "以下是这一段的编辑建议：当前重点是“{{focus}}”，其余内容为它提供方向和压力。不是对已有作品风格的事实判断。"
+      }
+    },
+    {
+      "id": "optionsIntro",
+      "kind": "prose",
+      "title": "两种方案，改变的是读者先看见什么",
+      "text": "信息优先更利于交代任务；感受优先更利于建立紧张。并不是哪种一定更好，而是要与这一段的目的保持一致。"
+    },
+    {
+      "id": "alternatives",
+      "kind": "component",
+      "type": "comparison",
+      "title": "同一个场景，两种推进方式",
+      "data": {
+        "items": [
+          {
+            "label": "方案 A · 信息优先",
+            "title": "先让读者知道要去哪里",
+            "detail": "把任务、路线与装备交代清楚，再进入出发动作。适合读者需要迅速理解局面的段落。",
+            "tone": "blue"
+          },
+          {
+            "label": "方案 B · 感受优先",
+            "title": "先让读者感到出发的压力",
+            "detail": "从等待、声音或一次停顿切入，信息随行动逐步显露。适合把注意力留在人物身上的段落。",
+            "tone": "green"
+          }
+        ]
+      }
+    },
+    {
+      "id": "rhythmIntro",
+      "kind": "prose",
+      "title": "这一版的叙事节奏",
+      "text": "下面只表示建议的叙事关注度，不是字数、时长或精确配额。段落与节奏应围绕同一个重点组织。"
+    },
+    {
+      "id": "rhythm",
+      "kind": "component",
+      "type": "rhythm",
+      "title": "章节结构示意",
+      "data": {
+        "note": "定性示意：一笔带过 / 适度展开 / 重点描写。",
+        "items": [
+          {
+            "label": "收拾物资",
+            "emphasis": "brief"
+          },
+          {
+            "label": "任务说明",
+            "emphasis": "moderate"
+          },
+          {
+            "label": "离开诊所",
+            "emphasis": "brief"
+          },
+          {
+            "label": "等待",
+            "emphasis": "brief"
+          },
+          {
+            "label": "装甲车出现",
+            "emphasis": "focus"
+          },
+          {
+            "label": "装车出发",
+            "emphasis": "moderate"
+          }
+        ]
+      }
+    },
+    {
+      "id": "continuous",
+      "kind": "prose",
+      "title": "让正文保持连贯",
+      "text": "她把最后一卷绷带塞进侧袋，扣上背包。走廊里的灯灭了一盏，门外仍是灰白的晨雾。\n\n履带的声音先抵达。窗框轻轻震动，水杯里的波纹碰到了杯沿。她抬起头，看见装甲车从雾里露出半边轮廓。\n\n没有人再问出发的时间。她拉紧肩带，跟着前面的人走了出去。"
+    },
+    {
+      "id": "writingClose",
+      "kind": "prose",
+      "title": "需要控制的，不只是长短",
+      "text": "保留一个明确的变化点，让前面的细节为它蓄力。完整创作或翻译要求仍以连续正文为主；这里只用少量视觉帮助你判断结构。"
+    }
+  ]
+}

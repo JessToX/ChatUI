@@ -1,0 +1,38 @@
+{
+  "provenance": "Independent exact derivations in docs/final-edition/phase01.md; never generated from production functions.",
+  "geometry": {
+    "radius": 2, "unit": "cm", "analyticDomain": "0 < h < 2r", "sliderDomain": [0.05, 1.95],
+    "cases": [
+      {"ratio": 1, "height": 2, "base": 4, "area": 4},
+      {"ratio": 1.5, "height": 3, "baseExact": "2sqrt(3)", "base": 3.4641016151377546, "areaExact": "3sqrt(3)", "area": 5.196152422706632}
+    ],
+    "maximumReason": "Equilateral triangle: circumradius r implies side sqrt(3)r, area sqrt(3)/4 times side squared."
+  },
+  "cone": {
+    "radiusM": 3, "heightM": 6, "flowM3ps": 2, "waterHeightM": 2,
+    "waterRadiusM": 1, "volumeExact": "2pi/3 m^3", "volumeM3": 2.0943951023931953,
+    "rateExact": "2/pi m/s", "rateMps": 0.6366197723675814,
+    "radiusRateExact": "1/pi m/s", "radiusRateMps": 0.3183098861837907,
+    "domain": "0 < h < H; singular at h=0; stop this model at full capacity",
+    "oracle": "Volume conservation: instantaneous surface area pi*1^2 m^2, so rate Q/area."
+  },
+  "integral": {
+    "domain": "x in R, dimensionless", "integrand": "2x cos(x^2)", "primitive": "sin(x^2)+C",
+    "derivativeAtOne": 1.0806046117362795,
+    "oracle": "Chain rule: d(sin(x^2)+C)/dx=cos(x^2)*2x; includes x=0, no division by x."
+  },
+  "motion": {
+    "x0M": 0, "initialVelocity": 20, "acceleration": -10, "duration": 2, "unit": "SI",
+    "cases": [{"time": 0, "position": 0, "velocity": 20}, {"time": 1, "position": 15, "velocity": 10}, {"time": 2, "position": 20, "velocity": 0}],
+    "oracle": "Signed trapezoid/triangle area under v(t); explicitly x0=0."
+  },
+  "incline": {
+    "massKg": 2, "gravityMps2": 10, "inclineDeg": 30,
+    "model": "stationary smooth plane, gravity and contact only, no friction or extra forces",
+    "axes": "global +x right, +y up; local +x' uphill at +30 degrees",
+    "normalExact": "10sqrt(3) N", "normalN": 17.32050807568877,
+    "normalVectorN": [-8.660254037844386, 15], "netVectorN": [-8.660254037844386, -5], "netN": 10,
+    "accelerationVectorMps2": [-4.330127018922193, -2.5], "accelerationMps2": 5,
+    "oracle": "Independent projections: N=mg*cos(30), tangential acceleration=-g*sin(30); exact trig constants."
+  }
+}

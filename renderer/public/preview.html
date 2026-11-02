@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="data:,"><title>ChatUI · 统一回答验收</title><link rel="stylesheet" href="/preview.css"></head>
+<body>
+  <header class="preview-header">
+    <div class="preview-brand"><a href="/" aria-label="返回 ChatUI Renderer">ChatUI</a><span>An Intellectual Interface for AI Conversations</span></div>
+    <p class="preview-notice">开发验收宿主：使用真实 iframe 与 MCP Apps 消息，不代表真实 ChatGPT 已验收。</p>
+    <nav id="examples" class="preview-tabs" aria-label="选择参考样例"></nav>
+    <div class="preview-tools">
+      <label>内容宽度 <select id="width"><option value="320">320 px</option><option value="375">375 px</option><option value="390">390 px</option><option value="768">768 px</option><option value="1024">1024 px</option></select></label>
+      <button type="button" id="theme">切换浅色</button><button type="button" id="reload">刷新视图</button><button type="button" id="reset">清除本例交互</button>
+      <a href="?legacy=1">旧接口样例</a><a href="?example=html-velocity">HTML 样例</a><a href="?example=timeline">结构化样例</a>
+      <a href="?phase=2a&amp;example=document-g01">Phase 2A 原型</a>
+    </div>
+  </header>
+  <main>
+    <form id="conditions" class="conditions" aria-label="修改示例条件"></form>
+    <p id="host-status" class="host-status" role="status" aria-live="polite">正在连接预览宿主…</p>
+    <iframe id="explanation" title="ChatUI 统一回答：可操作预览"></iframe>
+    <article id="native-answer" class="native-answer" hidden aria-label="G06 原生 Markdown 对照"><p class="native-label">原生 Markdown 对照</p><pre id="native-text"></pre></article>
+    <details class="host-debug"><summary>查看实际交互回传</summary><p>仅真实控件操作生成记录。此页不向任何聊天发送消息，不调用模型。</p><pre id="interaction-log">尚无操作。</pre></details>
+    <footer>安全语义 HTML · 保留结构化交互 · 完整文本兜底 · Renderer 1.5.0</footer>
+  </main>
+  <script type="module" src="/preview-host.js"></script>
+</body></html>

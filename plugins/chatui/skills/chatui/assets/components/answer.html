@@ -1,0 +1,400 @@
+<!-- Generated from component-kit.html; edit that source and rebuild. -->
+<div id="chatui-component" lang="zh-CN"></div>
+<style>
+  #chatui-component {
+    --cui-fg: var(--foreground, light-dark(#222222, #f2f2f2));
+    --cui-bg: var(--background, light-dark(#ffffff, #181818));
+    --cui-line: color-mix(in srgb, var(--cui-fg) 17%, transparent);
+    --cui-soft: color-mix(in srgb, var(--cui-fg) 7%, transparent);
+    --cui-muted: color-mix(in srgb, var(--cui-fg) 72%, var(--cui-bg));
+    --cui-blue: light-dark(#075fd8, #438fff);
+    --cui-green: light-dark(#087739, #45cb75);
+    --cui-orange: light-dark(#a74905, #ffa344);
+    --cui-red: light-dark(#b52235, #ff8490);
+    --cui-blue-mark: light-dark(#176be5, #287dff);
+    --cui-geometry-mark: light-dark(#2395d3, #299ddd);
+    --cui-green-mark: light-dark(#0b9850, #0cad50);
+    --cui-orange-mark: light-dark(#cc7315, #f6a02b);
+    --cui-structure: light-dark(#7a8792, #92a3b2);
+    color: var(--cui-fg);
+    background: transparent;
+    font-family: inherit;
+    font-size: 16px;
+    line-height: 1.75;
+    width: 100%;
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+  #chatui-component *, #chatui-component *::before, #chatui-component *::after { box-sizing: border-box; }
+  #chatui-component .cui-followup-copy { width:100%; min-height:130px; padding:12px; border:1px solid var(--cui-line); border-radius:10px; color:inherit; background:var(--cui-soft); font:inherit; resize:vertical; }
+  #chatui-component .cui-panel { padding: 20px; border: 1px solid var(--cui-line); border-radius: 18px; background: transparent; min-width: 0; }
+  #chatui-component .cui-stack { display: grid; gap: 20px; }
+  #chatui-component .cui-row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+  #chatui-component .cui-between { justify-content: space-between; }
+  #chatui-component .cui-title { margin: 0; font-size: 1.3em; line-height: 1.4; font-weight: 650; }
+  #chatui-component .cui-hero { margin: 0; font-size: 2.15em; line-height: 1.3; font-weight: 650; letter-spacing: -.02em; }
+  #chatui-component .cui-label { font-size: .88em; color: var(--cui-muted); }
+  #chatui-component .cui-muted { color: var(--cui-muted); }
+  #chatui-component .cui-count { font-size: 3em; line-height: 1.15; font-weight: 650; font-variant-numeric: tabular-nums; letter-spacing: -.025em; }
+  #chatui-component p, #chatui-component ul { margin: 0; }
+  #chatui-component ul { padding-inline-start: 1.35em; }
+  #chatui-component hr { margin: 5px 0; width: 100%; height: 1px; border: 0; background: var(--cui-line); }
+  #chatui-component .cui-badge { display: inline-flex; width: fit-content; max-width: 100%; padding: 3px 10px; border-radius: 99px; font-size: .82em; font-weight: 600; line-height: 1.45; color: var(--cui-tone, var(--cui-blue)); background: color-mix(in srgb, var(--cui-tone, var(--cui-blue)) 14%, transparent); }
+  #chatui-component .cui-track { height: 11px; overflow: hidden; border: 0; border-radius: 99px; background: var(--cui-soft); }
+  #chatui-component .cui-progress .cui-track { height: 16px; }
+  #chatui-component .cui-progress-stage { display: grid; gap: 8px; min-width: 0; }
+  #chatui-component .cui-progress-stage-heading { display: flex; flex-wrap: wrap; gap: 6px 16px; align-items: baseline; justify-content: space-between; min-width: 0; }
+  #chatui-component .cui-progress-stage-label { flex: 1 1 160px; min-width: 0; color: var(--cui-tone); font-weight: 600; }
+  #chatui-component .cui-progress-stage-count { max-width: 100%; font-size: 1.15em; font-weight: 600; font-variant-numeric: tabular-nums; }
+  #chatui-component .cui-progress-primary .cui-progress-stage-heading { flex-direction: column; align-items: flex-start; gap: 10px; }
+  #chatui-component .cui-progress-primary .cui-progress-stage-label { flex: none; color: var(--cui-muted); font-weight: 500; }
+  #chatui-component .cui-progress-primary .cui-progress-stage-count { color: var(--cui-tone); font-size: 3em; line-height: 1.15; letter-spacing: -.025em; }
+  #chatui-component .cui-progress-unit { font-size: .34em; font-weight: 500; letter-spacing: 0; }
+  #chatui-component .cui-profile-eyebrow { letter-spacing: .055em; text-transform: uppercase; }
+  #chatui-component .cui-profile-tags { display: grid; gap: 14px; }
+  #chatui-component .cui-profile-tags-title { margin: 0; font-size: 1em; font-weight: 600; }
+  #chatui-component .cui-fill { height: 100%; border: 0; border-radius: inherit; background: var(--cui-mark, var(--cui-green-mark)); }
+  #chatui-component .cui-rail { display: grid; gap: 0; margin: 0; padding: 0; list-style: none; }
+  #chatui-component .cui-event { position: relative; display: grid; grid-template-columns: 28px minmax(0, 1fr); gap: 12px; padding-bottom: 25px; }
+  #chatui-component .cui-event:not(:last-child)::after { content: ""; position: absolute; top: 34px; bottom: 7px; left: 10px; width: 3px; background: var(--cui-line); border-radius: 2px; }
+  #chatui-component .cui-event:last-child { padding-bottom: 0; }
+  #chatui-component .cui-event-content { display: grid; gap: 7px; min-width: 0; }
+  #chatui-component .cui-event-title { font-weight: 600; }
+  #chatui-component .cui-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  #chatui-component .cui-compare { display: grid; gap: 22px; grid-template-rows: auto 1fr auto; border-color: var(--cui-mark, var(--cui-blue-mark)); }
+  #chatui-component .cui-math { display: flex; justify-content: center; align-items: center; min-width: 0; padding: 17px 0; font-size: 1.4em; }
+  #chatui-component .cui-math math { max-width: 100%; font-size: inherit; }
+  #chatui-component .cui-rhythm { display: grid; gap: 17px; }
+  #chatui-component .cui-rhythm-line { display: grid; gap: 6px; }
+  #chatui-component .cui-rhythm-label { flex: 1 1 160px; }
+  #chatui-component .cui-question { margin: 0; padding: 0 0 24px; border: 0; border-bottom: 1px solid var(--cui-line); min-width: 0; }
+  #chatui-component .cui-question legend { padding: 0; margin-bottom: 12px; font-weight: 500; max-width: 100%; }
+  #chatui-component .cui-option { display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 8px 0; }
+  #chatui-component .cui-option input { margin: 0; flex: 0 0 auto; width: 22px; height: 22px; accent-color: var(--cui-fg); }
+  #chatui-component .cui-feedback { margin-top: 14px; padding: 16px; border-radius: 12px; background: var(--cui-soft); display: grid; gap: 8px; }
+  #chatui-component .cui-result { padding: 22px; border-radius: 14px; background: var(--cui-soft); }
+  #chatui-component .cui-actions { display: grid; gap: 12px; }
+  #chatui-component .cui-button { appearance: none; font: inherit; font-weight: 550; color: var(--cui-fg); background: transparent; border: 1px solid color-mix(in srgb, var(--cui-fg) 30%, transparent); border-radius: 99px; padding: 10px 18px; min-height: 44px; max-width: 100%; overflow-wrap: anywhere; cursor: var(--cursor-interaction, pointer); }
+  #chatui-component .cui-button-primary { background: var(--cui-fg); color: var(--cui-bg); border-color: transparent; }
+  #chatui-component .cui-button:disabled { opacity: .55; cursor: default; }
+  #chatui-component .cui-error { color: var(--cui-red); }
+  #chatui-component .cui-error:empty { display: none; }
+  #chatui-component .cui-answer { border-color: var(--cui-green-mark); }
+  #chatui-component .cui-answer-title { color: var(--cui-green); font-size: 1.5em; line-height: 1.4; font-weight: 600; margin: 0; }
+  #chatui-component .cui-answer .cui-math { justify-content: flex-start; padding: 0; }
+  #chatui-component .cui-range { width: 100%; accent-color: var(--cui-blue); min-height: 30px; margin: 0; }
+  #chatui-component .cui-svg { display: block; width: 100%; overflow: visible; }
+  #chatui-component .cui-svg text { fill: var(--cui-fg); font-family: inherit; font-size: 18px; }
+  #chatui-component .cui-svg .cui-outline { stroke: var(--cui-structure); stroke-width: 2.5; fill: none; }
+  #chatui-component .cui-svg .cui-guide { stroke: var(--cui-structure); stroke-width: 2; stroke-dasharray: 7 6; fill: none; }
+  #chatui-component .cui-svg .cui-triangle { stroke: var(--cui-geometry-mark); stroke-width: 4; stroke-linejoin: round; fill: color-mix(in srgb, var(--cui-geometry-mark) 10%, transparent); }
+  #chatui-component .cui-chart text { font-size: 12px; }
+  #chatui-component .cui-chart .axis-title { font-size: 13px; }
+  #chatui-component .cui-chart-frame { stroke: var(--cui-line); stroke-width: 1; fill: none; }
+  #chatui-component .cui-chart-grid { stroke: var(--cui-line); stroke-width: 1; stroke-dasharray: 3 5; }
+  #chatui-component .cui-chart-line { stroke: var(--cui-mark, var(--cui-green-mark)); stroke-width: 3; stroke-linejoin: round; fill: none; }
+  #chatui-component .cui-chart-point { fill: var(--cui-mark, var(--cui-green-mark)); stroke: var(--cui-bg); stroke-width: 2; }
+  #chatui-component .cui-chart-key { display: flex; align-items: center; gap: 9px; font-size: .88em; color: var(--cui-muted); }
+  #chatui-component .cui-chart-swatch { display: inline-block; width: 24px; height: 3px; background: var(--cui-mark, var(--cui-green-mark)); }
+  #chatui-component .cui-data { font-size: .88em; color: var(--cui-muted); }
+  #chatui-component .cui-data summary { cursor: var(--cursor-interaction, pointer); }
+  #chatui-component .cui-data table { width: 100%; border-collapse: collapse; margin-top: 12px; }
+  #chatui-component .cui-data th, #chatui-component .cui-data td { padding: 6px 10px; text-align: right; border-bottom: 1px solid var(--cui-line); font-variant-numeric: tabular-nums; }
+  #chatui-component .cui-force [hidden] { display: none !important; }
+  #chatui-component .cui-force svg text { font-size: 14px; }
+  #chatui-component .cui-force-controls { display: flex; flex-wrap: wrap; gap: 8px 22px; }
+  #chatui-component .cui-force-choice { display: flex; align-items: center; gap: 10px; min-height: 44px; }
+  #chatui-component .cui-force-choice input { width: 20px; height: 20px; margin: 0; accent-color: var(--cui-blue); }
+  #chatui-component .cui-force-select { display: grid; gap: 7px; min-width: 0; }
+  #chatui-component .cui-force-select select { font: inherit; color: var(--cui-fg); background: var(--cui-bg); border: 1px solid var(--cui-line); border-radius: 8px; padding: 8px; min-height: 44px; width: 100%; min-width: 0; }
+  #chatui-component .cui-force-table { width: 100%; border-collapse: collapse; font-size: .82em; table-layout: fixed; }
+  #chatui-component .cui-force-table caption { text-align: left; margin-bottom: 8px; font-weight: 600; }
+  #chatui-component .cui-force-table th, #chatui-component .cui-force-table td { text-align: right; padding: 8px 5px; border-bottom: 1px solid var(--cui-line); font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+  #chatui-component .cui-force-table th:first-child, #chatui-component .cui-force-table td:first-child { width: 40%; text-align: left; }
+  #chatui-component .cui-force-result { border-left: 3px solid var(--cui-green-mark); padding-left: 12px; }
+  #chatui-component .cui-values { font-variant-numeric: tabular-nums; }
+  #chatui-component .cui-sr { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+  @media (max-width: 480px) {
+    #chatui-component { font-size: 16px; }
+    #chatui-component .cui-grid { grid-template-columns: 1fr; }
+    #chatui-component .cui-panel { padding: 18px; }
+    #chatui-component .cui-title { font-size: 1.2em; }
+    #chatui-component .cui-hero { font-size: 1.85em; }
+    #chatui-component .cui-count, #chatui-component .cui-progress-primary .cui-progress-stage-count { font-size: 2.7em; }
+    #chatui-component .cui-result { padding: 18px; }
+    #chatui-component .cui-svg text { font-size: 16px; }
+    #chatui-component .cui-chart text { font-size: 12px; }
+  }
+  @media (pointer: coarse) {
+    #chatui-component .cui-option, #chatui-component .cui-button { min-height: 44px; }
+    #chatui-component .cui-range { min-height: 44px; }
+  }
+  #chatui-component .cui-motion-controls { display: grid; gap: 14px; }
+  #chatui-component .cui-motion-control { display: grid; gap: 2px; min-width: 0; }
+  #chatui-component .cui-motion-control output { color: var(--cui-blue); }
+  #chatui-component .cui-motion-stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+  #chatui-component .cui-motion-stat { display: grid; gap: 2px; }
+  #chatui-component .cui-motion-value { font-size: 1.45em; font-weight: 600; font-variant-numeric: tabular-nums; }
+  #chatui-component .cui-motion-stat:first-child .cui-motion-value { color: var(--cui-blue); }
+  #chatui-component .cui-motion-stat:last-child .cui-motion-value { color: var(--cui-green); }
+  #chatui-component .cui-motion-plots { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+  #chatui-component .cui-motion-figure { margin: 0; min-width: 0; }
+  #chatui-component .cui-motion-figure figcaption { font-size: .9em; font-weight: 600; margin-bottom: 4px; }
+  #chatui-component .cui-motion-plot text { font-size: 12px; }
+  #chatui-component .cui-motion-formulas { font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+  @media (max-width: 640px) {
+    #chatui-component .cui-motion-plots { grid-template-columns: 1fr; gap: 16px; }
+    #chatui-component .cui-motion-plot text { font-size: 12px; }
+  }
+
+  #chatui-component .cui-media [hidden] { display: none !important; }
+  #chatui-component .cui-media-list { display: grid; gap: 24px; }
+  #chatui-component .cui-media-item { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 22px; align-items: center; margin: 0; min-width: 0; }
+  #chatui-component .cui-media-copy { display: grid; gap: 9px; min-width: 0; }
+  #chatui-component .cui-media-image { display: block; width: 100%; height: auto; max-height: 400px; object-fit: contain; border-radius: 12px; }
+  #chatui-component .cui-media-caption { font-size: .88em; color: var(--cui-muted); }
+  #chatui-component .cui-media a { color: var(--cui-blue); text-decoration: underline; overflow-wrap: anywhere; }
+  #chatui-component .cui-media h4 { font-size: 1.08em; font-weight: 600; margin: 0; }
+  #chatui-component .cui-media-image-side { display: grid; gap: 8px; min-width: 0; }
+  @media (max-width: 600px) { #chatui-component .cui-media-item { grid-template-columns: 1fr; gap: 14px; } }
+  #chatui-component .cui-tabs [hidden], #chatui-component .cui-reveal [hidden] { display: none !important; }
+  #chatui-component .cui-tab-list { display: flex; flex-wrap: wrap; gap: 6px 12px; border-bottom: 1px solid var(--cui-line); min-width: 0; }
+  #chatui-component .cui-tab { appearance: none; border: 0; border-bottom: 3px solid transparent; border-radius: 8px 8px 0 0; padding: 10px 12px; min-height: 44px; max-width: 100%; font: inherit; font-weight: 550; color: var(--cui-muted); background: transparent; overflow-wrap: anywhere; cursor: var(--cursor-interaction, pointer); }
+  #chatui-component .cui-tab[aria-selected="true"] { color: var(--cui-blue); border-bottom-color: var(--cui-blue-mark); background: color-mix(in srgb, var(--cui-blue) 8%, transparent); }
+  #chatui-component .cui-tab:focus-visible, #chatui-component .cui-tab-panel:focus-visible, #chatui-component .cui-reveal-controls button:focus-visible { outline: 2px solid var(--cui-blue); outline-offset: 3px; }
+  #chatui-component .cui-tab-panel { min-width: 0; gap: 12px; }
+  #chatui-component .cui-tab-title, #chatui-component .cui-reveal-title { font: inherit; font-weight: 650; margin: 0; }
+  #chatui-component .cui-exploration-prose { white-space: pre-wrap; }
+  #chatui-component .cui-reveal .cui-event { grid-template-columns: 34px minmax(0, 1fr); gap: 14px; }
+  #chatui-component .cui-reveal .cui-event > .cui-badge { align-self: start; }
+  #chatui-component .cui-reveal .cui-event::after { left: 15px; }
+  #chatui-component .cui-reveal .cui-event[aria-current="step"]::after { display: none; }
+  #chatui-component .cui-reveal .cui-event[aria-current="step"] .cui-reveal-title { color: var(--cui-blue); }
+  #chatui-component .cui-reveal .cui-math { justify-content: safe center; overflow-x: auto; padding: 18px 0; }
+  #chatui-component .cui-reveal-next { color: var(--cui-blue); border-color: var(--cui-blue-mark); background: color-mix(in srgb, var(--cui-blue) 8%, transparent); }
+  @media (max-width: 480px) {
+    #chatui-component .cui-tab { padding-inline: 10px; }
+    #chatui-component .cui-reveal-controls { align-items: stretch; }
+    #chatui-component .cui-reveal-controls button { flex: 1 1 140px; }
+  }
+
+  #chatui-component .cui-table-explorer [hidden] { display: none !important; }
+  #chatui-component .cui-table-controls { display: flex; flex-wrap: wrap; align-items: end; gap: 12px; min-width: 0; }
+  #chatui-component .cui-table-search { display: grid; gap: 7px; flex: 1 1 220px; min-width: 0; max-width: 100%; }
+  #chatui-component .cui-table-search input { min-width: 0; width: 100%; min-height: 44px; padding: 10px 12px; border: 1px solid var(--cui-line); border-radius: 9px; background: var(--cui-bg); color: var(--cui-fg); font: inherit; }
+  #chatui-component .cui-table-scroll { width: 100%; max-width: 100%; overflow-x: auto; border: 1px solid var(--cui-line); border-radius: 12px; }
+  #chatui-component .cui-explorer-table { width: 100%; table-layout: fixed; border-collapse: collapse; font-size: .88em; }
+  #chatui-component .cui-explorer-table th, #chatui-component .cui-explorer-table td { padding: 10px 12px; text-align: left; border-bottom: 1px solid var(--cui-line); overflow-wrap: anywhere; vertical-align: top; }
+  #chatui-component .cui-explorer-table th { background: color-mix(in srgb, var(--cui-blue) 9%, transparent); color: var(--cui-blue); }
+  #chatui-component .cui-explorer-table tbody tr:last-child td { border-bottom: 0; }
+  #chatui-component .cui-explorer-table .cui-table-number { text-align: right; font-variant-numeric: tabular-nums; }
+  #chatui-component .cui-table-sort { appearance: none; border: 0; background: transparent; color: inherit; font: inherit; font-weight: 600; cursor: var(--cursor-interaction, pointer); padding: 0; min-height: 44px; width: 100%; text-align: inherit; overflow-wrap: anywhere; }
+  #chatui-component .cui-table-sort:focus-visible, #chatui-component .cui-table-search input:focus-visible, #chatui-component .cui-table-scroll:focus-visible { outline: 2px solid var(--cui-blue); outline-offset: 2px; }
+
+  #chatui-component .cui-form-field { min-width: 0; margin: 0; padding: 0; border: 0; gap: 6px; }
+  #chatui-component .cui-form-field legend { margin-bottom: 8px; }
+  #chatui-component .cui-form-field input:not([type=checkbox]):not([type=radio]), #chatui-component .cui-form-field select, #chatui-component .cui-form-field textarea, #chatui-component .cui-geometry-number { width: 100%; min-width: 0; max-width: 100%; min-height: 44px; padding: 10px; border: 1px solid var(--cui-line); border-radius: 8px; background: var(--cui-bg); color: var(--cui-fg); font: inherit; }
+  #chatui-component .cui-form-choice input { width: 22px; height: 22px; margin: 0; flex: 0 0 auto; accent-color: var(--cui-blue); }
+  #chatui-component .cui-form-field textarea { resize: vertical; }
+  #chatui-component .cui-form-choice, #chatui-component .cui-form-actions { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; min-height: 44px; }
+  #chatui-component .cui-form-field [aria-invalid=true], #chatui-component .cui-geometry-number[aria-invalid=true] { border-color: var(--cui-orange); }
+  #chatui-component .cui-form-field :focus-visible, #chatui-component .cui-geometry-number:focus-visible { outline: 2px solid var(--cui-blue); outline-offset: 2px; }
+  #chatui-component .cui-input-form dd { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; }
+</style>
+<script type="application/json" id="chatui-component-config">
+{
+  "schemaVersion": 1,
+  "contentId": "example-related-rates-answer-v1",
+  "type": "answer",
+  "title": "计算结果",
+  "data": {
+    "label": "核对后的结果",
+    "title": "表面积正在增加",
+    "mathLabel": "dS除以dt等于28π",
+    "math": {
+      "tag": "mrow",
+      "children": [
+        {
+          "tag": "mfrac",
+          "children": [
+            {
+              "tag": "mrow",
+              "children": [
+                {
+                  "tag": "mi",
+                  "text": "d"
+                },
+                {
+                  "tag": "mi",
+                  "text": "S"
+                }
+              ]
+            },
+            {
+              "tag": "mrow",
+              "children": [
+                {
+                  "tag": "mi",
+                  "text": "d"
+                },
+                {
+                  "tag": "mi",
+                  "text": "t"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "tag": "mo",
+          "text": "="
+        },
+        {
+          "tag": "mn",
+          "text": "28"
+        },
+        {
+          "tag": "mi",
+          "text": "π"
+        }
+      ]
+    },
+    "detail": "教学示例：S = 2πrh，r·dh/dt = 12、h·dr/dt = 2，因此 dS/dt = 28π mm²/s。"
+  }
+}
+</script>
+<script>
+(() => {
+  'use strict';
+  const root = document.getElementById('chatui-component');
+  const configNode = document.getElementById('chatui-component-config');
+  if (!root || !configNode) return;
+  const HTML_NS = 'http://www.w3.org/1999/xhtml';
+  const SVG_NS = 'http://www.w3.org/2000/svg';
+  const MATH_NS = 'http://www.w3.org/1998/Math/MathML';
+  const colors = { blue: 'var(--cui-blue)', green: 'var(--cui-green)', orange: 'var(--cui-orange)', neutral: 'var(--cui-muted)' };
+  const marks = { blue: 'var(--cui-blue-mark)', green: 'var(--cui-green-mark)', orange: 'var(--cui-orange-mark)', neutral: 'var(--cui-structure)' };
+  let config;
+  let activeRestore = null, activeHostRefresh = null;
+  let resizeObserver = null;
+  let disposed = false;
+  const el = (tag, className, text, ns = HTML_NS) => {
+    const node = document.createElementNS(ns, tag);
+    if (className) node.setAttribute('class', className);
+    if (text !== undefined) node.textContent = String(text);
+    return node;
+  };
+  const append = (node, ...children) => { children.filter(Boolean).forEach(child => node.append(child)); return node; };
+  const text = value => typeof value === 'string' ? value : '';
+  const number = value => typeof value === 'number' && Number.isFinite(value);
+  const require = (test, message) => { if (!test) throw new Error(message); };
+  const list = value => Array.isArray(value) ? value : [];
+  const tone = (node, name) => {
+    node.style.setProperty('--cui-tone', colors[name] || colors.blue);
+    node.style.setProperty('--cui-mark', marks[name] || marks.blue);
+    return node;
+  };
+  const badge = (label, color = 'blue') => tone(el('span', 'cui-badge', label), color);
+  const paragraph = (value, className = '') => value ? el('p', className, value) : null;
+  const heading = () => config.title ? el('h3', 'cui-title', config.title) : null;
+  const panel = () => el('section', 'cui-panel cui-stack');
+  const finiteFormat = value => new Intl.NumberFormat('zh-CN', {
+    maximumFractionDigits: 2,
+    notation: value !== 0 && (Math.abs(value) < .01 || Math.abs(value) >= 1e6) ? 'scientific' : 'standard'
+  }).format(value);
+  const fingerprint = value => {
+    const serialized = JSON.stringify(value);
+    let hash = 2166136261;
+    for (let i = 0; i < serialized.length; i++) hash = Math.imul(hash ^ serialized.charCodeAt(i), 16777619);
+    return (hash >>> 0).toString(16) + ':' + serialized.length;
+  };
+  let identity = '';
+  const stateEnvelope = candidate => {
+    const state = candidate && candidate.privateContent && candidate.privateContent.chatui;
+    return state && state.schemaVersion === 1 && state.identity === identity ? state.value : null;
+  };
+  const saveState = (value, modelContent) => {
+    if (disposed) return;
+    if (typeof window.openai?.setWidgetState !== 'function') return;
+    const payload = { modelContent, privateContent: { chatui: { schemaVersion: 1, identity, value } } };
+    if (JSON.stringify(payload).length > 15000) return;
+    try { Promise.resolve(window.openai.setWidgetState(payload)).catch(() => {}); } catch (_) { /* State remains usable locally. */ }
+  };
+  // Shared attribute policy; parity is regression-tested.
+  const MATH_ATTRIBUTES = {
+    mathvariant: /^(normal|bold|italic|bold-italic|double-struck|script|bold-script|fraktur|bold-fraktur|sans-serif|bold-sans-serif|sans-serif-italic|sans-serif-bold-italic|monospace)$/,
+    displaystyle: /^(true|false)$/, scriptlevel: /^[0-2]$/,
+    stretchy: /^(true|false)$/, fence: /^(true|false)$/, separator: /^(true|false)$/,
+    largeop: /^(true|false)$/, movablelimits: /^(true|false)$/, symmetric: /^(true|false)$/,
+    accent: /^(true|false)$/, accentunder: /^(true|false)$/,
+    columnalign: /^(left|center|right)( (left|center|right)){0,11}$/,
+    rowalign: /^(top|center|bottom|baseline|axis)( (top|center|bottom|baseline|axis)){0,11}$/,
+    notation: /^(updiagonalstrike|downdiagonalstrike|horizontalstrike|verticalstrike|box|circle|top|bottom|left|right)( (updiagonalstrike|downdiagonalstrike|horizontalstrike|verticalstrike|box|circle|top|bottom|left|right)){0,3}$/
+  };
+  const mathLengths = new Set(['width', 'height', 'depth', 'voffset', 'lspace', 'rspace', 'minsize', 'maxsize', 'mathsize', 'linethickness', 'rowspacing', 'columnspacing']);
+  function validateMathAttributes(attrs) {
+    require((attrs && typeof attrs === 'object' && !Array.isArray(attrs)) && Object.keys(attrs).length <= 12, '公式属性过多。');
+    for (const [key, value] of Object.entries(attrs)) {
+      require(typeof value === 'string' && value.length <= 160, '公式属性必须是有界文本。');
+      if (Object.hasOwn(MATH_ATTRIBUTES, key)) require(MATH_ATTRIBUTES[key].test(value), '公式属性值不受支持。');
+      else {
+        require(mathLengths.has(key), '公式不能含 HTML、样式、链接或事件属性。');
+        const lengths = value.split(' ');
+        require(lengths.length <= 12 && lengths.every(part => {
+          const match = part.match(/^(-?(?:\d+(?:\.\d+)?|\.\d+))(em|ex|px|%)?$/);
+          return match && Math.abs(Number(match[1])) <= (match[2] === '%' ? 400 : match[2] === 'px' ? 64 : 4);
+        }), '公式尺寸超出安全范围。');
+      }
+    }
+  }
+  const safeMath = (spec, depth = 0) => {
+    require(depth < 16, '公式结构过深。');
+    if (typeof spec === 'string') return el('mtext', '', spec, MATH_NS);
+    require(spec && typeof spec === 'object', '公式缺少有效结构。');
+    const allowed = new Set(['mrow', 'mi', 'mn', 'mo', 'mtext', 'mfrac', 'msup', 'msub', 'msubsup', 'msqrt', 'mroot', 'mover', 'munder', 'munderover', 'mstyle', 'mspace', 'mpadded', 'mtable', 'mtr', 'mtd', 'menclose']);
+    require(allowed.has(spec.tag), '公式包含不支持的元素。');
+    const node = el(spec.tag, '', undefined, MATH_NS);
+    if (spec.attrs !== undefined) { validateMathAttributes(spec.attrs); Object.entries(spec.attrs).forEach(([key, value]) => node.setAttribute(key, value)); }
+    if (typeof spec.text === 'string') node.textContent = spec.text;
+    list(spec.children).forEach(child => node.append(safeMath(child, depth + 1)));
+    return node;
+  };
+  const formula = (spec, label) => {
+    if (!spec) return null;
+    const wrap = el('div', 'cui-math');
+    const math = el('math', '', undefined, MATH_NS);
+    math.setAttribute('display', 'block');
+    if (label) math.setAttribute('aria-label', label);
+    math.append(safeMath(spec));
+    return append(wrap, math);
+  };
+  const answer = data => {
+    require(text(data.title).trim().length > 0, '结果块需要明确的结果标题。');
+    const content = panel();
+    content.classList.add('cui-answer');
+    append(content, badge(text(data.label) || '结果', 'green'), el('h3', 'cui-answer-title', data.title), formula(data.math, text(data.mathLabel)), paragraph(text(data.detail)));
+    root.append(content);
+  };
+  try {
+    config = JSON.parse(configNode.textContent);
+    require(config && config.schemaVersion === 1 && typeof config.contentId === 'string' && config.contentId.length > 0, '配置需要 schemaVersion: 1 和内容标识。');
+    require(config.data && typeof config.data === 'object', '配置需要组件数据。');
+    identity = config.contentId + ':' + fingerprint(config);
+    const renderers = { 'answer': answer };
+    require(Object.hasOwn(renderers, config.type), '不支持的组件类型。');
+    renderers[config.type](config.data);
+    window.addEventListener('openai:set_globals', event => {
+      activeHostRefresh?.();
+      const candidate = event.detail?.globals?.widgetState;
+      if (candidate === undefined || !activeRestore) return;
+      const saved = stateEnvelope(candidate);
+      if (saved !== null) activeRestore(saved);
+    });
+  } catch (error) {
+    if (resizeObserver) resizeObserver.disconnect();
+    root.replaceChildren();
+    const message = el('p', 'cui-error', '组件未显示：' + (error instanceof Error ? error.message : '请检查配置。'));
+    message.setAttribute('role', 'alert'); root.append(message);
+  }
+})();
+</script>

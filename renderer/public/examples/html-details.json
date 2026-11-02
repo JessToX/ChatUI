@@ -1,0 +1,1 @@
+{"structuredContent":{"schemaVersion":1,"mode":"html","contentId":"html-details-v1","title":"真实折叠区","html":"<details>\n  <summary><strong>点我展开</strong></summary>\n  <p>如果这句话展开出来了，就成功。</p>\n</details>","theme":"native"},"content":[{"type":"text","text":"点我展开\n \n如果这句话展开出来了，就成功。"}]}

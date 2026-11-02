@@ -1,0 +1,6 @@
+interface:
+  display_name: "ChatUI"
+  short_description: "实质性回答默认统一呈现正文、公式、图解与交互，连续追问无需重复点名"
+  default_prompt: "按当前上下文回答，用 render_response 一次组织本轮需要的正文、公式和真实图解；不重复整篇文字，明确纯文本与简单确认除外。"
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,31 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "chatui",
+  "version": "1.0.0",
+  "description": "本地 1.0.0 候选（尚未发布）：普通回答默认安全语义 HTML，复杂交互保留结构化组件，Rich Document v1 为附加入口。",
+  "author": {
+    "name": "JessToX"
+  },
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "ChatUI",
+        "shortDescription": "安全 HTML 回答与结构化交互双路径",
+        "longDescription": "普通解释、写作、翻译、总结、代码与静态表格默认一次 render_html，经服务端和客户端净化成为真实 DOM；任何本应用于界面结构的 HTML 片段不得直接裸发为原生 Assistant Message，除非用户明确要求查看源码。测验、图表、实验与复杂公式使用 render_response；失败完整文字兜底。",
+        "developerName": "JessToX",
+        "category": "Productivity",
+        "capabilities": [
+          "Interactive"
+        ],
+        "defaultPrompt": "结合上下文回答。普通实质性内容只要 render_html 可用就优先调用；如果草稿包含用于呈现的 HTML 标签且用户没有明确要求查看源码，不得把源码直接发成原生 Assistant Message，必须把同一片段交给 render_html。复杂交互和复杂公式整轮用 render_response；成功后不重复完整原生正文。",
+        "logo": "./assets/icon.svg",
+        "composerIcon": "./assets/icon.svg",
+        "logoDark": "./assets/icon.svg",
+        "composerIconDark": "./assets/icon.svg",
+        "brandColor": "#276BA8",
+        "brandColorDark": "#75B6E8"
+      },
+      "apps": "./.app.json"
+    }
+  }
+}

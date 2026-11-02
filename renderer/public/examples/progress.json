@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "contentId": "progress-v3-10-6-3",
+  "title": "先分清“成稿”和“核对”，再谈进度",
+  "facts": {
+    "total": {
+      "value": 10,
+      "unit": "章"
+    },
+    "drafted": {
+      "value": 6,
+      "unit": "章"
+    },
+    "reviewed": {
+      "value": 3,
+      "unit": "章"
+    },
+    "remaining": {
+      "value": 4,
+      "unit": "章"
+    }
+  },
+  "blocks": [
+    {
+      "id": "progressStart",
+      "kind": "prose",
+      "text": "这是一组可修改的演示数据：共 {{total}}，其中 {{drafted}} 已成稿，{{reviewed}} 已核对。已核对是已成稿的子集，不能把两者相加当作完成量。",
+      "eyebrow": "项目进展 · 可操作示例"
+    },
+    {
+      "id": "stages",
+      "kind": "component",
+      "type": "progress",
+      "title": "当前阶段进度",
+      "data": {
+        "total": {
+          "fact": "total"
+        },
+        "unit": "章",
+        "stages": [
+          {
+            "id": "drafted",
+            "label": "已成稿",
+            "value": {
+              "fact": "drafted"
+            }
+          },
+          {
+            "id": "reviewed",
+            "label": "已核对",
+            "value": {
+              "fact": "reviewed"
+            },
+            "subsetOf": "drafted"
+          }
+        ],
+        "note": "两个阶段共享同一个总量；子集不是额外完成量。",
+        "details": [
+          "尚有 {{remaining}} 未成稿。",
+          "这些计数不说明具体哪些章节已完成，也不代表已定稿。"
+        ]
+      }
+    },
+    {
+      "id": "historyIntro",
+      "kind": "prose",
+      "title": "时间线，只保留已经给出的状态",
+      "text": "示例没有提供真实日期或章节名称，因此不补造时间，也不把未完成章节编成一份具体清单。下面区分当前记录和计划中的下一阶段。"
+    },
+    {
+      "id": "history",
+      "kind": "component",
+      "type": "timeline",
+      "title": "从当前记录到下一阶段",
+      "data": {
+        "note": "演示状态；日期未提供，时间待定。",
+        "items": [
+          {
+            "title": "记录成稿数量",
+            "detail": "已确认 {{drafted}} 成稿；其余 {{remaining}} 尚未成稿。",
+            "status": "当前记录",
+            "tone": "blue"
+          },
+          {
+            "title": "记录核对数量",
+            "detail": "其中 {{reviewed}} 已核对；与成稿阶段存在包含关系。",
+            "status": "当前记录",
+            "tone": "green"
+          },
+          {
+            "title": "继续推进与核对",
+            "detail": "需要先确认具体章节和质量标准，再制定针对性的安排。",
+            "status": "下一阶段 · 时间待定",
+            "tone": "orange"
+          }
+        ]
+      }
+    },
+    {
+      "id": "progressClose",
+      "kind": "prose",
+      "title": "条件变了，所有表达一起变",
+      "text": "在预览上方改总量、成稿或核对数量，点击“更新完整快照”。正文、计数、分母、阶段条和时间线都由同一组 facts 更新；不只改某一条进度条。"
+    }
+  ]
+}

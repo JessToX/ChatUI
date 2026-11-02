@@ -1,0 +1,565 @@
+{
+  "schemaVersion": 1,
+  "contentId": "learning-v0-20-g10-v1",
+  "title": "最高点静止了，为什么加速度还在？",
+  "facts": {
+    "v0": {
+      "value": 20,
+      "unit": "m/s",
+      "label": "初速度"
+    },
+    "g": {
+      "value": 10,
+      "unit": "m/s²",
+      "label": "重力加速度"
+    },
+    "acceleration": {
+      "value": -10,
+      "unit": "m/s²"
+    },
+    "topTime": {
+      "value": 2,
+      "unit": "s",
+      "precision": 2
+    },
+    "zero": {
+      "value": 0,
+      "unit": "m/s"
+    },
+    "halfSpeed": {
+      "value": 10,
+      "unit": "m/s"
+    },
+    "duration": {
+      "value": 4,
+      "unit": "s"
+    }
+  },
+  "blocks": [
+    {
+      "id": "start",
+      "kind": "prose",
+      "text": "速度描述“这一刻怎样运动”，加速度描述“速度正在怎样改变”。两者不是同一个量。\n\n这个教学示例忽略空气阻力，明确取初速度 {{v0}}、重力加速度 {{g}}，向上为正方向。",
+      "eyebrow": "概念讲解"
+    },
+    {
+      "id": "formulaPair",
+      "kind": "group",
+      "layout": "parallel",
+      "blocks": [
+        {
+          "id": "velocity",
+          "kind": "math",
+          "title": "速度会经过零点",
+          "label": "描述运动状态",
+          "tone": "blue",
+          "math": {
+            "tag": "mrow",
+            "children": [
+              {
+                "tag": "mi",
+                "text": "v"
+              },
+              {
+                "tag": "mo",
+                "text": "="
+              },
+              {
+                "tag": "msub",
+                "children": [
+                  {
+                    "tag": "mi",
+                    "text": "v"
+                  },
+                  {
+                    "tag": "mn",
+                    "text": "0"
+                  }
+                ]
+              },
+              {
+                "tag": "mo",
+                "text": "−"
+              },
+              {
+                "tag": "mi",
+                "text": "g"
+              },
+              {
+                "tag": "mi",
+                "text": "t"
+              }
+            ]
+          },
+          "detail": "初速度 {{v0}}，随着时间增加，速度逐渐减小。"
+        },
+        {
+          "id": "acceleration",
+          "kind": "math",
+          "title": "加速度保持向下",
+          "label": "描述速度的变化",
+          "tone": "green",
+          "math": {
+            "tag": "mrow",
+            "children": [
+              {
+                "tag": "mi",
+                "text": "a"
+              },
+              {
+                "tag": "mo",
+                "text": "="
+              },
+              {
+                "tag": "mfrac",
+                "children": [
+                  {
+                    "tag": "mrow",
+                    "children": [
+                      {
+                        "tag": "mi",
+                        "text": "d"
+                      },
+                      {
+                        "tag": "mi",
+                        "text": "v"
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "mrow",
+                    "children": [
+                      {
+                        "tag": "mi",
+                        "text": "d"
+                      },
+                      {
+                        "tag": "mi",
+                        "text": "t"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "mo",
+                "text": "="
+              },
+              {
+                "tag": "mo",
+                "text": "−"
+              },
+              {
+                "tag": "mi",
+                "text": "g"
+              }
+            ]
+          },
+          "detail": "本例 a = {{acceleration}}。速度为零，并不会让重力消失。"
+        }
+      ]
+    },
+    {
+      "id": "deriveIntro",
+      "kind": "prose",
+      "title": "从方程走到最高点",
+      "text": "先写出速度关于时间的关系，再问：它什么时候恰好为零？展开下面的推导，检查代入的数值与单位。"
+    },
+    {
+      "id": "derivation",
+      "kind": "component",
+      "type": "reveal-steps",
+      "title": "逐步推导",
+      "data": {
+        "initialVisible": 1,
+        "items": [
+          {
+            "title": "从恒定加速度得到速度关系",
+            "math": {
+              "tag": "mrow",
+              "children": [
+                {
+                  "tag": "mi",
+                  "text": "v"
+                },
+                {
+                  "tag": "mo",
+                  "text": "="
+                },
+                {
+                  "tag": "mn",
+                  "text": {
+                    "fact": "v0",
+                    "format": "text"
+                  }
+                },
+                {
+                  "tag": "mo",
+                  "text": "−"
+                },
+                {
+                  "tag": "mn",
+                  "text": {
+                    "fact": "g",
+                    "format": "text"
+                  }
+                },
+                {
+                  "tag": "mi",
+                  "text": "t"
+                }
+              ]
+            },
+            "mathLabel": "v 等于初速度减去 g 乘 t；各量使用 SI 单位",
+            "detail": "在 SI 单位下，时间以秒计、速度以米每秒计。"
+          },
+          {
+            "title": "在最高点代入 v = 0",
+            "math": {
+              "tag": "mrow",
+              "children": [
+                {
+                  "tag": "mi",
+                  "text": "t"
+                },
+                {
+                  "tag": "mo",
+                  "text": "="
+                },
+                {
+                  "tag": "mfrac",
+                  "children": [
+                    {
+                      "tag": "msub",
+                      "children": [
+                        {
+                          "tag": "mi",
+                          "text": "v"
+                        },
+                        {
+                          "tag": "mn",
+                          "text": "0"
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "mi",
+                      "text": "g"
+                    }
+                  ]
+                },
+                {
+                  "tag": "mo",
+                  "text": "="
+                },
+                {
+                  "tag": "mn",
+                  "text": {
+                    "fact": "topTime",
+                    "format": "text"
+                  }
+                },
+                {
+                  "tag": "mtext",
+                  "text": " s"
+                }
+              ]
+            },
+            "mathLabel": "最高点时间等于初速度除以重力加速度",
+            "detail": "到达最高点的时间为 {{topTime}}。"
+          },
+          {
+            "title": "再检查加速度，而不是猜测",
+            "math": {
+              "tag": "mrow",
+              "children": [
+                {
+                  "tag": "mi",
+                  "text": "a"
+                },
+                {
+                  "tag": "mo",
+                  "text": "="
+                },
+                {
+                  "tag": "mo",
+                  "text": "−"
+                },
+                {
+                  "tag": "mi",
+                  "text": "g"
+                },
+                {
+                  "tag": "mo",
+                  "text": "≠"
+                },
+                {
+                  "tag": "mn",
+                  "text": "0"
+                }
+              ]
+            },
+            "mathLabel": "加速度等于负 g，不等于零",
+            "detail": "最高点是速度改变符号的一瞬间，不是重力停止作用的一段时间。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ballStates",
+      "kind": "diagram",
+      "title": "切换三个瞬间，看方向而不是只看数值",
+      "description": "位置与箭头长度仅作示意，不表示实际高度或大小。蓝色表示速度，橙色表示加速度；两者不是新增的外力。",
+      "viewBox": {
+        "width": 400,
+        "height": 290
+      },
+      "initialState": "top",
+      "elements": [
+        {
+          "id": "ground",
+          "kind": "line",
+          "x1": 26,
+          "y1": 265,
+          "x2": 380,
+          "y2": 265,
+          "tone": "neutral",
+          "dashed": true
+        },
+        {
+          "id": "direction",
+          "kind": "text",
+          "x": 250,
+          "y": 34,
+          "text": "向上为正方向",
+          "tone": "neutral",
+          "fontSize": 22
+        }
+      ],
+      "states": [
+        {
+          "id": "up",
+          "label": "上升",
+          "description": "上升途中：速度向上，加速度向下。小球在减速。",
+          "elements": [
+            {
+              "id": "ball",
+              "kind": "point",
+              "x": 96,
+              "y": 196,
+              "r": 8,
+              "tone": "green",
+              "label": "小球",
+              "labelX": 47,
+              "labelY": 196
+            },
+            {
+              "id": "velocityArrow",
+              "kind": "arrow",
+              "x1": 96,
+              "y1": 196,
+              "x2": 96,
+              "y2": 113,
+              "tone": "blue"
+            },
+            {
+              "id": "accelerationArrow",
+              "kind": "arrow",
+              "x1": 160,
+              "y1": 196,
+              "x2": 160,
+              "y2": 252,
+              "tone": "orange"
+            },
+            {
+              "id": "velocityLabel",
+              "kind": "text",
+              "x": 270,
+              "y": 126,
+              "text": "v > 0，向上",
+              "tone": "blue",
+              "fontSize": 22
+            },
+            {
+              "id": "accelerationLabel",
+              "kind": "text",
+              "x": 270,
+              "y": 226,
+              "text": "a = {{acceleration}}",
+              "tone": "orange",
+              "fontSize": 22
+            }
+          ]
+        },
+        {
+          "id": "top",
+          "label": "最高点",
+          "description": "到达最高点：v = {{zero}}，但 a = {{acceleration}}。重力仍然作用。",
+          "elements": [
+            {
+              "id": "ball",
+              "kind": "point",
+              "x": 96,
+              "y": 94,
+              "r": 8,
+              "tone": "green",
+              "label": "小球",
+              "labelX": 47,
+              "labelY": 94
+            },
+            {
+              "id": "accelerationArrow",
+              "kind": "arrow",
+              "x1": 160,
+              "y1": 94,
+              "x2": 160,
+              "y2": 166,
+              "tone": "orange"
+            },
+            {
+              "id": "velocityLabel",
+              "kind": "text",
+              "x": 270,
+              "y": 94,
+              "text": "v = {{zero}}",
+              "tone": "blue",
+              "fontSize": 22
+            },
+            {
+              "id": "accelerationLabel",
+              "kind": "text",
+              "x": 270,
+              "y": 184,
+              "text": "a = {{acceleration}}",
+              "tone": "orange",
+              "fontSize": 22
+            }
+          ]
+        },
+        {
+          "id": "down",
+          "label": "下降",
+          "description": "下降途中：速度与加速度都向下。速度的大小在增加。",
+          "elements": [
+            {
+              "id": "ball",
+              "kind": "point",
+              "x": 96,
+              "y": 150,
+              "r": 8,
+              "tone": "green",
+              "label": "小球",
+              "labelX": 47,
+              "labelY": 150
+            },
+            {
+              "id": "velocityArrow",
+              "kind": "arrow",
+              "x1": 96,
+              "y1": 150,
+              "x2": 96,
+              "y2": 222,
+              "tone": "blue"
+            },
+            {
+              "id": "accelerationArrow",
+              "kind": "arrow",
+              "x1": 160,
+              "y1": 150,
+              "x2": 160,
+              "y2": 207,
+              "tone": "orange"
+            },
+            {
+              "id": "velocityLabel",
+              "kind": "text",
+              "x": 270,
+              "y": 226,
+              "text": "v < 0，向下",
+              "tone": "blue",
+              "fontSize": 22
+            },
+            {
+              "id": "accelerationLabel",
+              "kind": "text",
+              "x": 270,
+              "y": 144,
+              "text": "a = {{acceleration}}",
+              "tone": "orange",
+              "fontSize": 22
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "experimentIntro",
+      "kind": "prose",
+      "title": "再把“一瞬间”放回完整过程",
+      "text": "拖动时间，观察速度曲线在最高点穿过零点，而斜率仍保持 −g。下面是独立实验：若在实验里修改参数，结果以实验当前读数为准；上面的已知条件仍属于这份讲解快照。"
+    },
+    {
+      "id": "motion",
+      "kind": "component",
+      "type": "motion-lab",
+      "title": "速度—时间实验",
+      "data": {
+        "initialVelocity": {
+          "fact": "v0"
+        },
+        "acceleration": {
+          "fact": "acceleration"
+        },
+        "duration": {
+          "fact": "duration"
+        },
+        "time": 0
+      }
+    },
+    {
+      "id": "takeaway",
+      "kind": "component",
+      "type": "answer",
+      "title": "抓住最重要的区别",
+      "data": {
+        "label": "结论",
+        "title": "瞬时静止，不等于没有加速度",
+        "math": {
+          "tag": "mrow",
+          "children": [
+            {
+              "tag": "mi",
+              "text": "v"
+            },
+            {
+              "tag": "mo",
+              "text": "="
+            },
+            {
+              "tag": "mn",
+              "text": "0"
+            },
+            {
+              "tag": "mo",
+              "text": "，"
+            },
+            {
+              "tag": "mi",
+              "text": "a"
+            },
+            {
+              "tag": "mo",
+              "text": "≠"
+            },
+            {
+              "tag": "mn",
+              "text": "0"
+            }
+          ]
+        },
+        "mathLabel": "在最高点，速度为零但加速度不为零",
+        "detail": "看速度判断运动方向；看加速度判断速度怎样变化。本例最高点 t = {{topTime}}，a = {{acceleration}}。"
+      }
+    }
+  ]
+}

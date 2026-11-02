@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "contentId": "reference-chart-v1",
+  "title": "速度为什么会变成负数？",
+  "facts": {
+    "v0": {
+      "value": 20,
+      "unit": "m/s"
+    },
+    "g": {
+      "value": 10,
+      "unit": "m/s²"
+    }
+  },
+  "blocks": [
+    {
+      "id": "intro",
+      "kind": "prose",
+      "text": "教学模型：忽略空气阻力，取向上为正。初速度为 {{v0}}，重力加速度大小取 {{g}}；负速度只表示向下运动。"
+    },
+    {
+      "id": "velocity",
+      "kind": "math",
+      "tex": "v(t)={{v0|value}}-{{g|value}}t",
+      "label": "速度 · SI 单位",
+      "detail": "斜率为 −g，速度不是路程。"
+    },
+    {
+      "id": "chart",
+      "kind": "component",
+      "type": "line-chart",
+      "data": {
+        "xLabel": "时间 t",
+        "xUnit": "s",
+        "yLabel": "速度 v",
+        "yUnit": "m/s",
+        "seriesLabel": "上抛物体",
+        "tone": "green",
+        "points": [
+          {
+            "x": 0,
+            "y": 20
+          },
+          {
+            "x": 1,
+            "y": 10
+          },
+          {
+            "x": 2,
+            "y": 0
+          },
+          {
+            "x": 3,
+            "y": -10
+          },
+          {
+            "x": 4,
+            "y": -20
+          }
+        ],
+        "note": "点可悬停或用键盘聚焦；有符号面积对应位移。"
+      }
+    },
+    {
+      "id": "read",
+      "kind": "prose",
+      "text": "图线穿过横轴时，物体到达最高点。之后速度为负，而加速度仍然向下。"
+    }
+  ]
+}

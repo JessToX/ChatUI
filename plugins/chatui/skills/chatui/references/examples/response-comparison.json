@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "contentId": "reference-comparison-v1",
+  "title": "把变量放到各自一边",
+  "facts": {},
+  "blocks": [
+    {
+      "id": "intro",
+      "kind": "prose",
+      "text": "在 $m>0$、$k>0$ 且 $v>0$ 的模型中，阻力满足 $m\\,\\frac{dv}{dt}=-kv^2$。两边同除以 $mv^2$ 后："
+    },
+    {
+      "id": "sides",
+      "kind": "component",
+      "type": "comparison",
+      "data": {
+        "items": [
+          {
+            "label": "左边 · 速度变量",
+            "tone": "blue",
+            "tex": "v^{-2}\\,dv",
+            "detail": "只含速度 v 及其微分，接下来对 v 积分。"
+          },
+          {
+            "label": "右边 · 时间与常数",
+            "tone": "green",
+            "tex": "-\\frac{k}{m}\\,dt",
+            "detail": "k 与 m 在本模型里为常数，接下来对 t 积分。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "check",
+      "kind": "prose",
+      "text": "这里用到了 $v\\ne0$，所以必须先说明适用范围。排版不能掩盖除法和模型本身的条件。"
+    }
+  ]
+}

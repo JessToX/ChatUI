@@ -1,0 +1,5 @@
+{
+  "contentId": "html-velocity-v2",
+  "html": "<p>\n  比如你之后问我一道物理题，我可以这样组织：\n</p>\n<div class=\"concept-card\">\n  <h4>核心结论</h4>\n  <p>\n    速度是一个<strong>矢量</strong>，因此比较速度时不能只比较大小，还必须考虑方向。\n  </p>\n</div>\n<div class=\"derivation\">\n  <h4>推导</h4>\n  <p>若有：</p>\n  <p>\n    <code><span class=\"vector\">v</span><sub>LG</sub> = <span class=\"vector\">v</span><sub>LP</sub> + <span class=\"vector\">v</span><sub>PG</sub></code>\n  </p>\n  <p>\n    那么三个速度必须按照同一个坐标系处理，不能直接把三个速率的绝对值相加。\n  </p>\n</div>\n<details>\n  <summary><strong>展开查看更多解释</strong></summary>\n  <p>\n    三个速度必须在同一个坐标系中处理。\n  </p>\n</details>",
+  "title": "中文速度矢量"
+}

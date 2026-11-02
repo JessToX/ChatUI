@@ -1,0 +1,205 @@
+{
+  "schemaVersion": 1,
+  "contentId": "reference-geometry-v1",
+  "title": "圆、弦与三角形高度",
+  "facts": {},
+  "blocks": [
+    {
+      "id": "intro",
+      "kind": "prose",
+      "text": "图中 $O$ 是圆心，$AD\\perp BC$，$D$ 是底边中点。蓝色边、虚线半径与直角标记分别表示不同几何关系。"
+    },
+    {
+      "id": "geometry",
+      "kind": "diagram",
+      "description": "A、B、C 在同一个圆上，AD 为高且垂直 BC；OD 与 AD 共线，OC 为半径。图示选取 h=1.5r，坐标由这些关系计算。",
+      "viewBox": {
+        "width": 500,
+        "height": 370
+      },
+      "elements": [
+        {
+          "id": "circle",
+          "kind": "circle",
+          "cx": 250,
+          "cy": 190,
+          "r": 120,
+          "tone": "neutral"
+        },
+        {
+          "id": "triangle",
+          "kind": "path",
+          "tone": "blue",
+          "fill": "soft",
+          "commands": [
+            {
+              "op": "M",
+              "values": [
+                250,
+                70
+              ]
+            },
+            {
+              "op": "L",
+              "values": [
+                146.0769515,
+                250
+              ]
+            },
+            {
+              "op": "L",
+              "values": [
+                353.9230485,
+                250
+              ]
+            },
+            {
+              "op": "Z",
+              "values": []
+            }
+          ]
+        },
+        {
+          "id": "height",
+          "kind": "line",
+          "x1": 250,
+          "y1": 70,
+          "x2": 250,
+          "y2": 250,
+          "dashed": true,
+          "tone": "blue",
+          "label": "h",
+          "labelX": 269,
+          "labelY": 132
+        },
+        {
+          "id": "radius",
+          "kind": "line",
+          "x1": 250,
+          "y1": 190,
+          "x2": 353.9230485,
+          "y2": 250,
+          "dashed": true,
+          "tone": "orange",
+          "label": "r",
+          "labelX": 317,
+          "labelY": 208
+        },
+        {
+          "id": "right-angle",
+          "kind": "path",
+          "tone": "neutral",
+          "commands": [
+            {
+              "op": "M",
+              "values": [
+                250,
+                238
+              ]
+            },
+            {
+              "op": "L",
+              "values": [
+                262,
+                238
+              ]
+            },
+            {
+              "op": "L",
+              "values": [
+                262,
+                250
+              ]
+            }
+          ]
+        },
+        {
+          "id": "a",
+          "kind": "point",
+          "x": 250,
+          "y": 70,
+          "label": "A",
+          "labelY": 44,
+          "tone": "blue"
+        },
+        {
+          "id": "b",
+          "kind": "point",
+          "x": 146.0769515,
+          "y": 250,
+          "label": "B",
+          "labelX": 127,
+          "labelY": 268,
+          "tone": "blue"
+        },
+        {
+          "id": "c",
+          "kind": "point",
+          "x": 353.9230485,
+          "y": 250,
+          "label": "C",
+          "labelX": 375,
+          "labelY": 268,
+          "tone": "blue"
+        },
+        {
+          "id": "o",
+          "kind": "point",
+          "x": 250,
+          "y": 190,
+          "label": "O",
+          "labelX": 228,
+          "labelY": 190,
+          "tone": "orange"
+        },
+        {
+          "id": "d",
+          "kind": "point",
+          "x": 250,
+          "y": 250,
+          "label": "D",
+          "labelY": 277,
+          "tone": "neutral"
+        },
+        {
+          "id": "base",
+          "kind": "text",
+          "x": 250,
+          "y": 331,
+          "text": "BC = 2√(2rh − h²)",
+          "fontSize": 20,
+          "tone": "blue"
+        }
+      ]
+    },
+    {
+      "id": "relation",
+      "kind": "math",
+      "tex": "\\left(\\frac{BC}{2}\\right)^2+(h-r)^2=r^2",
+      "label": "直角三角形 ODC",
+      "detail": "由勾股关系得到 BC，再求面积。图形关系与公式使用同一个 h 和 r。"
+    },
+    {
+      "id": "experiment",
+      "kind": "collapse",
+      "summary": "展开：用滑块改变 h/r",
+      "blocks": [
+        {
+          "id": "local-geometry",
+          "kind": "component",
+          "type": "geometry",
+          "data": {
+            "radius": 3,
+            "heightRatio": 1.5,
+            "unit": "cm"
+          }
+        },
+        {
+          "id": "experiment-note",
+          "kind": "prose",
+          "text": "实验只改变此处的本地观察值，不把上面的固定示意图说成已经更新。"
+        }
+      ]
+    }
+  ]
+}

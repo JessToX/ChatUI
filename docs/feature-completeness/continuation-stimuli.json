@@ -1,0 +1,37 @@
+{
+  "scope": "Synthetic nonprivate stimuli. Local MCP/Renderer replay only; no model or real ChatGPT conversation was run.",
+  "routes": ["render_html", "render_document"],
+  "hostStatus": "HOST NOT_RUN / AUTHORIZATION REQUIRED",
+  "turns": [
+    {
+      "id": "initial",
+      "question": "解释平均速度：甲走了8米，用了10秒；乙走了6米，用了10秒。",
+      "body": "平均速度等于路程除以时间。甲为0.8米每秒，乙为0.6米每秒，因此甲的平均速度更大。",
+      "tail": "这只比较整个时间段的平均速度，不给出每一瞬间的速度。"
+    },
+    {
+      "id": "why",
+      "question": "为什么？",
+      "body": "两人用时相同。甲在同样的10秒内走得更远，因此路程除以时间的比值更大。",
+      "tail": "这里沿用上一轮的8米、6米和10秒，没有增加新的测量数据。"
+    },
+    {
+      "id": "continue",
+      "question": "继续讲。",
+      "body": "平均速度描述整个时间段。途中可以有停顿或加速，因此仅凭平均速度无法还原具体运动过程。",
+      "tail": "要描述具体过程，还需要位置随时间变化等额外信息。"
+    },
+    {
+      "id": "another_example",
+      "question": "换个例子。",
+      "body": "换成合成数据：甲走9米，乙走6米，两人都用12秒。平均速度分别是0.75和0.5米每秒。",
+      "tail": "这个例子改变了条件，需要一份新的完整内容快照。"
+    }
+  ],
+  "futureHostRecording": [
+    "Separate raw MCP content text from assistant native messages and the visible iframe.",
+    "Record selected tool, call order, complete input, public output and post-success assistant output; exclude Quiz grading metadata.",
+    "Count a full body echoed before or after a successful tool as duplication; required citations/files and a short acknowledgement are allowed.",
+    "Record unnecessary repetition of the previous complete explanation separately from repetition within the current turn."
+  ]
+}

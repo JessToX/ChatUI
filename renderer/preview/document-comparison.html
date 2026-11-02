@@ -1,0 +1,14 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="data:,"><title>Rich Document · matched visual references</title>
+<style>
+:root{color-scheme:light dark;font:16px/1.6 system-ui}body{margin:20px}h1{font-size:24px}h2{font-size:20px}p{max-width:90ch}.row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.cell{min-width:0}iframe{width:100%;height:680px;border:1px solid #8884;border-radius:0}h3{font-size:16px}@media(max-width:800px){.row{grid-template-columns:1fr}}
+</style>
+<h1>同一内容的三个呈现入口</h1><p>开发验收页。HTML 列保留可读内容；数学为 TeX 文字，测验、图表与实验为静态摘要，不能当作等功能替代。结构化列采用紧凑的现有契约。历史产品参考见仓库 visual-spec-v0.7；本页不复制私人历史聊天。</p>
+<main id="comparisons"></main>
+<script>
+const theme=new URLSearchParams(location.search).get('theme')==='dark'?'dark':'light';document.documentElement.style.colorScheme=theme;
+for(const [id,label] of [['teaching','概念教学'],['project','进度与档案'],['comparison','变量比较'],['quiz','测验']]){
+ const section=document.createElement('section'),heading=document.createElement('h2');heading.textContent=label;section.append(heading);const row=document.createElement('div');row.className='row';
+ for(const [name,example] of [['render_html · 静态参考',`benchmark-${id}-html`],['render_response',`benchmark-${id}-structured`],['render_document',`document-${id}`]]){const cell=document.createElement('div');cell.className='cell';const title=document.createElement('h3');title.textContent=name;const frame=document.createElement('iframe');frame.title=`${label} · ${name}`;frame.src=`/preview.html?example=${example}&theme=${theme}&width=390&bare=1`;cell.append(title,frame);row.append(cell);}
+ section.append(row);document.getElementById('comparisons').append(section);
+}
+</script></html>

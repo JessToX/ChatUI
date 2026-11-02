@@ -1,0 +1,5 @@
+{
+  "contentId": "html-details-v1",
+  "html": "<details>\n  <summary><strong>点我展开</strong></summary>\n  <p>如果这句话展开出来了，就成功。</p>\n</details>",
+  "title": "真实折叠区"
+}

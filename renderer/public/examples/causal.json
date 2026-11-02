@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "contentId": "causal-v3",
+  "title": "把模板之外的反馈关系画出来",
+  "facts": {},
+  "blocks": [
+    {
+      "id": "causeStart",
+      "kind": "prose",
+      "text": "这张图表达一种待核实的流程假设，不把相关性直接说成已经证实的因果。结构化路径可表示回路，而不需要执行 SVG 或公式字符串。"
+    },
+    {
+      "id": "loop",
+      "kind": "diagram",
+      "title": "需求澄清与返工的反馈回路",
+      "description": "箭头表示假设中的影响方向；不是数据测量，也没有精确强度。",
+      "viewBox": {
+        "width": 400,
+        "height": 430
+      },
+      "elements": [
+        {
+          "id": "unclear",
+          "kind": "rect",
+          "x": 65,
+          "y": 30,
+          "width": 270,
+          "height": 65,
+          "label": "需求尚不清晰",
+          "tone": "blue",
+          "fill": "soft"
+        },
+        {
+          "id": "first",
+          "kind": "arrow",
+          "x1": 200,
+          "y1": 95,
+          "x2": 200,
+          "y2": 151,
+          "tone": "blue"
+        },
+        {
+          "id": "redo",
+          "kind": "rect",
+          "x": 65,
+          "y": 155,
+          "width": 270,
+          "height": 65,
+          "label": "实现后出现返工",
+          "tone": "orange",
+          "fill": "soft"
+        },
+        {
+          "id": "second",
+          "kind": "arrow",
+          "x1": 200,
+          "y1": 220,
+          "x2": 200,
+          "y2": 276,
+          "tone": "orange"
+        },
+        {
+          "id": "lessTime",
+          "kind": "rect",
+          "x": 65,
+          "y": 280,
+          "width": 270,
+          "height": 65,
+          "label": "澄清时间被挤占",
+          "tone": "green",
+          "fill": "soft"
+        },
+        {
+          "id": "feedback",
+          "kind": "path",
+          "tone": "neutral",
+          "dashed": true,
+          "commands": [
+            {
+              "op": "M",
+              "values": [
+                65,
+                312
+              ]
+            },
+            {
+              "op": "L",
+              "values": [
+                29,
+                312
+              ]
+            },
+            {
+              "op": "L",
+              "values": [
+                29,
+                62
+              ]
+            },
+            {
+              "op": "L",
+              "values": [
+                59,
+                62
+              ]
+            }
+          ]
+        },
+        {
+          "id": "feedbackTip",
+          "kind": "arrow",
+          "x1": 43,
+          "y1": 62,
+          "x2": 64,
+          "y2": 62,
+          "tone": "neutral"
+        },
+        {
+          "id": "feedbackLabel",
+          "kind": "text",
+          "x": 200,
+          "y": 394,
+          "text": "回路提示：先留出澄清时间",
+          "tone": "neutral",
+          "fontSize": 20
+        }
+      ]
+    },
+    {
+      "id": "causeClose",
+      "kind": "prose",
+      "text": "下一步需要观察真实案例，确认哪一环节成立。图帮助提出问题，不替代证据。"
+    }
+  ]
+}

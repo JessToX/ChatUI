@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "contentId": "reference-derivation-v1",
+  "title": "从受力到速度关系",
+  "facts": {},
+  "blocks": [
+    {
+      "id": "intro",
+      "kind": "prose",
+      "text": "设质量 $m>0$、阻力系数 $k>0$ 为常数，初速度 $v_0>0$。下面只讨论 $t\\ge0$ 时的正向运动。"
+    },
+    {
+      "id": "steps",
+      "kind": "component",
+      "type": "steps",
+      "data": {
+        "items": [
+          {
+            "title": "建立运动方程",
+            "tex": "m\\frac{dv}{dt}=-kv^2",
+            "detail": "负号表示阻力与速度方向相反。"
+          },
+          {
+            "title": "分离变量",
+            "tex": "\\frac{dv}{v^2}=-\\frac{k}{m}\\,dt",
+            "detail": "在 v>0 的范围内进行除法，两边分别积分。"
+          },
+          {
+            "title": "使用初始条件",
+            "tex": "-\\frac{1}{v}+\\frac{1}{v_0}=-\\frac{k}{m}t",
+            "detail": "采用 v(0)=v₀，避免丢掉积分常数。"
+          },
+          {
+            "title": "整理速度表达式",
+            "tex": "v(t)=\\frac{v_0}{1+\\frac{k v_0}{m}t}",
+            "detail": "t≥0 时分母为正，速度逐渐下降但保持正值。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "check",
+      "kind": "collapse",
+      "summary": "展开：初值与量纲检查",
+      "blocks": [
+        {
+          "id": "check-content",
+          "kind": "prose",
+          "text": "代入 $t=0$ 得 $v(0)=v_0$。又因 $[k]=\\mathrm{kg}/\\mathrm{m}$，所以 $kv_0t/m$ 无量纲，可以与 1 相加。"
+        }
+      ]
+    }
+  ]
+}

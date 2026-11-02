@@ -1,0 +1,52 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; frame-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'"><title>ChatUI · 通用视图原型</title><style>
+:root{color-scheme:light dark;font-family:ui-sans-serif,system-ui,-apple-system,sans-serif;color:light-dark(#202124,#f0f0f0);background:light-dark(#fff,#181818)}*{box-sizing:border-box}body{margin:0;padding:28px 20px;line-height:1.6}main{max-width:860px;margin:auto}h1{font-size:26px;letter-spacing:-.02em;margin:0 0 8px}.note{color:light-dark(#62656b,#a8acb3);font-size:14px;margin:0 0 22px}nav{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0}button,select{font:inherit;color:inherit;background:transparent;border:1px solid light-dark(#d2d5da,#565960);border-radius:8px;padding:10px 14px;min-height:44px}button[aria-pressed=true]{border-color:light-dark(#2563bb,#81b4fa);background:light-dark(#eef5ff,#203047)}:focus-visible{outline:2px solid light-dark(#2563bb,#81b4fa);outline-offset:3px}.settings{display:flex;flex-wrap:wrap;gap:16px;align-items:center}.settings label{display:flex;gap:8px;align-items:center}#prompt{font-size:17px;border-left:3px solid light-dark(#a9bfdc,#627e9e);padding-left:14px;margin:24px 0}#stage{max-width:100%;margin:auto}iframe{display:block;width:100%;border:0;min-height:300px;background:transparent}#status{font-size:14px;color:light-dark(#62656b,#a8acb3)}details{margin-top:24px;font-size:14px}pre{white-space:pre-wrap;overflow-wrap:anywhere}a{color:inherit}
+</style></head><body><main><h1>通用视图原型</h1><p class="note">同一套浏览器布局、图元与共享计算，承载不同内容。以下为合成体验数据，用于检查运行时组合与交互；原生正文与为什么解释均为预写的合成示例，没有实时 AI；上下文 ACK 由本页模拟，真实自然语言与宿主验收另行记录。</p><nav id="cases" aria-label="体验内容"></nav><div class="settings"><label>主题 <select id="theme"><option value="light">浅色</option><option value="dark">深色</option></select></label><label>内容宽度 <select id="width"><option value="860">自适应</option><option value="320">320 px</option></select></label><button type="button" id="reload">重新挂载</button></div><p id="prompt"></p><article id="native-explanation" style="white-space:pre-line"></article><details id="knowledge-example" hidden><summary>为什么：预写知识解释示例（不是 AI 生成）</summary><p id="why-question"></p><p id="why-answer"></p><p id="current-question"></p></details><details><summary>本地模拟的上下文回执（不是宿主验收）</summary><pre id="context-payload">尚未发送探索状态。</pre></details><p id="status" role="status">正在载入本地原型…</p><div id="stage"></div><details><summary>完整初始文字快照</summary><pre id="fallback"></pre></details><p class="note">控件只改变本视图内的探索值，重新挂载恢复初始值。此页没有模型接口、聊天读取或存储；不会修改早先消息。公式排版首版为安全文字数学记法。</p></main><script>
+(() => {
+  let active, serial = 0, selected = 0, data;
+  const stage = document.getElementById('stage'), status = document.getElementById('status');
+  const mount = () => {
+    if (!data) return;
+    document.documentElement.style.colorScheme = document.getElementById('theme').value;
+    const item = data.cases[selected], generation = ++serial;
+    document.getElementById('prompt').textContent = item.prompt;
+    document.getElementById('fallback').textContent = item.result.content[0].text;
+    document.getElementById('native-explanation').textContent = item.nativeText || '';
+    document.getElementById('knowledge-example').hidden = !item.whyText;
+    document.getElementById('why-question').textContent = item.whyPrompt || '';
+    document.getElementById('why-answer').textContent = item.whyText || '';
+    document.getElementById('current-question').textContent = item.currentPrompt || '';
+    document.getElementById('context-payload').textContent = '尚未发送探索状态。';
+    for (const [i, b] of [...document.getElementById('cases').children].entries()) b.setAttribute('aria-pressed', String(i === selected));
+    active?.frame.remove();
+    const frame = document.createElement('iframe'); frame.title = item.title; frame.setAttribute('sandbox', 'allow-scripts');
+    // Only the fixed trusted renderer from this origin is loaded, never generated HTML or executable source.
+    frame.src = '/chatui-response.html'; active = { frame, generation }; stage.append(frame); status.textContent = '正在挂载可信 Renderer…';
+  };
+  window.addEventListener('message', event => {
+    if (!active || event.source !== active.frame.contentWindow || event.origin !== 'null') return;
+    const m = event.data;
+    if (!m || m.jsonrpc !== '2.0' || typeof m.method !== 'string') return;
+    const send = value => active.frame.contentWindow.postMessage({ jsonrpc: '2.0', ...value }, '*');
+    if (m.method === 'ui/initialize' && typeof m.id === 'string') {
+      send({ id: m.id, result: { protocolVersion: '2026-01-26', hostCapabilities: { updateModelContext: { structuredContent: {}, text: {} } }, hostContext: { theme: document.getElementById('theme').value } } });
+      send({ method: 'ui/notifications/tool-result', params: data.cases[selected].result });
+    } else if (m.method === 'ui/update-model-context') {
+      document.getElementById('context-payload').textContent = JSON.stringify(m.params, null, 2);
+      send({ id: m.id, result: {} });
+    } else if (['ui/message', 'tools/call', 'sampling/createMessage'].includes(m.method)) {
+      status.textContent = '错误：本地预览拒绝自动消息或工具调用。';
+      send({ id: m.id, error: { code: -32601, message: 'Local synthetic preview does not send messages or call tools' } });
+    } else if (m.method === 'ui/notifications/size-changed') {
+      const height = m.params?.height;
+      if (Number.isFinite(height) && height > 0 && height < 12000) { active.frame.style.height = height + 'px'; status.textContent = '本地视图已挂载 · 交互与错误提示可直接体验'; }
+    }
+  });
+  document.getElementById('theme').addEventListener('change', event => { document.documentElement.style.colorScheme = event.target.value; active?.frame.contentWindow.postMessage({ jsonrpc: '2.0', method: 'ui/notifications/host-context-changed', params: { theme: event.target.value } }, '*'); });
+  document.getElementById('width').addEventListener('change', event => { stage.style.width = event.target.value === '320' ? '320px' : '100%'; });
+  document.getElementById('reload').addEventListener('click', mount);
+  fetch('/generative-view-cases.json').then(r => { if (!r.ok) throw new Error('数据未准备好'); return r.json(); }).then(value => {
+    data = value;
+    value.cases.forEach((item, i) => { const b = document.createElement('button'); b.type = 'button'; b.textContent = item.title; b.addEventListener('click', () => { selected = i; mount(); }); document.getElementById('cases').append(b); }); mount();
+  }).catch(error => { status.textContent = '原型数据未能载入：' + error.message; });
+})();
+</script></body></html>

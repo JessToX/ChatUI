@@ -1,0 +1,8 @@
+{
+  "apps": {
+    "chatui": {
+      "id": "connector_synthetic_local_placeholder",
+      "required": true
+    }
+  }
+}

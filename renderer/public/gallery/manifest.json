@@ -1,0 +1,32 @@
+{
+  "format": "chatui-offline-gallery-v1",
+  "rendererResourceSHA256": "40e069f07c32e4954f7b892d6251dcf576b946ff6133c05f8b77f293cac16b63",
+  "fixtureHash": "3e09a77c50ac32aa66f4361aaccbb8e5b81fb1f223d43d2b3d3f7059acd2b802",
+  "files": [
+    {
+      "path": "index.html",
+      "bytes": 415567,
+      "sha256": "80dc94c159c459d0dd7f857b920f9dd421a486738e26d09cb197c92baa502e53"
+    },
+    {
+      "path": "fixtures.json",
+      "bytes": 88968,
+      "sha256": "3e09a77c50ac32aa66f4361aaccbb8e5b81fb1f223d43d2b3d3f7059acd2b802"
+    },
+    {
+      "path": "renderer.html",
+      "bytes": 296007,
+      "sha256": "40e069f07c32e4954f7b892d6251dcf576b946ff6133c05f8b77f293cac16b63"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2175,
+      "sha256": "a7d283165e8ca8b923a514600ff528e095d27edca0cdd8d10ebf47f8b677ba01"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "bytes": 18848,
+      "sha256": "5dfd3e349b79995fc8f5e5b2dbd75da341e113774c9aeb8f82c3fdd9cba4ff77"
+    }
+  ]
+}

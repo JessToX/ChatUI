@@ -1,0 +1,7 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; frame-src about:; img-src data:; connect-src 'none'; base-uri 'none'; form-action 'none'"><title>ChatUI · Offline Intellectual Gallery</title><style>__GALLERY_STYLE__</style></head><body>
+<header><p class="eyebrow">ChatUI · Intellectual UI</p><h1>知识 Gallery</h1><p class="gallery-note">离线合成示例 · 未连接 ChatGPT/MCP。</p></header>
+<nav id="scenes" aria-label="固定场景"></nav>
+<div class="controls"><label>主题 <select id="theme"><option value="light">浅色</option><option value="dark">深色</option></select></label><label>阅读宽度 <select id="width"><option>320</option><option>390</option><option selected>768</option><option>1024</option></select> CSS px</label><button id="reload" type="button">重新载入</button><button id="reset" type="button">重置本例</button></div>
+<main><h2 id="scene-title"></h2><p id="goal" class="gallery-note"></p><details id="test-details"><summary>测试说明与预期</summary><dl><dt>操作说明</dt><dd id="instructions"></dd><dt>实际显示模式</dt><dd id="actual-mode"></dd><dt>正确预期</dt><dd id="expected"></dd><dt>限制</dt><dd id="limitations"></dd></dl></details><p id="gallery-status" role="status" aria-live="polite"></p><div id="gallery-stage"></div></main>
+<footer>本地候选 · 真实宿主、人工读屏与理解效果仍需另行验收。</footer>
+<script type="application/json" id="gallery-data">__GALLERY_DATA__</script><script>__GALLERY_HOST__</script></body></html>

@@ -1,0 +1,27 @@
+.DS_Store
+.local/
+dist/
+__pycache__/
+*.pyc
+.env
+.env.*
+node_modules/
+.playwright-cli/
+output/playwright/
+
+# Local experiment hosting and dependency links must remain untracked.
+/renderer/experiments/persistent-gate/.openai/hosting.json
+/renderer/experiments/progressive-gate/.openai/hosting.json
+/renderer/experiments/sequential-gate/.openai/hosting.json
+/renderer/experiments/persistent-gate/node_modules
+
+# Preserved local evidence/build copies, not product source. See docs/ENGINEERING.md.
+/output/site-diagnostic-clean-0e4dfb-20261020T103919Z/
+/output/host-ui-20261021/
+/docs/tunnel-preparation/*.log
+/docs/tunnel-preparation/verification.json
+
+# Reviewed historical evidence; preserved, not active product entry points.
+/docs/native-ui-iteration-1/form-sync.patch
+/docs/native-ui-iteration-1/resource-uri-site.patch
+/plugins/chatui/skills/chatui/assets/component-kit 2.html

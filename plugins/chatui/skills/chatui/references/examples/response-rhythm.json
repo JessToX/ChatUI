@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "contentId": "reference-rhythm-v1",
+  "title": "这一版的叙事节奏",
+  "facts": {},
+  "blocks": [
+    {
+      "id": "intro",
+      "kind": "prose",
+      "text": "把篇幅留给发生变化的时刻。横条是**定性关注度**，不是实测字数、时长或完成率。"
+    },
+    {
+      "id": "rhythm",
+      "kind": "component",
+      "type": "rhythm",
+      "data": {
+        "items": [
+          {
+            "label": "整理行李",
+            "emphasis": "brief"
+          },
+          {
+            "label": "读到来信",
+            "emphasis": "moderate"
+          },
+          {
+            "label": "走向车站",
+            "emphasis": "brief"
+          },
+          {
+            "label": "站台相遇",
+            "emphasis": "focus"
+          },
+          {
+            "label": "列车出发",
+            "emphasis": "moderate"
+          }
+        ],
+        "note": "简写 → 适度展开 → 重点展开；不表示百分比。"
+      }
+    },
+    {
+      "id": "why",
+      "kind": "prose",
+      "text": "相遇让人物关系发生改变，因此值得慢下来。路上的过渡可以更短，不需要为每个动作分配相同篇幅。"
+    }
+  ]
+}

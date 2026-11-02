@@ -1,0 +1,6 @@
+ChatUI source preview
+Original project contributions are licensed under MIT. Copyright (c) 2026 Jess(T o X).
+Third-party code and assets retain their original licenses and copyright notices; root MIT does not relicense them.
+See THIRD_PARTY_NOTICES.md and docs/final-edition/third-party-dependencies.json.
+Two unverified original main icons are excluded and replaced by newly authored simple geometric SVG placeholders.
+This distribution excludes original Git history, credentials, private host evidence, account-bound configuration and installed dependencies.

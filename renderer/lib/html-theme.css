@@ -1,0 +1,45 @@
+/* Trusted, scoped stylesheet. Models author semantic HTML, not CSS. */
+.cui-html-surface { display:flow-root; min-width:0; width:100%; background:transparent; font-size:16px; line-height:1.75; color:var(--cui-fg); overflow-wrap:anywhere; }
+.cui-html-surface :is(article,section,div,pre,table) { min-width:0; }
+.cui-html-surface :is(p,ul,ol,dl,blockquote,pre,details,.cui-html-scroll) { margin:0 0 16px; }
+.cui-html-surface :is(h1,h2,h3,h4,h5,h6) { margin:26px 0 12px; font-weight:650; line-height:1.4; letter-spacing:-.02em; text-wrap:balance; }
+.cui-html-surface h1 { font-size:1.75em; }.cui-html-surface h2 { font-size:1.4em; }.cui-html-surface h3 { font-size:1.2em; }.cui-html-surface :is(h4,h5,h6) { font-size:1em; }
+.cui-html-surface :is(strong,b) { font-weight:650; }.cui-html-surface :is(em,i) { font-style:italic; }
+.cui-html-surface :is(ul,ol) { padding-inline-start:1.5em; }.cui-html-surface li+li { margin-top:6px; }
+.cui-html-surface li>p { margin-bottom:8px; }.cui-html-surface li>:is(ul,ol) { margin-top:8px; margin-bottom:0; }
+.cui-html-surface dt { font-weight:650; }.cui-html-surface dd { margin:4px 0 12px 1.5em; }
+.cui-html-surface blockquote { padding:4px 0 4px 18px; border-inline-start:3px solid var(--cui-blue); color:var(--cui-muted); }
+.cui-html-surface :is(code,kbd,samp) { font-family:ui-monospace,SFMono-Regular,Consolas,monospace; font-size:.88em; padding:2px 5px; border-radius:5px; background:var(--cui-soft); }
+.cui-html-surface pre { max-width:100%; overflow-x:auto; white-space:pre; padding:18px; border:1px solid var(--cui-line); border-radius:12px; line-height:1.6; }
+.cui-html-surface pre code { padding:0; background:transparent; border-radius:0; font-size:.9em; overflow-wrap:normal; }
+.cui-html-surface :is(sub,sup) { font-size:.75em; line-height:0; position:relative; vertical-align:baseline; }.cui-html-surface sub { bottom:-.25em; }.cui-html-surface sup { top:-.5em; }
+.cui-html-surface .cui-html-scroll { max-width:100%; overflow-x:auto; border:1px solid var(--cui-line); border-radius:12px; }
+.cui-html-surface table { width:100%; border-collapse:collapse; font-size:.92em; }
+.cui-html-surface caption { text-align:start; padding:10px 14px; font-weight:650; }
+.cui-html-surface :is(th,td) { min-width:90px; text-align:start; padding:10px 14px; border-bottom:1px solid var(--cui-line); vertical-align:top; }
+.cui-html-surface th { font-weight:650; background:var(--cui-soft); }.cui-html-surface tbody tr:last-child td { border-bottom:0; }
+.cui-html-surface details { padding:14px 18px; border:1px solid var(--cui-line); border-radius:18px; }
+.cui-html-surface summary { cursor:pointer; font-weight:600; min-height:28px; }.cui-html-surface details[open]>summary { margin-bottom:18px; }
+.cui-html-surface a { color:var(--cui-blue); text-decoration:underline; text-underline-offset:3px; }
+.cui-html-surface :is(a,summary,pre,.cui-html-scroll):focus-visible { outline:2px solid var(--cui-blue); outline-offset:3px; }
+.cui-html-surface hr { border:0; height:1px; background:var(--cui-line); margin:24px 0; }
+.cui-html-surface mark { color:inherit; background:color-mix(in srgb,var(--cui-orange) 16%,transparent); }
+.cui-html-surface :is(.concept-card,.key-point,.note,.warning,.success) { padding:18px 20px; margin:16px 0; border:1px solid var(--cui-line); border-radius:18px; }
+.cui-html-surface :is(.concept-card,.key-point) { border-color:color-mix(in srgb,var(--cui-blue) 40%,var(--cui-line)); background:color-mix(in srgb,var(--cui-blue) 5%,transparent); }
+.cui-html-surface .note { background:var(--cui-soft); }.cui-html-surface .warning { border-inline-start:3px solid var(--cui-orange); background:color-mix(in srgb,var(--cui-orange) 5%,transparent); }
+.cui-html-surface .success { border-inline-start:3px solid var(--cui-green); background:color-mix(in srgb,var(--cui-green) 5%,transparent); }
+/* Derivations read as body sections, not a second prominent card. */
+.cui-html-surface .derivation { padding:10px 0 10px 14px; margin:16px 0; border:0; border-inline-start:2px solid var(--cui-line); border-radius:0; background:transparent; }
+/* Empty pseudo-elements draw the accent; no arrow font or remote math dependency. */
+.cui-html-surface span.vector { position:relative; display:inline-block; padding-inline:1px; line-height:1; white-space:nowrap; }
+.cui-html-surface span.vector::before { content:""; position:absolute; top:-.14em; inset-inline:0; border-top:1px solid currentColor; }
+.cui-html-surface span.vector::after { content:""; position:absolute; top:-.25em; right:0; width:.22em; height:.22em; border-top:1px solid currentColor; border-right:1px solid currentColor; transform:rotate(45deg); }
+.cui-html-surface .cui-html-vector-mark { font-size:0; }
+.cui-html-surface :is(pre,kbd,samp) span.vector { display:inline; padding:0; line-height:inherit; white-space:inherit; }
+.cui-html-surface :is(pre,kbd,samp) span.vector::before,.cui-html-surface :is(pre,kbd,samp) span.vector::after { content:none; }
+.cui-html-surface .comparison-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; }
+.cui-html-surface .muted { color:var(--cui-muted); }.cui-html-surface .compact { font-size:.92em; line-height:1.6; }
+.cui-html-surface :is(article,section,div,details,blockquote)>:first-child { margin-top:0; }
+.cui-html-surface :is(article,section,div,details,blockquote)>:last-child { margin-bottom:0; }
+@media(max-width:560px) { .cui-html-surface .comparison-grid { grid-template-columns:minmax(0,1fr); }.cui-html-surface :is(.concept-card,.key-point,.note,.warning,.success) { padding:16px; } }
+@media(prefers-reduced-motion:reduce) { .cui-html-surface * { scroll-behavior:auto!important; } }
