@@ -16,7 +16,7 @@ python3 -m http.server 4173 --bind 127.0.0.1 --directory renderer/public
 
 ## 安装与验证
 
-完整步骤见[安装与运行](docs/installation.md)：离线 Gallery 不需 npm 或密钥；源码验证使用 Node.js 24.20.0 / npm 12.0.2。已验环境为 macOS/Python 3.9.6 与 Ubuntu 24.04/Python 3.12；其他组合不由此保证兼容。Linux 完整绘图测试需先按指南安装中文字体。在独立虚拟环境安装固定依赖，再从全新解包目录或克隆目录运行：
+完整步骤见[安装与运行](docs/installation.md)：离线 Gallery 不需 npm 或密钥；源码验证使用 Node.js 24.20.0 / npm 12.0.2。本次依赖修复已在 macOS/Python 3.12.16 验证；Pillow 13.0.0 要求 Python 3.11 或更新版本，完整复现建议使用 Python 3.12。旧候选的 macOS/Python 3.9.6 和 Ubuntu 24.04/Python 3.12 验收不能直接继承到本次修复，Linux CI 仍需重新验证。Linux 完整绘图测试需先按指南安装中文字体。在独立虚拟环境安装固定依赖，再从全新解包目录或克隆目录运行：
 
 ```sh
 python3 -m venv /tmp/chatui-preview-venv
@@ -29,7 +29,7 @@ python3 scripts/reproduce-package.py
 
 文档整理前的精确基线 `a90c8d3f03a567db99186b25d144b017564158cc` 已通过 main push 云 CI，组件92、Python159、Renderer472，零跳过。当前工作流支持 main push、向 main 的 pull_request，以及临时验收分支 push；实际 PR 事件仍未验。新提交必须有自己的验证记录，不能继承基线 CI 结论。完整开发树的旧测试计数也不等于本发行范围。
 
-工程说明见 [Renderer](renderer/README.md)、[验证说明](docs/release-preparation/VALIDATION.md)。[包清单](PACKAGE-MANIFEST.json)记录来源与清理差异；来源提交号是追溯信息，不表示公开包与其全部字节相同。
+工程说明见 [Renderer](renderer/README.md)、[验证说明](docs/release-preparation/VALIDATION.md)。[包清单](PACKAGE-MANIFEST.json)记录本地修复快照的全部源文件摘要和原候选；此快照尚未提交，sourceCommit 为 null，不表示已经获得发布或云端验收。
 
 ## 支持范围与已知限制
 
@@ -46,3 +46,10 @@ python3 scripts/reproduce-package.py
 原创贡献按 [MIT License](LICENSE) 授权，署名 **Jess(T o X)**。第三方代码和素材保留各自许可证与版权，详见 [THIRD_PARTY_NOTICES](THIRD_PARTY_NOTICES.md) 和 [NOTICE](NOTICE.txt)。两枚来源未确认的原主图标已排除，替换为本项目简单几何占位图；不宣称原图标已清权。
 
 源码与 Gallery ZIP 不是安装程序，也不提供可直接使用的 ChatGPT 服务或账户连接。接入须使用用户自己的服务、账户与权限，见[接入边界](docs/installation.md#连接-chatgpt)。附件生成与校验见[发行材料](docs/release-preparation/DISTRIBUTION.md)。实际公开仍须最终确认。
+
+
+### Local dependency security repair
+
+This uncommitted repair snapshot pins vinext's OG provider to `@vercel/og 1.0.1` and applies the official Next.js 16.4.1 security backport. The patch and source/output SHA256 fingerprints are retained in `renderer/vendor/og-security`; original licenses remain applicable. The embedded Satori implementation needs this backport independently of the standalone `satori 0.33.5` pin.
+
+Normal install and npm dev/build/start/test hooks verify the patch. After installing with `--ignore-scripts`, run `npm --prefix renderer run patch:dependencies` before invoking framework files directly. Unsupported versions or modified provider bytes stop patching; review the upstream patch before changing the pinned provider. This local verification does not confirm hosted deployment behavior.

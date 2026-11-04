@@ -14,7 +14,7 @@ python3 -m http.server 4173 --bind 127.0.0.1 --directory gallery
 
 ## 完整源码验证
 
-使用 Node.js **24.20.0** / npm **12.0.2**。完整验证已在 macOS/Python **3.9.6** 与 Ubuntu **24.04**/Python **3.12** 执行；建议 Linux 对齐 CI 的 Python 3.12。其他 Python、操作系统和 Node 主版本尚不作保证。
+使用 Node.js **24.20.0** / npm **12.0.2**。本次依赖修复的完整本地验证使用 macOS/Python **3.12.16**。Pillow **13.0.0** 要求 Python **3.11 或更新版本**；建议使用 Python **3.12**。旧候选的 Python 3.9.6 与 Ubuntu 24.04/Python 3.12 验收不代表本次修复已经通过 Linux CI，后者仍需重新运行。其他 Python、操作系统和 Node 主版本尚不作保证。
 
 Ubuntu 24.04 上完整绘图回归需要官方 Noto CJK 字体和 fontconfig；这些是系统依赖，不捆绑进 ZIP：
 

@@ -4,14 +4,14 @@
   "embeddedRuntime": [
     {
       "name": "DOMPurify",
-      "version": "3.4.16",
+      "version": "3.4.17",
       "license": "(MPL-2.0 OR Apache-2.0)",
       "chosenNotice": "Apache-2.0",
       "shippedIn": "response generated resources only; absent from Document Gallery"
     },
     {
       "name": "regenerator-runtime helper",
-      "version": "bundled helper within DOMPurify 3.4.16; no separate npm version asserted",
+      "version": "bundled helper within DOMPurify 3.4.17; no separate npm version asserted",
       "license": "MIT",
       "shippedIn": "response generated resources only; absent from Document Gallery",
       "copyright": "Copyright (c) 2014-present, Facebook, Inc."
@@ -31,6 +31,14 @@
       "provenanceScope": "Repository source attribution; upstream origin not independently revalidated in Phase 3",
       "license": "MIT",
       "shippedIn": "renderer/build/sites-vite-plugin.ts"
+    },
+    {
+      "name": "Official Next.js OG security backport",
+      "version": "Next 16.4.1 patch for @vercel/og 1.0.1",
+      "sourceSha256": "3d59af991a9f85bbc368d2891b4e965f10dd11c86b9786e79fc4a362bb01401b",
+      "license": "MIT (Next.js patch); MPL-2.0 (modified OG files)",
+      "shippedIn": "renderer/vendor/og-security",
+      "provenance": "renderer/vendor/og-security/provenance.json"
     }
   ],
   "direct": [
@@ -93,7 +101,7 @@
     {
       "scope": "renderer",
       "name": "dompurify",
-      "version": "3.4.16",
+      "version": "3.4.17",
       "license": "(MPL-2.0 OR Apache-2.0)",
       "role": "server/app install dependency"
     },
@@ -149,7 +157,7 @@
     {
       "scope": "renderer",
       "name": "next",
-      "version": "16.3.4",
+      "version": "16.4.1",
       "license": "MIT",
       "role": "server/app install dependency"
     },
@@ -170,7 +178,7 @@
     {
       "scope": "renderer",
       "name": "react",
-      "version": "19.2.6",
+      "version": "19.2.8",
       "license": "MIT",
       "role": "server/app install dependency"
     },
@@ -184,7 +192,7 @@
     {
       "scope": "renderer",
       "name": "react-dom",
-      "version": "19.2.6",
+      "version": "19.2.8",
       "license": "MIT",
       "role": "server/app install dependency"
     },
@@ -212,7 +220,7 @@
     {
       "scope": "renderer",
       "name": "sanitize-html",
-      "version": "2.18.0",
+      "version": "2.18.1",
       "license": "MIT",
       "role": "server/app install dependency"
     },
@@ -247,7 +255,7 @@
     {
       "scope": "renderer",
       "name": "zod",
-      "version": "3.25.76",
+      "version": "4.6.6",
       "license": "MIT",
       "role": "server/app install dependency"
     },
@@ -338,7 +346,7 @@
     {
       "scope": "renderer",
       "name": "eslint-config-next",
-      "version": "16.3.4",
+      "version": "16.4.1",
       "license": "MIT",
       "role": "install/build/test"
     },
@@ -366,7 +374,7 @@
     {
       "scope": "renderer",
       "name": "react-server-dom-webpack",
-      "version": "19.2.6",
+      "version": "19.2.8",
       "license": "MIT",
       "role": "install/build/test"
     },
@@ -401,7 +409,7 @@
     {
       "scope": "renderer",
       "name": "vite",
-      "version": "8.0.13",
+      "version": "8.1.6",
       "license": "MIT",
       "role": "install/build/test"
     },
@@ -417,7 +425,7 @@
     {
       "scope": "root-test",
       "lockfile": "package-lock.json",
-      "lockSha256": "447256f187663299f78c06fdf37ca094acc3437ee6d5dea779517f04be615433",
+      "lockSha256": "6a773d58a8220c87b0fbd78fdaba56168969441f713765eb2b5b56f101175288",
       "packages": [
         {
           "path": "node_modules/@asamuzakjp/css-color",
@@ -661,11 +669,11 @@
         },
         {
           "path": "node_modules/undici",
-          "version": "8.11.2",
+          "version": "8.12.2",
           "license": "MIT",
           "dev": true,
           "optional": false,
-          "integrity": "sha512-u4UB2/IrKdU6lFxumHmmo1a3fCQO5tzQllRorfoRS63txhrB7xTpSn1PftwC4qEHkOaqP95fCWW4lJzwErwzhQ=="
+          "integrity": "sha512-XtuDWVdqTLr3NAxm2ly9/hU6kUsJOgGh1RASzMBbsw6aWCOaQzHdW+QQDfdERjfJ2V5vL5pRPa4RetO9UfivDg=="
         },
         {
           "path": "node_modules/w3c-xmlserializer",
@@ -720,7 +728,7 @@
     {
       "scope": "renderer",
       "lockfile": "renderer/package-lock.json",
-      "lockSha256": "a40ce19c88f9ec50c5ab4a3e22473cc615f70ae3dc03d2b9d49d1790ce727c2a",
+      "lockSha256": "1bcbee766528b1ebb682f3069c5009ba0bbffda02e3e1bd778157ce3a835a3a6",
       "packages": [
         {
           "path": "node_modules/@alloc/quick-lru",
@@ -780,19 +788,19 @@
         },
         {
           "path": "node_modules/@babel/core",
-          "version": "7.29.0",
+          "version": "7.29.6",
           "license": "MIT",
           "dev": true,
           "optional": false,
-          "integrity": "sha512-CGOfOJqWjg2qW/Mb6zNsDm+u5vFQ8DxXfbM09z69p5Z6+mE1ikP2jUXw+j42Pf1XTYED2Rni5f95npYeuwMDQA=="
+          "integrity": "sha512-QdxmAo/ikZqqRGA8s43ww8lcql6naWRvEz0FFrl6MIlc7Gi6TroXnSdWa5U/kq6fzcpqpHesicQxFZIieZbyIA=="
         },
         {
           "path": "node_modules/@babel/generator",
-          "version": "7.29.1",
+          "version": "7.29.12",
           "license": "MIT",
           "dev": true,
           "optional": false,
-          "integrity": "sha512-qsaF+9Qcm2Qv8SRIMMscAvG4O3lJ0F1GuMo5HR/Bp02LopNgnZBC/EkbevHFeGs4ls/oPz9v+Bsmzbkbe+0dUw=="
+          "integrity": "sha512-2W76mhjrpQFO1lK5e8IvGYB2D0YZ7S2R1Z2BjO2ZUYuW+amcpK/z60U6ZZmzskwoa7sJ6XohP/Wg8H5KxXI/IA=="
         },
         {
           "path": "node_modules/@babel/helper-compilation-targets",
@@ -828,19 +836,19 @@
         },
         {
           "path": "node_modules/@babel/helper-string-parser",
-          "version": "7.27.1",
+          "version": "7.29.11",
           "license": "MIT",
           "dev": true,
           "optional": false,
-          "integrity": "sha512-qMlSxKbpRlAridDExk92nSobyDdpPijUq2DW6oDnUqd0iOGxmQjyqhMIihI9+zv4LPyZdRje2cavWPbCbWm3eA=="
+          "integrity": "sha512-snZbO7MEDOof+hvNa97EjEY7qD7h2kwvQr5AJC3ZhQudKW5dnej6k3kP9NQV88hJwaS8vDqRLFo9rivLEhle2g=="
         },
         {
           "path": "node_modules/@babel/helper-validator-identifier",
-          "version": "7.28.5",
+          "version": "7.29.7",
           "license": "MIT",
           "dev": true,
           "optional": false,
-          "integrity": "sha512-qSs4ifwzKJSV39ucNjsvc6WVHs6b7S03sOh2OcHF9UHfVPqWWALUsNUVzhSBiItjRZoLHx7nIarVjqKVusUZ1Q=="
+          "integrity": "sha512-qehxGkRj55h/ff8EMaJ+cYhyaKlHIxqYDn682wQD7RNp9UujOQsHog2uS0r2vzr4pW+sXf90NeeayjcNaX3fFg=="
         },
         {
           "path": "node_modules/@babel/helper-validator-option",
@@ -860,11 +868,11 @@
         },
         {
           "path": "node_modules/@babel/parser",
-          "version": "7.29.3",
+          "version": "7.29.12",
           "license": "MIT",
           "dev": true,
           "optional": false,
-          "integrity": "sha512-b3ctpQwp+PROvU/cttc4OYl4MzfJUWy6FZg+PMXfzmt/+39iHVF0sDfqay8TQM3JA2EUOyKcFZt75jWriQijsA=="
+          "integrity": "sha512-WJ7JBp/Q4+z/ImydtI7jS6NVco5++632ExBemSX+Ysb+G1lCwQ5BVo3SY+jGGOcZXI4ZccbZSUSJLNBW6eEpJg=="
         },
         {
           "path": "node_modules/@babel/runtime",
@@ -892,11 +900,11 @@
         },
         {
           "path": "node_modules/@babel/types",
-          "version": "7.29.0",
+          "version": "7.29.11",
           "license": "MIT",
           "dev": true,
           "optional": false,
-          "integrity": "sha512-LwdZHpScM4Qz8Xw2iKSzS+cfglZzJGvofQICy7W7v4caru4EaAmyUuO6BGrbyQ2mYV11W0U8j5mBhd14dd3B0A=="
+          "integrity": "sha512-WCsemW40Cpc6gouC1SrY6PBaZ+oLRlEVY9XBvZBI7il/HyUrb2nJ505wE1MHEFyDZNnrWDEuy4jL50WVHfTTSQ=="
         },
         {
           "path": "node_modules/@base-ui/react",
@@ -1076,27 +1084,27 @@
         },
         {
           "path": "node_modules/@emnapi/core",
-          "version": "1.10.0",
+          "version": "1.11.1",
           "license": "MIT",
           "dev": true,
           "optional": true,
-          "integrity": "sha512-yq6OkJ4p82CAfPl0u9mQebQHKPJkY7WrIuk205cTYnYe+k2Z8YBh11FrbRG/H6ihirqcacOgl2BIO8oyMQLeXw=="
+          "integrity": "sha512-RSvbQmHzdKzNsLYa/wHrbc3KN4sYLKAdPZxqiM2HATqv/SBk2/ENSHpvXGaLOMcsAyz0poEGqkmmKYG3OWiJEQ=="
         },
         {
           "path": "node_modules/@emnapi/runtime",
-          "version": "1.10.0",
+          "version": "1.11.3",
           "license": "MIT",
-          "dev": true,
+          "dev": false,
           "optional": true,
-          "integrity": "sha512-ewvYlk86xUoGI0zQRNq/mC+16R1QeDlKQy21Ki3oSYXNgLb45GV1P6A0M+/s6nyCuNDqe5VpaY84BzXGwVbwFA=="
+          "integrity": "sha512-Xz4Tpyki7XyrpbUK1jR1AhdAdaXyhhY4lZ3neLodmhpuWfy2PAQN5B46sAiU4liOXGLkHypn/qU+jvfWSCYYLA=="
         },
         {
           "path": "node_modules/@emnapi/wasi-threads",
-          "version": "1.2.1",
+          "version": "1.2.2",
           "license": "MIT",
           "dev": true,
           "optional": true,
-          "integrity": "sha512-uTII7OYF+/Mes/MrcIOYp5yOtSMLBWSIoLPpcgwipoiKbli6k322tcoFsxoIIxPDqW01SQGAgko4EzZi2BNv2w=="
+          "integrity": "sha512-c95qOXkHdydNKhscBTebqEC1CVAZpyqOfVfBzQ1qgzyl3gfeldUjIggDbIZgDKsHLgnsM+igH7TJ/eAasaVuMA=="
         },
         {
           "path": "node_modules/@esbuild-kit/core-utils",
@@ -1700,235 +1708,211 @@
         },
         {
           "path": "node_modules/@img/sharp-darwin-arm64",
-          "version": "0.35.4",
+          "version": "0.35.5",
           "license": "Apache-2.0",
           "dev": false,
           "optional": true,
-          "integrity": "sha512-Uhfl4V4lhP2nbUVF9+hyH1+luj86f1gUFeo8ALYxFoULoU+G87D43BfeMP8XHsk9boxAnCY/bf2EHwhA7MuGsA=="
+          "integrity": "sha512-QRUlFQ0WxvdWyqqG/WtI3iupfD5rBzmCHXSdPsY91sAtVtTo7Q4cb6zOccZ3gqEqkr0f1As1ehLqmEpDsRf+lg=="
         },
         {
           "path": "node_modules/@img/sharp-darwin-x64",
-          "version": "0.35.4",
+          "version": "0.35.5",
           "license": "Apache-2.0",
           "dev": false,
           "optional": true,
-          "integrity": "sha512-hWniXY3bG5qKpkKrAwPe4y+VTPmf086YQAnkxWh7uA1YrlRouWGa0M0Mxj3ZjnXFkv7/TD1bTy9lGUK26vRvWw=="
+          "integrity": "sha512-+BR255RhDlpygUpOc/Jdt1nT6DQ3XG/ERo5wbcdOf5Q320dKtPCKPLR1LJs9VGXRaMa8l1uUa0tkCNOXiAxZUw=="
         },
         {
           "path": "node_modules/@img/sharp-freebsd-wasm32",
-          "version": "0.35.4",
+          "version": "0.35.5",
           "license": "Apache-2.0",
           "dev": false,
           "optional": true,
-          "integrity": "sha512-lIsKw/BU+kjB4eZjxrYrZmwOJYi3Ajrv66iAlBmUPyKc3HpnloevB1g3wxGD9P/5BbQ1brBGl65VRRrCvQDEqA=="
-        },
-        {
-          "path": "node_modules/@img/sharp-freebsd-wasm32/node_modules/@emnapi/runtime",
-          "version": "1.11.3",
-          "license": "MIT",
-          "dev": false,
-          "optional": true,
-          "integrity": "sha512-Xz4Tpyki7XyrpbUK1jR1AhdAdaXyhhY4lZ3neLodmhpuWfy2PAQN5B46sAiU4liOXGLkHypn/qU+jvfWSCYYLA=="
-        },
-        {
-          "path": "node_modules/@img/sharp-freebsd-wasm32/node_modules/@img/sharp-wasm32",
-          "version": "0.35.4",
-          "license": "Apache-2.0 AND LGPL-3.0-or-later AND MIT",
-          "dev": false,
-          "optional": true,
-          "integrity": "sha512-zQnl4Kwp7Q6NHsENtU2T/00Zi+w3AQNwz3+UaTyVBy2FpXrzXzGjndpK61onhZjRtRpQXxCTeqw19bVyXOh7jA=="
+          "integrity": "sha512-Y/z91nEZ4uIBX5X3nfTovjU9lHNKFYbL2lpHCLVNmXQK03VIZvXBBt0KxbPGp2SdGSF+2mQU4e+hQaWOt86iAw=="
         },
         {
           "path": "node_modules/@img/sharp-libvips-darwin-arm64",
-          "version": "1.3.3",
+          "version": "1.3.4",
           "license": "LGPL-3.0-or-later",
           "dev": false,
           "optional": true,
-          "integrity": "sha512-suTBPTDGrI9WodccaDdwZItTSaBYASlBk1NSfElSHrUfzu3szG6lvIF58+WiFvnfzuK8ZBFS5zE00PxqxnRiPg=="
+          "integrity": "sha512-5R89nBYiRdUlSWJxPhO+GVtaXzXSxKnRu/xqMn3KTA3L9EB9Oy/P+Nn2f2vlhPuUdy/Zusb2DarbyTpGCfEDuw=="
         },
         {
           "path": "node_modules/@img/sharp-libvips-darwin-x64",
-          "version": "1.3.3",
+          "version": "1.3.4",
           "license": "LGPL-3.0-or-later",
           "dev": false,
           "optional": true,
-          "integrity": "sha512-FVJZ5mITMobmXIz/hPDTw0EintTW5H3WfrxwLqEqjiIihlu+hVRyGrFQ60xl0Lxn7Bt3zdpevPaQi0HEzqz9fw=="
+          "integrity": "sha512-iR2OKH80yi0U+dUplyh3/xdpFvps6YkCwsXenIJxqxR1v9o+xtKTGbS9H7cps+2Vxjc8B1j96p75NmTGjIhtpQ=="
         },
         {
           "path": "node_modules/@img/sharp-libvips-linux-arm",
-          "version": "1.3.3",
+          "version": "1.3.4",
           "license": "LGPL-3.0-or-later",
           "dev": false,
           "optional": true,
-          "integrity": "sha512-3rbU4vqXXc3hY/OiXdl52xZvT0F1yEngWfvqudtPJg/KkyiaQw2DRsFrNzpmLvfavbwOq3qXn36GP8obHRULQA=="
+          "integrity": "sha512-LmRtTsOHuvM2+wlO2Db37dx5MiZhB0FvSunciw48YjdOkZz9KAiRbm8ujeMOA1INqmei5NapFxYEK1D1ZSidmw=="
         },
         {
           "path": "node_modules/@img/sharp-libvips-linux-arm64",
-          "version": "1.3.3",
+          "version": "1.3.4",
           "license": "LGPL-3.0-or-later",
           "dev": false,
           "optional": true,
-          "integrity": "sha512-0DaL0A6Xu6sQSQFwe4iVCrKWU2cCTItnRsYsCdxAMm9NF6twAA9BKnoqy4hqz4+azQ0JHuA26qiUKsf1XJ/v5A=="
+          "integrity": "sha512-Y3dgX/6lE2QhQb+Gxy0WZxfg9MEm/JBjamZpS2IklP7xIQoKN4hzAm7KcMVGtaVDt3neE9OKBC7vAfonA/Lr1A=="
         },
         {
           "path": "node_modules/@img/sharp-libvips-linux-ppc64",
-          "version": "1.3.3",
+          "version": "1.3.4",
           "license": "LGPL-3.0-or-later",
           "dev": false,
           "optional": true,
-          "integrity": "sha512-cdn1OvUBwsXhbC0zSzJnNzf5MZ/mTrobawDvNXBTxe8VtqKAm0sRuEY2Evzovb/w9JMk4TvRxqt1mekSuJz64w=="
+          "integrity": "sha512-Le6boB8Tai0Nis+gIxIpKx68UDVVIqdR8Tin5Yf1z2LJJQLDJvCDRqRu+jC2qCoD+eIomonmOwB4smBRxfVpYQ=="
         },
         {
           "path": "node_modules/@img/sharp-libvips-linux-riscv64",
-          "version": "1.3.3",
+          "version": "1.3.4",
           "license": "LGPL-3.0-or-later",
           "dev": false,
           "optional": true,
-          "integrity": "sha512-HjPVx7yKz+0lqdhDlTw1tt90wamBoxhiXpvl1XZpJLiHH4RCJ5yDTqH+VlYPv2fwFs89JFw4c1IexYOcQUi4IQ=="
+          "integrity": "sha512-aHkkIEHPRdQEegJN20MLmGtxYD9R2wQr3Cwpddnu5+YKMt6Uzax7S9h5gpZTo8wyrGuZSlfQ63OevL5mTyOC7Q=="
         },
         {
           "path": "node_modules/@img/sharp-libvips-linux-s390x",
-          "version": "1.3.3",
+          "version": "1.3.4",
           "license": "LGPL-3.0-or-later",
           "dev": false,
           "optional": true,
-          "integrity": "sha512-neWLh+3yCNThxnfy3c4BbVBeGgt9aftno+XbT56iK28RgeDs3UOFWviLWlUu0bArYVYJaFDK+RRohbicUNCm8Q=="
+          "integrity": "sha512-ra/mB6MikESDUO7Yg+Mi95bFBb9GsObURuhnOv3OqknjGe9sZrG8tCe9q0xSIGrtLgvgw0gKnFWcK4blSgQOuQ=="
         },
         {
           "path": "node_modules/@img/sharp-libvips-linux-x64",
-          "version": "1.3.3",
+          "version": "1.3.4",
           "license": "LGPL-3.0-or-later",
           "dev": false,
           "optional": true,
-          "integrity": "sha512-4vKmvAst9nrowcqquKFAyZJUDolUaIp8uRiN0mWFguJ1IplC9/pitXtlnnlU4aa/eJw3J7i67V+pwUL+wZGdsA=="
+          "integrity": "sha512-GJ//SSXbnwSDes02umB3nDJLFcQzw8a18V8fyhqr6tV515tOEMdImjjxj1AoafMRz56F3PHgftnj1QEKSU1zkw=="
         },
         {
           "path": "node_modules/@img/sharp-libvips-linuxmusl-arm64",
-          "version": "1.3.3",
+          "version": "1.3.4",
           "license": "LGPL-3.0-or-later",
           "dev": false,
           "optional": true,
-          "integrity": "sha512-Y9kQaLMuNoB0bPYOOdcZMaseNrFpPodIWWMrx+CZyydf2xn68j9WYc6sWWRrDwNkzCQjKYfc68L7jKjGlHMibw=="
+          "integrity": "sha512-hvulFwtjUcagsis6BBxHwGFwWoNZjgYmULGVrZcyfNbjA8hKILbRxGg15/7w5HDyXHXUos/j6baAWqnCyQ2DWA=="
         },
         {
           "path": "node_modules/@img/sharp-libvips-linuxmusl-x64",
-          "version": "1.3.3",
+          "version": "1.3.4",
           "license": "LGPL-3.0-or-later",
           "dev": false,
           "optional": true,
-          "integrity": "sha512-fj8Mv0HHfD1Rr+4I68+3agJynxDWtBFgicTbSOb9Bke6pIwzGcJ+RX/yHjmiEGFMCavY/dxvem7MyNaJF+wDiw=="
+          "integrity": "sha512-6zXKeE/p39I1AmA3cJG35eyBGNqNddLnUXjhwBnsGjFPWqf5VKkDBEqaEkPDoTEtkxwi2vv8Tcr2mDyP4So7Fg=="
         },
         {
           "path": "node_modules/@img/sharp-linux-arm",
-          "version": "0.35.4",
+          "version": "0.35.5",
           "license": "Apache-2.0",
           "dev": false,
           "optional": true,
-          "integrity": "sha512-7OAS8gI0EReKGVN2HssHlM6umJgxF5VI3xN0p9FA91p/YO+ou5hiNghLdZ5BEHztwaaK5+bLKRf8x/o2L2nk9A=="
+          "integrity": "sha512-LEaXK2WdXVK5ykcw0buWyPMsmLLL2vpHLD6yrNSW+JGEL3BZPA4tpKN6iaMc4AxTTAoaX/sU1rOL51lcIz48ZQ=="
         },
         {
           "path": "node_modules/@img/sharp-linux-arm64",
-          "version": "0.35.4",
+          "version": "0.35.5",
           "license": "Apache-2.0",
           "dev": false,
           "optional": true,
-          "integrity": "sha512-De4jpEnAU8Hd5oT0j1G3uL4ZvTuipVMn7YC6vPaJhy6/7EwEae0SVAoBrUMYQbkLGDm85taVWwuPc1a44LTzCQ=="
+          "integrity": "sha512-LYVx5JTsOM2CBzmxreh+nl64/3H6Xb09iSLknqH47z2T2DFFxDeFLP5y4dJwe6H7uGQlHPyEEtIqyo3DYsRwdQ=="
         },
         {
           "path": "node_modules/@img/sharp-linux-ppc64",
-          "version": "0.35.4",
+          "version": "0.35.5",
           "license": "Apache-2.0",
           "dev": false,
           "optional": true,
-          "integrity": "sha512-2oYZJeIl4kCcMGk4ouZVjnkCtFrpQFlNEtJ6GbxzhHQchwH0NH/qEb9ykmOl29dqwMq+JhFdZn+1ak2FKhI9fQ=="
+          "integrity": "sha512-QVxAAq8evVRI9ia2vqgwrmWucn5Dfv+JdWzj75pD8omHLPSP7f8p20O8jxzjCcuCEQEOtYOZUmX1hkiZ0kdevA=="
         },
         {
           "path": "node_modules/@img/sharp-linux-riscv64",
-          "version": "0.35.4",
+          "version": "0.35.5",
           "license": "Apache-2.0",
           "dev": false,
           "optional": true,
-          "integrity": "sha512-cPbNChoRURAWdebDIHSenxRpgEdy7JkPydSnUxRm9VvKD7m0/xVaR/8Fzlu81pk5nHEvHH87UZUA7cTtwnbJSA=="
+          "integrity": "sha512-LtdreXguaavKODPIfzJ4kffx7UNt1omwtK0rch4EBbbSTXPnxWmYSayXdLJw0fJzQ97kHt1gL/yh4tvU+nCyRQ=="
         },
         {
           "path": "node_modules/@img/sharp-linux-s390x",
-          "version": "0.35.4",
+          "version": "0.35.5",
           "license": "Apache-2.0",
           "dev": false,
           "optional": true,
-          "integrity": "sha512-RY0JFY8Fd6RonCBtHz+DvadaPkXDSI1AUn6yWL9TipqkZ1vY8w8evqdgyDFnkm4/K1ve1TvZiaePP5oSd4+WVQ=="
+          "integrity": "sha512-UZasTOFiYzotTsGOCu42BfUzP6Tu6Do/947iRm1RsLKvlllxwGcn4RN27LibGWceix4Y+Pmw3jsnTcCQIgWjqA=="
         },
         {
           "path": "node_modules/@img/sharp-linux-x64",
-          "version": "0.35.4",
+          "version": "0.35.5",
           "license": "Apache-2.0",
           "dev": false,
           "optional": true,
-          "integrity": "sha512-9qvvEAuk8k89TfWUoX2htWjbAMX8p+NxCppjpcg5k6xMsjhBQPTsoIh36h9Qde4WRuGpJeYnOjdosDn/cnv+OA=="
+          "integrity": "sha512-SxFtLTeJInhAA9Q836kux2vZNeOBQEx658qvbboZScr0wIARym3IcGmW7KpVD5sbVg0Ojy+udFQdayYIZyoNog=="
         },
         {
           "path": "node_modules/@img/sharp-linuxmusl-arm64",
-          "version": "0.35.4",
+          "version": "0.35.5",
           "license": "Apache-2.0",
           "dev": false,
           "optional": true,
-          "integrity": "sha512-KB5jxpfWQTr0nc3xdHtWChdbifHrBGsd2SM62Eyxrl8afikm+f5qGBU75SJIZBT/S1MC8XyacdlXBMSWq6OURA=="
+          "integrity": "sha512-9HbMclmI1zlNkFRs3z9/eBtDjfD0sGlrX1z6b1qwmiFY5ElDLh4BC0LPBdVp7z1DXFiKlIcznf+ZlsuZzLxQqg=="
         },
         {
           "path": "node_modules/@img/sharp-linuxmusl-x64",
-          "version": "0.35.4",
+          "version": "0.35.5",
           "license": "Apache-2.0",
           "dev": false,
           "optional": true,
-          "integrity": "sha512-f+eZJZIQNEEd26RPSW+76chwOf1XtA2Y/O+5ocVyLliHkeih3e+jhLVBdNTd2rS3IbNXK8+ug93Vf5ZXtF5Lxg=="
+          "integrity": "sha512-4KOphqB035HrVdqLZfCgMzzERrQkkzOwRhl4OAkRO1YCldbaFjySXMaK534Mo0V+LndnlJk+sbUyLeU0ULyD1A=="
         },
         {
-          "path": "node_modules/@img/sharp-webcontainers-wasm32",
-          "version": "0.35.4",
-          "license": "Apache-2.0",
-          "dev": false,
-          "optional": true,
-          "integrity": "sha512-ESfNkywmCfPNyaZjxooddJQiQ+l/nTpGEOGthxiLnIHXC/CmcBixnfwUleX9mCz9ovrUUvKMap/pm8RYbzfwaA=="
-        },
-        {
-          "path": "node_modules/@img/sharp-webcontainers-wasm32/node_modules/@emnapi/runtime",
-          "version": "1.11.3",
-          "license": "MIT",
-          "dev": false,
-          "optional": true,
-          "integrity": "sha512-Xz4Tpyki7XyrpbUK1jR1AhdAdaXyhhY4lZ3neLodmhpuWfy2PAQN5B46sAiU4liOXGLkHypn/qU+jvfWSCYYLA=="
-        },
-        {
-          "path": "node_modules/@img/sharp-webcontainers-wasm32/node_modules/@img/sharp-wasm32",
-          "version": "0.35.4",
+          "path": "node_modules/@img/sharp-wasm32",
+          "version": "0.35.5",
           "license": "Apache-2.0 AND LGPL-3.0-or-later AND MIT",
           "dev": false,
           "optional": true,
-          "integrity": "sha512-zQnl4Kwp7Q6NHsENtU2T/00Zi+w3AQNwz3+UaTyVBy2FpXrzXzGjndpK61onhZjRtRpQXxCTeqw19bVyXOh7jA=="
+          "integrity": "sha512-Ptsga1su4tQx+LLF1ECS9U6nz5kmrXKo6XVbtR48Ke3ZRxxgaWBu7IDtEe1quo8hiupwm6WFqxVlXaSf7IINGQ=="
+        },
+        {
+          "path": "node_modules/@img/sharp-webcontainers-wasm32",
+          "version": "0.35.5",
+          "license": "Apache-2.0",
+          "dev": false,
+          "optional": true,
+          "integrity": "sha512-hfhF/FmoQyTUkA0bIKFOtw536BQSeBMe6BF6QyWlrPxT754+TFLaZ7sKKTfvvM0yJgKgaYTwnFCIZ/GuDw5SUA=="
         },
         {
           "path": "node_modules/@img/sharp-win32-arm64",
-          "version": "0.35.4",
+          "version": "0.35.5",
           "license": "Apache-2.0 AND LGPL-3.0-or-later",
           "dev": false,
           "optional": true,
-          "integrity": "sha512-iNdlBX9gLVvqe2I3uIJSIKTq6wckP/DYxZtcqxm09x5Gi24DnFBmPAWZmr60ZyYMG0xlzo6goG3670ar+RXvRw=="
+          "integrity": "sha512-X4t7g+7ZA5DKblCBEXGjUqqemj4vczING/5viFwAL8h4N3qYeyjwdCvRLHi4EdOUI+2Z7UFlp1VM+p/AuEtm6Q=="
         },
         {
           "path": "node_modules/@img/sharp-win32-ia32",
-          "version": "0.35.4",
+          "version": "0.35.5",
           "license": "Apache-2.0 AND LGPL-3.0-or-later",
           "dev": false,
           "optional": true,
-          "integrity": "sha512-kqRsbaa5CS6KHlpxnN7WhE6vAAugXyZButpRdvDWetlv6Qv4N9WTcrWzF7tXfB9T7MsoadqdI8hmwLq6UlLvtw=="
+          "integrity": "sha512-5Zm82LoBc43nhwNybZlG7Y1KO//Zhsn306fQl29ZOuStHLGTo3BWL83q3cznX0poxSAMuYL1On/BHBxkBeKr6A=="
         },
         {
           "path": "node_modules/@img/sharp-win32-x64",
-          "version": "0.35.4",
+          "version": "0.35.5",
           "license": "Apache-2.0 AND LGPL-3.0-or-later",
           "dev": false,
           "optional": true,
-          "integrity": "sha512-XtmnYhBcrORsJ4XJngyzr/EWP0hRZLAZRFaApdKuviyqF78+ylxh2y06ZmtULAMOnObJ3ucpN0AcwSWnMowTRg=="
+          "integrity": "sha512-x76eH0vEiHlcMQu8Y8IenntaACtddpT6W0wmXtWrnKcnKI7ME5DdgqhAD6SEWOEl1v2zDvkZDhFA9KnURwpfqg=="
         },
         {
           "path": "node_modules/@jridgewell/gen-mapping",
@@ -1988,83 +1972,83 @@
         },
         {
           "path": "node_modules/@next/env",
-          "version": "16.3.4",
+          "version": "16.4.1",
           "license": "MIT",
           "dev": false,
           "optional": false,
-          "integrity": "sha512-cjWZnUUa6jZq2kFaNe/ZyJdZonOZ/QoN0Zka2nz/FLOrfx14pQuM9c5RaSVkWMqgdt4ksgPAMWPyHSs/CyV48Q=="
+          "integrity": "sha512-5sUUrrSvs/2/2LnLoesybMGx12EtPB46fdZ6RhAw0XDGSPxU2LFyQBB7yuEiOFFJPKmBY6+q2jTr1/AMbnp0/g=="
         },
         {
           "path": "node_modules/@next/eslint-plugin-next",
-          "version": "16.3.4",
+          "version": "16.4.1",
           "license": "MIT",
           "dev": true,
           "optional": false,
-          "integrity": "sha512-szW9y2Aumu4z88YXfTzcFsgUAg2k64uzbtcO5L9f1AKS4w/GUKJcbFllRflROVyNPgJtGOnvNxiyp3v6b+prIA=="
+          "integrity": "sha512-2io6M+wAqe7nT5mt2gEVy6FOzye2DmwhjaYCpSvHfrIKL11SXNTwSARxpPHJacRmfgSBSDnNmnEXSp0DaJ23BQ=="
         },
         {
           "path": "node_modules/@next/swc-darwin-arm64",
-          "version": "16.3.4",
+          "version": "16.4.1",
           "license": "MIT",
           "dev": false,
           "optional": true,
-          "integrity": "sha512-iBr3I5LZNk5/bgl5//iTgD2tcym14MX0Xo7fD//u9dYAEgGzza1y9oywluPtf74YnOswVdH1908aK9xVz7zQTw=="
+          "integrity": "sha512-U+hQ5Gj3fpzf4fveTIF3dpUFYhaSW8vHhdAnbiIomzXzg7boreYFgBqprepXFtW4sw+aTttiNmg0gew/iFNhbg=="
         },
         {
           "path": "node_modules/@next/swc-darwin-x64",
-          "version": "16.3.4",
+          "version": "16.4.1",
           "license": "MIT",
           "dev": false,
           "optional": true,
-          "integrity": "sha512-2dpiSyl2Jw/NrBPaU2MAKGSa+2MR82pJIn4Sm5Rjr+gxAeuh0z158Su3Z2O8zn7UNNq+ej4bToed6RcRN/Lydg=="
+          "integrity": "sha512-/hqC3V1XLUjhMASf/WridKdO9FXoEgN3HBWmtKbj00MPgnltutfraWJ3bYTpCRIgEIpbjJyOVLpYgAhh/BkdcQ=="
         },
         {
           "path": "node_modules/@next/swc-linux-arm64-gnu",
-          "version": "16.3.4",
+          "version": "16.4.1",
           "license": "MIT",
           "dev": false,
           "optional": true,
-          "integrity": "sha512-+t+U8HZT+fApePCS5h89CSH3datz29MkzyfCn+6fpsZBG/oiEOhINcb9rtkv6sdpToLGFn2e6146NzaKCXkqrA=="
+          "integrity": "sha512-GHzncHbcaS9g95kcvTNtKQW3aCLoR+xc3Jm7qrkpk1R+D2BjMHIPyvQGRPKCdMX95BsH/421jBUK06q9tEwzjw=="
         },
         {
           "path": "node_modules/@next/swc-linux-arm64-musl",
-          "version": "16.3.4",
+          "version": "16.4.1",
           "license": "MIT",
           "dev": false,
           "optional": true,
-          "integrity": "sha512-mx03GNs1ocQA5JQ4FxDMmIsNkdrZh8cuezKCrId28e5/gIPU/l7Kcy2+vmCCzdjnnmXJy+iOAu+7K0QppO6Urg=="
+          "integrity": "sha512-1SuJyDxW/PR9dHJat/ZRgcYLhuSZ+1psP4DlKb2tKIuXbjygqpLrJWRSq+onZQBv8LcmU67EIrmb6c3XTaJLjw=="
         },
         {
           "path": "node_modules/@next/swc-linux-x64-gnu",
-          "version": "16.3.4",
+          "version": "16.4.1",
           "license": "MIT",
           "dev": false,
           "optional": true,
-          "integrity": "sha512-YIhGY6fSMfha52bnVxnzc9zaVBzJg+cqQTOD8tXIBSx4fuv0pVMxQTE0PaS59YhnMOiYiG09IMwxJAf/CFm/Dw=="
+          "integrity": "sha512-Istng1hMGp9TGO4lUqeKLd70MPN/OOkucVTP2Nmj+gLkwBgmPqUw8CJYBCC7nbl/B/23bBCcjCI5Hsh6hazC1A=="
         },
         {
           "path": "node_modules/@next/swc-linux-x64-musl",
-          "version": "16.3.4",
+          "version": "16.4.1",
           "license": "MIT",
           "dev": false,
           "optional": true,
-          "integrity": "sha512-+eaaX6axpDb0yF1GCpiERe6njplvdC+nks/fKfcHu3XPGRrald8P3/X7yv7QLdjA51knnxwl9pxdIJsg+w1L+Q=="
+          "integrity": "sha512-aSC9wMNiZRRFVpPkPWBzRwLQxIGm/CiQcXyFF1XNcgodb+uMxdk7aSSGGpDXCbnvZdf4itjHxpOd5h7i7zaiYw=="
         },
         {
           "path": "node_modules/@next/swc-win32-arm64-msvc",
-          "version": "16.3.4",
+          "version": "16.4.1",
           "license": "MIT",
           "dev": false,
           "optional": true,
-          "integrity": "sha512-0jcXW7Xs/uzICrmgV3MhDYDeRy++1CqnpDIerlPIqYO4bhzB4WNbX/aRnQclustsAyTkFKB0z6rbcjmNg5tR8A=="
+          "integrity": "sha512-t/myvwFDlypMUjRvbBf8qLPyuaB0iXYYdBtwMt6DM6f+60wtGr4bSYholdPqNeV5VUXZhrpMwfza829kmhS3iA=="
         },
         {
           "path": "node_modules/@next/swc-win32-x64-msvc",
-          "version": "16.3.4",
+          "version": "16.4.1",
           "license": "MIT",
           "dev": false,
           "optional": true,
-          "integrity": "sha512-vvBzwu1pYQCp92maZCFCIw/XgOTMR5tur9GjakwIo2cmwRTMKajRZZDS9+e4KsUZWKu1E007WUeAFXRRjZeuzw=="
+          "integrity": "sha512-6ICqPo9awCkrtYNPhwkx1uU7rlFWrZRrIboDHS2LU+jv088UBYQtmJ25h6pCp27/+FZjF6BQ4Te4ErugyMeuBg=="
         },
         {
           "path": "node_modules/@nodelib/fs.scandir",
@@ -2100,11 +2084,11 @@
         },
         {
           "path": "node_modules/@oxc-project/types",
-          "version": "0.130.0",
+          "version": "0.139.0",
           "license": "MIT",
           "dev": true,
           "optional": false,
-          "integrity": "sha512-ibD2usx9JRu7f5pu2tMKMI4cpA4NgXJQoYRP4pQ7Pxmn1l6k/53qWtQWZayhYy3X4QZkt90Ot+mJEaeXouio6Q=="
+          "integrity": "sha512-r9gHphtCs+1M7J0pw6Sn/hh/Wpa/iQrOOkrNAlVLF/gHq+/CJmHIWKKUUhdWjcD6CIa8idarspCsASiXCXvFUw=="
         },
         {
           "path": "node_modules/@poppinss/colors",
@@ -2900,139 +2884,147 @@
         },
         {
           "path": "node_modules/@resvg/resvg-wasm",
-          "version": "2.4.0",
+          "version": "2.4.1",
           "license": "MPL-2.0",
           "dev": true,
           "optional": false,
-          "integrity": "sha512-C7c51Nn4yTxXFKvgh2txJFNweaVcfUPQxwEUFw4aWsCmfiBDJsTSwviIF8EcwjQ6k8bPyMWCl1vw4BdxE569Cg=="
+          "integrity": "sha512-yi6R0HyHtsoWTRA06Col4WoDs7SvlXU3DLMNP2bdAgs7HK18dTEVl1weXgxRzi8gwLteGUbIg29zulxIB3GSdg=="
         },
         {
           "path": "node_modules/@rolldown/binding-android-arm64",
-          "version": "1.0.1",
+          "version": "1.1.5",
           "license": "MIT",
           "dev": true,
           "optional": true,
-          "integrity": "sha512-fJI3I0r3C3Oj/zdBCpaCmBRZYf07xpaq4yCfDDoSFm+beWNzbIl26puW8RraUdugoJw/95zerNOn6jasAhzSmg=="
+          "integrity": "sha512-lZg8fqIv2v7FF237bwMgzGZEJvGL79/s5knJ/i6FmsGF4XXlzccZ4jb+TrFIxtSSxFtIpdsgrPZeMk1I9AFcyQ=="
         },
         {
           "path": "node_modules/@rolldown/binding-darwin-arm64",
-          "version": "1.0.1",
+          "version": "1.1.5",
           "license": "MIT",
           "dev": true,
           "optional": true,
-          "integrity": "sha512-cKnAhWEsV7TPcA/5EAteDp6KcJZBQ2G+BqE7zayMMi7kMvwRsbv7WT9aOnn0WNl4SKEIf43vjS31iUPu80nzXg=="
+          "integrity": "sha512-51Bnx9pNiMRKSUNtBfySkNJ9vMU9Hh3I1ozDd6gyPPYzaXCfnptUcEZxXGYFn+ul2dtcMUiqGR1Yai2K10uoTw=="
         },
         {
           "path": "node_modules/@rolldown/binding-darwin-x64",
-          "version": "1.0.1",
+          "version": "1.1.5",
           "license": "MIT",
           "dev": true,
           "optional": true,
-          "integrity": "sha512-YKrVwQjIRBPo+5G/u03wGjbdy4q7pyzCe93DK9VJ7zkVmeg8LJ7GbgsiHWdR4xSoe4CAXRD7Bcjgbtr64bkXNg=="
+          "integrity": "sha512-Tm+gbfC0aHu1tBA/JvKQh32S0K6YgCHkiAF4/W6xX0K0RmNuc94VeK419dJoE65R5aRxmo+noZQSWrAMF6yb6g=="
         },
         {
           "path": "node_modules/@rolldown/binding-freebsd-x64",
-          "version": "1.0.1",
+          "version": "1.1.5",
           "license": "MIT",
           "dev": true,
           "optional": true,
-          "integrity": "sha512-z/oBsREo46SsFqBwYtFe0kpJeBijAT48O/WXLI4suiCLBkr03RTtTJMCzSdDd2znlh8VJizL09XVkQgk8IZonw=="
+          "integrity": "sha512-JMzDKCCXq93YccG5gz3hvOs1oXRKAf0XYpfOS88e+wZrC8Iugj6j68867vrYZkvpDDpKn/KoKORThmchMpF6TA=="
         },
         {
           "path": "node_modules/@rolldown/binding-linux-arm-gnueabihf",
-          "version": "1.0.1",
+          "version": "1.1.5",
           "license": "MIT",
           "dev": true,
           "optional": true,
-          "integrity": "sha512-ik8q7GM11zxvYxFc2PeDcT6TBvhCQMaUxfph/M5l9sKuTs/Sjg3L+Byw0F7w0ZVLBZmx30P+gG0ECzzN+MFcmQ=="
+          "integrity": "sha512-uML21j2K5TfPGutKxub+M+nLjZIrWjXQ5Grx4lCe/nimTj9B4L63zHpjXLl4y0L3mcm2htEQIb06oCG/szerNw=="
         },
         {
           "path": "node_modules/@rolldown/binding-linux-arm64-gnu",
-          "version": "1.0.1",
+          "version": "1.1.5",
           "license": "MIT",
           "dev": true,
           "optional": true,
-          "integrity": "sha512-QoSx2EkyrrdZ6kcyE8stqZ62t0Yra8Fs5ia9lOxJrh6TMQJK7gQKmscdTHf7pOXKREKrVwOtJcQG3qVSfc866A=="
+          "integrity": "sha512-navSiuTMogvnQoZoM/v+l3ZWo50/NTwSHSzheABx/RCnmUPaKwq9qSo4Br2OYRs21+Fz8uFqITZM3H4opOB0/Q=="
         },
         {
           "path": "node_modules/@rolldown/binding-linux-arm64-musl",
-          "version": "1.0.1",
+          "version": "1.1.5",
           "license": "MIT",
           "dev": true,
           "optional": true,
-          "integrity": "sha512-uwNwFpwKeNiZawfAWBgg0VIztPTV3ihhh1vV334h9ivnNLorxnQMU6Fz8wG1Zb4Qh9LC1/MkcyT3YlDXG3Rsgg=="
+          "integrity": "sha512-lAryqH7IteztmCXQXk0etKj4wBQ7Gx5S6LjKhsgp9zb8I5bsuvU/2llH1hDQcjsFeqIsovMVN339/8pUDDBXxA=="
         },
         {
           "path": "node_modules/@rolldown/binding-linux-ppc64-gnu",
-          "version": "1.0.1",
+          "version": "1.1.5",
           "license": "MIT",
           "dev": true,
           "optional": true,
-          "integrity": "sha512-zY1bul7OWr7DFBiJ++wofXvnr8B45ce3QsQUhKrIhXsygAh7bTkwyeM1bi1a2g5C/yC/N8TZyGDEoMfm/l9mpg=="
+          "integrity": "sha512-fsK/sNBnxzBlL4O1JNrZakVQxPspqpED5dLtNsZS9oOKmtSpdNIzxH2kkol5HYTWJN47sE20ztMJPxfZ89qGOg=="
         },
         {
           "path": "node_modules/@rolldown/binding-linux-s390x-gnu",
-          "version": "1.0.1",
+          "version": "1.1.5",
           "license": "MIT",
           "dev": true,
           "optional": true,
-          "integrity": "sha512-0frlsT/f4Ft6I7SMESTKnF3cZsdicQn1dCMkF/jT9wDLE+gGoiQfv1nmT9e+s7s/fekvvy6tZM2jHvI2tkbJDQ=="
+          "integrity": "sha512-gLYb4BIadlfTOYT5gO503n8zQjXflgzpD0FcyKh0Mzx3rqCZKnHoJWV9xe1KXUJ5lx2JfcSHr/mhzS0PC/McAA=="
         },
         {
           "path": "node_modules/@rolldown/binding-linux-x64-gnu",
-          "version": "1.0.1",
+          "version": "1.1.5",
           "license": "MIT",
           "dev": true,
           "optional": true,
-          "integrity": "sha512-XABVmGp9Tg0WspTVvwduTc4fpqy6JnAUrSQe6OuyqD/03nI7r0O9OWUkMIwFrjKAIqolvqoA4ZrJppgwE0Gxmw=="
+          "integrity": "sha512-FjcpEKUyJygHgs1o50VYNvkt5+7Le/VEdYt0AkRpkL33MnyQfwr8l5mXwMmfmTbyMPr5vJLC+8/Gd9gXnwU1QQ=="
         },
         {
           "path": "node_modules/@rolldown/binding-linux-x64-musl",
-          "version": "1.0.1",
+          "version": "1.1.5",
           "license": "MIT",
           "dev": true,
           "optional": true,
-          "integrity": "sha512-bV4fzswuzVcKD90o/VM6QqKxnxlDq0g2BISDLNVmxrnhpv1DDbyPhCIjYfvzYLV+MvkKKnQt2Q6AO86SEBULUQ=="
+          "integrity": "sha512-Me+PfPI2TMeOQk0gYWfLQZtTktrmzbr8cDboqX83XKc7UrgAi55gF+2dUkWdxd19n55Essp2yeca+O9N5rBxHg=="
         },
         {
           "path": "node_modules/@rolldown/binding-openharmony-arm64",
-          "version": "1.0.1",
+          "version": "1.1.5",
           "license": "MIT",
           "dev": true,
           "optional": true,
-          "integrity": "sha512-/Mh0Zhq3OP7fVs0kcQHZP6lZEthMGTaSf8UBQYSFEZDWGXXlEC+nJ6EqenaK2t4LBXMe3A+K/G2BVXXdtOr4PQ=="
+          "integrity": "sha512-yc5WrLzXks6zCQfn9Oxr8pORKyl/pF+QjHmW/Qx3qu0oyrrNC+y2JLTU1E2rcWYAmzlnqngWXHQjy51VzW70Vw=="
         },
         {
           "path": "node_modules/@rolldown/binding-wasm32-wasi",
-          "version": "1.0.1",
+          "version": "1.1.5",
           "license": "MIT",
           "dev": true,
           "optional": true,
-          "integrity": "sha512-+1xc9X45l8ufsBAm6Gjvx2qDRIY9lTVt0cgWNcJ+1gdhXvkbxePA60yRTwSTuXL09CMhyJmjpV7E3NoyxbqFQQ=="
+          "integrity": "sha512-VbQGPX2b4r48TAMIM2cjgluIM1HYutm4pcTEJsle7iEP7sB1dFqtPLBVbdLAZCxy1txCcPxf4QFf4v8uvltPqA=="
+        },
+        {
+          "path": "node_modules/@rolldown/binding-wasm32-wasi/node_modules/@emnapi/runtime",
+          "version": "1.11.1",
+          "license": "MIT",
+          "dev": true,
+          "optional": true,
+          "integrity": "sha512-vgj7R3y3Wgx24IQaGPA/R6YFXLHVMOZ0uVEyIQPaWs+rd1AzfEMXlAC22FYwO1XkKR6NPsq7mUandH8oIRdZFw=="
         },
         {
           "path": "node_modules/@rolldown/binding-wasm32-wasi/node_modules/@napi-rs/wasm-runtime",
-          "version": "1.1.4",
+          "version": "1.2.7",
           "license": "MIT",
           "dev": true,
           "optional": true,
-          "integrity": "sha512-3NQNNgA1YSlJb/kMH1ildASP9HW7/7kYnRI2szWJaofaS1hWmbGI4H+d3+22aGzXXN9IJ+n+GiFVcGipJP18ow=="
+          "integrity": "sha512-zJccwplOAbgfZju95IUHazLnx9RAPtPN2YGJXI6UbrgeaR9QfPjGrQL6ERkSAtnVCA4Q+83ApGyaX5zdpCaKkQ=="
         },
         {
           "path": "node_modules/@rolldown/binding-win32-arm64-msvc",
-          "version": "1.0.1",
+          "version": "1.1.5",
           "license": "MIT",
           "dev": true,
           "optional": true,
-          "integrity": "sha512-1D+UqZdfnuR+Jy1GgMJwi85bD40H21uNmOPRWQhw4oRSuolZ/B5rixZ45DK2KXOTCvmVCecauWgEhbw8bI7tOw=="
+          "integrity": "sha512-gHv82k63z4qpV5+Q1y/12KrK0ltWBukVDI8nZcbT7Tt/ZlOIVwppazneq0F93oDxTo3IgAMEDIoQh3E2n6mVsw=="
         },
         {
           "path": "node_modules/@rolldown/binding-win32-x64-msvc",
-          "version": "1.0.1",
+          "version": "1.1.5",
           "license": "MIT",
           "dev": true,
           "optional": true,
-          "integrity": "sha512-INAycaWuhlOK3wk4mRHGsdgwYWmd9cChdPdE9bwWmy6rn9VqVNYNFGhOdXrofXUxwHIncSiPNb8tNm8knDVIeQ=="
+          "integrity": "sha512-tTZuDBPw85tEN5PQi1pnEBzDy0Z49HtScLAbD5t6hyeU92A95pRWaSMw1GZZi/RwgSgUIl0xrSlXIT/9QzvYSA=="
         },
         {
           "path": "node_modules/@rolldown/pluginutils",
@@ -3276,11 +3268,11 @@
         },
         {
           "path": "node_modules/@tybys/wasm-util",
-          "version": "0.10.2",
+          "version": "0.10.4",
           "license": "MIT",
           "dev": true,
           "optional": true,
-          "integrity": "sha512-RoBvJ2X0wuKlWFIjrwffGw1IqZHKQqzIchKaadZZfnNpsAYp2mM0h36JtPCjNDAHGgYez/15uMBpfGwchhiMgg=="
+          "integrity": "sha512-W3c4gRigFS0T/Ma4qIYF3GDAc5AQdHb1yL5znJT1Zv1YaD9Kitx656wBjvr19qbiosmZT8lWDM5BEMynUqX65A=="
         },
         {
           "path": "node_modules/@types/d3-array",
@@ -3516,11 +3508,11 @@
         },
         {
           "path": "node_modules/@typescript-eslint/typescript-estree/node_modules/brace-expansion",
-          "version": "5.0.6",
+          "version": "5.0.12",
           "license": "MIT",
           "dev": true,
           "optional": false,
-          "integrity": "sha512-kLpxurY4Z4r9sgMsyG0Z9uzsBlgiU/EFKhj/h91/8yHu0edo7XuixOIH3VcJ8kkxs6/jPzoI6U9Vj3WqbMQ94g=="
+          "integrity": "sha512-YovQ3rzhaLMIrDjNDMkNS01tea93qhEhG5xy8f6+R0l+dw3Ki+5sCoIoI942iuLZTHWogWktgwVDhU09iNEimQ=="
         },
         {
           "path": "node_modules/@typescript-eslint/typescript-estree/node_modules/minimatch",
@@ -3729,14 +3721,6 @@
           "dev": true,
           "optional": true,
           "integrity": "sha512-lrW200hZdbfRtztbygyaq/6jP6AKE8qQN2KvPcJ+x7wiD038YtnYtZ82IMNJ69GJibV7bwL3y9FgK+5w/pYt6g=="
-        },
-        {
-          "path": "node_modules/@vercel/og",
-          "version": "0.8.6",
-          "license": "MPL-2.0",
-          "dev": true,
-          "optional": false,
-          "integrity": "sha512-hBcWIOppZV14bi+eAmCZj8Elj8hVSUZJTpf1lgGBhVD85pervzQ1poM/qYfFUlPraYSZYP+ASg6To5BwYmUSGQ=="
         },
         {
           "path": "node_modules/@vinext/types",
@@ -4108,11 +4092,11 @@
         },
         {
           "path": "node_modules/baseline-browser-mapping",
-          "version": "2.10.30",
+          "version": "2.11.0",
           "license": "Apache-2.0",
           "dev": false,
           "optional": false,
-          "integrity": "sha512-xjOFN16Ha1+Rz4nFYKqHU/LSB+gx/Vi3yQLX7r7sAW+Wa+8hhF2h4pvqTrTMc8+WcDBEunnUurr46Jvv0jk3Vg=="
+          "integrity": "sha512-oCu2wfipvX3AePSgmOuKkIywOu+8n9psz7hXYmk56ghpu3+7KzNIBopaOs4c9BrtdnTtW30unG9GTfHo7EwERQ=="
         },
         {
           "path": "node_modules/bidi-js",
@@ -4132,11 +4116,11 @@
         },
         {
           "path": "node_modules/brace-expansion",
-          "version": "1.1.14",
+          "version": "1.1.21",
           "license": "MIT",
           "dev": true,
           "optional": false,
-          "integrity": "sha512-MWPGfDxnyzKU7rNOW9SP/c50vi3xrmrua/+6hfPbCS2ABNWfx24vPidzvC7krjU/RTo235sV776ymlsMtGKj8g=="
+          "integrity": "sha512-9zeA+KLZNNzglF2TPKRQEDyx6Yby7daAkuy8MiPzpXPsYDWi/DRM8jmwUDxokQjYqBpv5DgPiwD4h4ZZSy1Ujw=="
         },
         {
           "path": "node_modules/braces",
@@ -4148,11 +4132,11 @@
         },
         {
           "path": "node_modules/browserslist",
-          "version": "4.28.2",
+          "version": "4.28.7",
           "license": "MIT",
           "dev": true,
           "optional": false,
-          "integrity": "sha512-48xSriZYYg+8qXna9kwqjIVzuQxi+KYWp2+5nCYnYKPTr0LvD89Jqk2Or5ogxz0NUMfIjhh2lIUX/LyX9B4oIg=="
+          "integrity": "sha512-JxV13hNrFxqjOc8alRbq9dK1MM79NEXYpma2B2J4wAtpWS5zIEIKqWPGCl7N4o7Uc7B7itylh7SuDujATRyyTw=="
         },
         {
           "path": "node_modules/buffer-from",
@@ -4212,11 +4196,11 @@
         },
         {
           "path": "node_modules/caniuse-lite",
-          "version": "1.0.30001793",
+          "version": "1.0.30001820",
           "license": "CC-BY-4.0",
           "dev": false,
           "optional": false,
-          "integrity": "sha512-iwSsYWaCOoh26cV8NwNRViHlrfUvYsHDfRVcbtmw0Kg6PJIZZXwMkj1442FYLBGkeUf1juAsU3DTfxW579mrPA=="
+          "integrity": "sha512-gfWD6MxqVCqAOwmODfZf7DchWvlrA+SRdNX7ceLfg3xRqe5ssjjpF7EgslC/0tiLiNTajdaNN/q8c/5u/7Gz8w=="
         },
         {
           "path": "node_modules/chalk",
@@ -4348,11 +4332,11 @@
         },
         {
           "path": "node_modules/css-gradient-parser",
-          "version": "0.0.16",
+          "version": "0.0.17",
           "license": "MIT",
           "dev": true,
           "optional": false,
-          "integrity": "sha512-3O5QdqgFRUbXvK1x5INf1YkBz1UKSWqrd63vWsum8MNHDBYD5urm3QtxZbKU259OrEXNM26lP/MPY3d1IGkBgA=="
+          "integrity": "sha512-w2Xy9UMMwlKtou0vlRnXvWglPAceXCTtcmVSo8ZBUvqCV5aXEFP/PC6d+I464810I9FT++UACwTD5511bmGPUg=="
         },
         {
           "path": "node_modules/css-to-react-native",
@@ -4571,14 +4555,6 @@
           "integrity": "sha512-oIPzksmTg4/MriiaYGO+okXDT7ztn/w3Eptv/+gSIdMdKsJo0u4CfYNFJPy+4SKMuCqGw2wxnA+URMg3t8a/bQ=="
         },
         {
-          "path": "node_modules/deepmerge",
-          "version": "4.3.1",
-          "license": "MIT",
-          "dev": false,
-          "optional": false,
-          "integrity": "sha512-3sUqbMEc77XqpdNO7FRyRog+eW3ph+GYCbj+rK+uYyRMuwsVy0rMiVtPn+QJlKFvWP/1PYpapqYn0Me2knFn+A=="
-        },
-        {
           "path": "node_modules/define-data-property",
           "version": "1.1.4",
           "license": "MIT",
@@ -4652,11 +4628,11 @@
         },
         {
           "path": "node_modules/dompurify",
-          "version": "3.4.16",
+          "version": "3.4.17",
           "license": "(MPL-2.0 OR Apache-2.0)",
           "dev": false,
           "optional": false,
-          "integrity": "sha512-sqo+pNp3qRhCIpbgRi1y8Tgk27Bo2Ry7w0dC1NBeNTdZChWjz9Xb/KOoZbRP/R6pQZ80Qw8YhXw13hWWBbMRnQ=="
+          "integrity": "sha512-B/pSlYVHQ58kqISD/yDjuJ1yfzI34m1gF4lAod2bwSRhiN4K5Cl3H8Af7hqB2PmTL911tdEudnnXn5FnhRoz0w=="
         },
         {
           "path": "node_modules/domutils",
@@ -4908,11 +4884,11 @@
         },
         {
           "path": "node_modules/electron-to-chromium",
-          "version": "1.5.358",
+          "version": "1.5.475",
           "license": "ISC",
           "dev": true,
           "optional": false,
-          "integrity": "sha512-EO7tKm3QxRqTs1lSuPXzl6yRAwznehp0AH9OoMOIC+4mQzTFday8FJCO5KU6J/TFSQXEOahNq4vTKpz1jmCVOA=="
+          "integrity": "sha512-S9tceHJbIsHH8VRwh9x+8lJO50SYwTdwVGdEjdz2FERyP59j1N6rdXOSklIusrhxt9GG/WN4V/kRgmDHl9MM5w=="
         },
         {
           "path": "node_modules/embla-carousel",
@@ -5100,11 +5076,11 @@
         },
         {
           "path": "node_modules/eslint-config-next",
-          "version": "16.3.4",
+          "version": "16.4.1",
           "license": "MIT",
           "dev": true,
           "optional": false,
-          "integrity": "sha512-35/8RM10huEL9vlr8hUZMERMENHBrnyHN3ZZkF9efSgzGaqK34jIqry44A956//zriUhUAUW0XSkcolhrryqAA=="
+          "integrity": "sha512-6AsojbCfRdpWkP6BIUnMBv3MH4OvtfmH9p4hSfLh8ZgsW7nfhu7DpUMNBB7leisDyyMz+YYxTc+NAdBOQfovlA=="
         },
         {
           "path": "node_modules/eslint-config-next/node_modules/globals",
@@ -5332,11 +5308,11 @@
         },
         {
           "path": "node_modules/fast-uri",
-          "version": "3.1.7",
+          "version": "3.1.9",
           "license": "BSD-3-Clause",
           "dev": false,
           "optional": false,
-          "integrity": "sha512-dOvZVzjdZdz7phd9v6jCbwxrBW3fK6n8Rc0CtdmM4bumzMnxywBYhuph6J819RRw/ku+rLbelwfMunktuzVVHg=="
+          "integrity": "sha512-hS/0Wt3Ya043oKXs0sIxrMpKQITXhMLIrVAKKXi4gozGC9v7YRWVnXIZzjNPTO02M9BdxLCWqK1yRXgNziVyJQ=="
         },
         {
           "path": "node_modules/fastq",
@@ -5348,11 +5324,11 @@
         },
         {
           "path": "node_modules/fflate",
-          "version": "0.7.4",
+          "version": "0.7.5",
           "license": "MIT",
           "dev": true,
           "optional": false,
-          "integrity": "sha512-5u2V/CDW15QM1XbbgS+0DfPxVB+jUKhWEKuuFuHncbk3tEEqzmoXL+2KyOFuKGqOnmdIy0/davWF1CkuwtibCw=="
+          "integrity": "sha512-QieYf//cis6ywHNi5qW1+PXPQ4bC+XVJAtS4AXIML8P76GroEiOxm/oQtn1f02UkJY1+KsXMJcC+R2v/Eg4G3g=="
         },
         {
           "path": "node_modules/file-entry-cache",
@@ -5539,6 +5515,14 @@
           "integrity": "sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ=="
         },
         {
+          "path": "node_modules/harfbuzzjs",
+          "version": "0.10.0",
+          "license": "MIT",
+          "dev": true,
+          "optional": false,
+          "integrity": "sha512-SN8LVwCOzvTq3OPNd0+EAghgXugItz56wst567D1vs7LnnKGWprhi3EG58aVOBwhN8HEbQxL4I9NDWkcXUutRw=="
+        },
+        {
           "path": "node_modules/has-bigints",
           "version": "1.1.0",
           "license": "MIT",
@@ -5660,11 +5644,11 @@
         },
         {
           "path": "node_modules/image-size",
-          "version": "2.0.2",
+          "version": "2.0.3",
           "license": "MIT",
           "dev": true,
           "optional": false,
-          "integrity": "sha512-IRqXKlaXwgSMAMtpNzZa1ZAe8m+Sa1770Dhk8VkSsP9LS+iHD62Zd8FQKs8fbPiagBE7BzoFX23cxFnwshpV6w=="
+          "integrity": "sha512-9BJAtVCBth+76NwqnEfWr3PiRnYhbquk6K/USuQ1GQajz5NgLzO7tNsnoNjHfO7LuftgkBf+CCH6j28hjMbIYQ=="
         },
         {
           "path": "node_modules/immer",
@@ -6020,11 +6004,11 @@
         },
         {
           "path": "node_modules/js-yaml",
-          "version": "4.1.1",
+          "version": "4.3.2",
           "license": "MIT",
           "dev": true,
           "optional": false,
-          "integrity": "sha512-qQKT4zQxXl8lLwBtHMWwaTcGfFOZviOJet3Oy/xmGk2gZH677CJM9EvtfdSkgWcATZhj/55JZ0rmy3myCT5lsA=="
+          "integrity": "sha512-SFNOvSJ+Dgf/9An904Yx+CgSlIPCkIpao4qo51lpee25TIRejdH3rhR4EZMGoNx3/TP3O+wzWuiTFl4sqbltzA=="
         },
         {
           "path": "node_modules/jsdom",
@@ -6044,11 +6028,11 @@
         },
         {
           "path": "node_modules/jsdom/node_modules/undici",
-          "version": "8.11.2",
+          "version": "8.12.2",
           "license": "MIT",
           "dev": true,
           "optional": false,
-          "integrity": "sha512-u4UB2/IrKdU6lFxumHmmo1a3fCQO5tzQllRorfoRS63txhrB7xTpSn1PftwC4qEHkOaqP95fCWW4lJzwErwzhQ=="
+          "integrity": "sha512-XtuDWVdqTLr3NAxm2ly9/hU6kUsJOgGh1RASzMBbsw6aWCOaQzHdW+QQDfdERjfJ2V5vL5pRPa4RetO9UfivDg=="
         },
         {
           "path": "node_modules/jsesc",
@@ -6452,11 +6436,11 @@
         },
         {
           "path": "node_modules/next",
-          "version": "16.3.4",
+          "version": "16.4.1",
           "license": "MIT",
           "dev": false,
           "optional": false,
-          "integrity": "sha512-/Ztf6CeRH+ejEXUrYtqI4gkS66eFIHuSwqi60RgcpWKodxFZx2/dqVCMKBwILfAHXQ+F1b1vAudgj3mnxqtoIA=="
+          "integrity": "sha512-uc657V62E34fOI6W5NtG9IzwsPcms0Z60grz2MJGtglgD+pTFnNt4Yw2PzaU622tfX4vhrDgLZzicE2YlhI20Q=="
         },
         {
           "path": "node_modules/next-themes",
@@ -6476,11 +6460,11 @@
         },
         {
           "path": "node_modules/node-releases",
-          "version": "2.0.44",
+          "version": "2.0.63",
           "license": "MIT",
           "dev": true,
           "optional": false,
-          "integrity": "sha512-5WUyunoPMsvvEhS8AxHtRzP+oA8UCkJ7YRxatWKjngndhDGLiqEVAQKWjFAiAiuL8zMRGzGSJxFnLetoa43qGQ=="
+          "integrity": "sha512-6li2QanLsAXpIH2R6j77MzRyvOyrvdTqlKtO4CgBdHGNvN99ZZfyxszHc5o5+IZBWD5u6Hzwg83JoGXmqZNG9Q=="
         },
         {
           "path": "node_modules/object-assign",
@@ -6764,11 +6748,11 @@
         },
         {
           "path": "node_modules/react",
-          "version": "19.2.6",
+          "version": "19.2.8",
           "license": "MIT",
           "dev": false,
           "optional": false,
-          "integrity": "sha512-sfWGGfavi0xr8Pg0sVsyHMAOziVYKgPLNrS7ig+ivMNb3wbCBw3KxtflsGBAwD3gYQlE/AEZsTLgToRrSCjb0Q=="
+          "integrity": "sha512-PWaYA1L/q9u2u7xYQi+Y3L3Yfnie7XyLeaJICV1MGD6LprsBxcAqGjYyr0eY3p+QdsA+x/Irkt4Qif8D63+Sbw=="
         },
         {
           "path": "node_modules/react-day-picker",
@@ -6780,11 +6764,11 @@
         },
         {
           "path": "node_modules/react-dom",
-          "version": "19.2.6",
+          "version": "19.2.8",
           "license": "MIT",
           "dev": false,
           "optional": false,
-          "integrity": "sha512-0prMI+hvBbPjsWnxDLxlCGyM8PN6UuWjEUCYmZhO67xIV9Xasa/r/vDnq+Xyq4Lo27g8QSbO5YzARu0D1Sps3g=="
+          "integrity": "sha512-rVprimfGBG3DR+Tq0IQG2DT5PxKth1WIGDmj5yPmlzr4YBe7uyE+Du4oVqTDXZSHGGGXRtTJEGSSePyQCMBglQ=="
         },
         {
           "path": "node_modules/react-hook-form",
@@ -6836,11 +6820,11 @@
         },
         {
           "path": "node_modules/react-server-dom-webpack",
-          "version": "19.2.6",
+          "version": "19.2.8",
           "license": "MIT",
           "dev": true,
           "optional": false,
-          "integrity": "sha512-762YXjBPc6hw2V16k4x1sdnw0mxghcSPzoiOhefGYjiTguJLCImGBUz6EjznPIfqKhWgLtpaQMlBhp66N8dKrw=="
+          "integrity": "sha512-rFO1VJZ+cH9ZH6hGy9+qmIsmZHZpCMKJZXhWHqT71UnSfg+w+W+gwrwp58MVzMqdFquG8GF1c6C8q0OGphkEdg=="
         },
         {
           "path": "node_modules/react-style-singleton",
@@ -6948,11 +6932,11 @@
         },
         {
           "path": "node_modules/rolldown",
-          "version": "1.0.1",
+          "version": "1.1.5",
           "license": "MIT",
           "dev": true,
           "optional": false,
-          "integrity": "sha512-X0KQHljNnEkWNqqiz9zJrGunh1B0HgOxLXvnFpCOcadzcy5qohZ3tqMEUg00vncoRovXuK3ZqCT9KnnKzoInFQ=="
+          "integrity": "sha512-t9z29cJjXf/vxQ8dyhCSpt6H6aSwHTk8cT5I3iy6SMXuFpk5mB6PL6XfC8PCwrPTx93udwKUm9HRteAlTGBLiA=="
         },
         {
           "path": "node_modules/run-parallel",
@@ -6996,11 +6980,11 @@
         },
         {
           "path": "node_modules/sanitize-html",
-          "version": "2.18.0",
+          "version": "2.18.1",
           "license": "MIT",
           "dev": false,
           "optional": false,
-          "integrity": "sha512-CvY+PV+NBhxe3BnjFI5f//vEDKLULm9OlZArso7gdgVsWvanBuq9PNDx+/2llfL+8XFYa/UNBxvqRBg3TWU2Ug=="
+          "integrity": "sha512-2X5lC8fYla8YaT8g73Nj+HcLWXan5dLyCWLgVvaOmfw7JI78IRsyNtIDytTHdn7hBQbIkCah7Zbmd5jabzeDig=="
         },
         {
           "path": "node_modules/sanitize-html/node_modules/postcss",
@@ -7012,11 +6996,11 @@
         },
         {
           "path": "node_modules/satori",
-          "version": "0.16.0",
+          "version": "0.33.5",
           "license": "MPL-2.0",
           "dev": true,
           "optional": false,
-          "integrity": "sha512-ZvHN3ygzZ8FuxjSNB+mKBiF/NIoqHzlBGbD0MJiT+MvSsFOvotnWOhdTjxKzhHRT2wPC1QbhLzx2q/Y83VhfYQ=="
+          "integrity": "sha512-PNW6ktrQ8SM6kk7u4aOuTkkUewkzyTOrj+QeEzXSsnNMAdff4ire9CAqIz8+4C3rCiBtK8QTELv52AZEd1PbRw=="
         },
         {
           "path": "node_modules/saxes",
@@ -7092,19 +7076,19 @@
         },
         {
           "path": "node_modules/sharp",
-          "version": "0.35.4",
+          "version": "0.35.5",
           "license": "Apache-2.0",
           "dev": false,
           "optional": false,
-          "integrity": "sha512-n++8XWcj+jCOr2IOl7h8LbKnGBDY4aPbmprMONBNFdn0ImXqpGVv5zliDs0V9HbmbCQLpbuo2ej9rAoOQTvMDA=="
+          "integrity": "sha512-Ywn4OnzGukp7CDMrp08RQ50YKmuwG47brZgIVPTvBaaAfQlRlygrRqSrxdCiL9M+LlzLBiJ68IR1QqvzHyjC7g=="
         },
         {
           "path": "node_modules/sharp/node_modules/semver",
-          "version": "7.8.5",
+          "version": "7.8.6",
           "license": "ISC",
           "dev": false,
           "optional": false,
-          "integrity": "sha512-Y7/KDsb8LjooZpwaqGyulO6DQlksgCncchHGk+sZIY4SBvUocMBEFH5Ur1fI4dV+Jvl0w6cjvucaIi40puRioA=="
+          "integrity": "sha512-9lpSSU4Mly3mrtruwLs1eLK6+gzbzqeBFwRNjIjE+9LuDpWdYctrQlQ3ej1Ilgi7gknpsTRnPoLP8DpCHqHIJw=="
         },
         {
           "path": "node_modules/shebang-command",
@@ -7388,11 +7372,11 @@
         },
         {
           "path": "node_modules/tinyglobby",
-          "version": "0.2.16",
+          "version": "0.2.17",
           "license": "MIT",
           "dev": true,
           "optional": false,
-          "integrity": "sha512-pn99VhoACYR8nFHhxqix+uvsbXineAasWm5ojXoN8xEwK5Kd3/TrhNn1wByuD52UxWRLy8pu+kRMniEi6Eq9Zg=="
+          "integrity": "sha512-wXR/dYpcqKmfWpEdZjiKJOwCNFndD0DMnrW/cYjVGttEkBfVgcLFHoNrlj47mjOVic9yyNu65alsgF4NQyTa2g=="
         },
         {
           "path": "node_modules/tinyglobby/node_modules/fdir",
@@ -7580,11 +7564,11 @@
         },
         {
           "path": "node_modules/undici",
-          "version": "7.24.8",
+          "version": "7.30.1",
           "license": "MIT",
           "dev": true,
           "optional": false,
-          "integrity": "sha512-6KQ/+QxK49Z/p3HO6E5ZCZWNnCasyZLa5ExaVYyvPxUwKtbCPMKELJOqh7EqOle0t9cH/7d2TaaTRRa6Nhs4YQ=="
+          "integrity": "sha512-03KrMbjIFDWQR5RNPrSw3bd1r12JpyFQl9/yxjUbJtqkjmllqC5lFjZh6ujeuJCKr8EOQvRW872Oy/az+nLYxg=="
         },
         {
           "path": "node_modules/undici-types",
@@ -7699,12 +7683,20 @@
           "integrity": "sha512-c0I1UB70/pGwD9y4/iXWrGfz/LnowSbkQpUw+lK9t08tes5WHX7Vl0sZAY4MIzGaVCyvrD4/xZo7HWpMje6SwA=="
         },
         {
+          "path": "node_modules/vinext/node_modules/@vercel/og",
+          "version": "1.0.1",
+          "license": "MPL-2.0",
+          "dev": true,
+          "optional": false,
+          "integrity": "sha512-uLTgu6ZIYuPuDnPpwkYhJsOjogqIhMnjjLREFpRAXjsMpCIQ2RmNX8Iz/5shDXfva1A2V0kC5j+KFVUSc4TVew=="
+        },
+        {
           "path": "node_modules/vite",
-          "version": "8.0.13",
+          "version": "8.1.6",
           "license": "MIT",
           "dev": true,
           "optional": false,
-          "integrity": "sha512-MFtjBYgzmSxmgA4RAfjIyXWpGe1oALnjgUTzzV7QLx/TKxCzjtMH6Fd9/eVK+5Fg1qNoz5VAwsmMs/NofrmJvw=="
+          "integrity": "sha512-aRAHIxx5SW5zc1sMqFwJU/t5qaFfXb5Hj0J7W0VXihu/X99+346tz6080tO1T1xVIJORX/b3zVTXGFqUXh35uw=="
         },
         {
           "path": "node_modules/vite-plugin-commonjs",
@@ -7844,11 +7836,11 @@
         },
         {
           "path": "node_modules/vite/node_modules/picomatch",
-          "version": "4.0.4",
+          "version": "4.0.7",
           "license": "MIT",
           "dev": true,
           "optional": false,
-          "integrity": "sha512-QP88BAKvMam/3NxH6vj2o21R6MjxZUAd6nlwAS/pnGvN9IVLocLHxGYIzFhg6fUQ+5th6P4dv4eW9jX3DSIj7A=="
+          "integrity": "sha512-qcJu88Q2IWqJsDD529JKMdwGm/dvInW4HvQnRwiH9JtihJvzGOscDtHE3x1pBKeUOTysQ8kVmLnJ2kJu7yhcGA=="
         },
         {
           "path": "node_modules/vitefu",
@@ -8220,11 +8212,11 @@
         },
         {
           "path": "node_modules/ws",
-          "version": "8.18.0",
+          "version": "8.21.0",
           "license": "MIT",
           "dev": true,
           "optional": false,
-          "integrity": "sha512-8VbfWfHLbbwu3+N6OKsOMpBdT4kXPDDB9cJk2bJ6mh9ucxdlnNvH1e+roYkKmN9Nxw2yjz7VzeO9oOz2zJ04Pw=="
+          "integrity": "sha512-Vsp28b7DRcimFQvrqu2Wek3z1iYxDCWqHYB8Qsnk/S4RfaCQzPGPyBNuVjJV3cd6UiKtUtp6sNM77gWvzcCH+g=="
         },
         {
           "path": "node_modules/xml-name-validator",
@@ -8284,11 +8276,11 @@
         },
         {
           "path": "node_modules/zod",
-          "version": "3.25.76",
+          "version": "4.6.6",
           "license": "MIT",
           "dev": false,
           "optional": false,
-          "integrity": "sha512-gzUt/qt81nXsFGKIFcC3YnfEAx5NkunCfnDlvuBSSFS02bcXu4Lmea0AFIUwbLWxWPx3d9p8S5QoaujKcNQxcQ=="
+          "integrity": "sha512-4UmzQUF5fxvfcYHlbjBmejU+w+hbDnWFx4aS8kBx7nPBHcO2SqPbpAG8snbdg+Xse4pRefR98hgjFgIMCI/UhA=="
         },
         {
           "path": "node_modules/zod-validation-error",
@@ -8316,7 +8308,7 @@
     },
     {
       "name": "Pillow",
-      "version": "11.3.0",
+      "version": "13.0.0",
       "license": "MIT-CMU",
       "role": "optional static-force PNG/SVG adapter acceptance environment; not shipped code"
     },

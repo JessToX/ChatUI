@@ -1,9 +1,10 @@
-# Existing local acceptance environment for the optional static force PNG/SVG adapter.
+# Pinned environment for the optional static force PNG/SVG adapter.
+# Pillow 13 requires Python >=3.11; full local acceptance uses Python 3.12.16.
 # Gallery and all JavaScript/Python stdlib generation require none of these packages.
 # Install in a fresh user-managed virtual environment; do not change system packages.
 matplotlib==3.9.4
 numpy==2.0.2
-Pillow==11.3.0
+Pillow==13.0.0
 contourpy==1.3.0
 cycler==0.12.1
 fonttools==4.60.2
