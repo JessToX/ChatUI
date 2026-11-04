@@ -16,7 +16,7 @@ PYTHONDONTWRITEBYTECODE=1 python3 scripts/reproduce-package.py
 
 当前 `.github/workflows/clean-candidate.yml` 使用 Ubuntu 24.04、Node24.20.0、Python3.12、固定 Python 依赖和官方 Noto CJK。触发为 main push、pull_request 到 main，以及精确临时验收分支 push；只有 contents:read，没有部署或 secrets。临时验收分支按约定不同时开 PR，避免一次 push 触发两次。并发仅按 workflow/event/ref 取消被替代的旧运行。
 
-精确基线 a90c8d3f03a567db99186b25d144b017564158cc 的 main push 已通过，组件92/Python159/Renderer472，零跳过；更早两次失败仍属于真实历史。PR 配置审查不等于实际 PR 事件已执行。当前后续候选必须记录自己的结果。
+精确基线 a90c8d3f03a567db99186b25d144b017564158cc 的 main push 已通过，组件92/Python159/Renderer472，零跳过；更早两次失败仍属于真实历史。后续安全修复候选 `448a8e0b5ac7b45d87085efe9252e3fcac2d955b` 已通过真实 pull_request CI [run 41828357173](https://github.com/JessToX/ChatUI/actions/runs/41828357173)，组件92/Python165/Renderer476，零跳过，并完成 types/lint/build/生成/许可/源文件保真。PR 合并测试提交 `71fc75bf34e02f8f55640da625844489c39c8852` 的树与候选相同，均为 `5338ddc2d8e3bf4972d29352440186c14fb85f2b`。这些是该精确候选的历史验证事实，不能用作后续修改提交已通过 CI 的证明。后续候选须更新清单、重新提交、打包并记录其自身 CI。
 
 ## 定向维护
 
