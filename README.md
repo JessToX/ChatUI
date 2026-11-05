@@ -2,7 +2,7 @@
 
 ChatUI 由 **Jess(T o X)** 制作，是独立、非官方项目，与 OpenAI 不存在隶属、赞助或背书关系。相关商标属于各自权利人。
 
-所有者已决定停止使用并退役线上 ChatUI，只保留源码与离线 Gallery。本地候选用于相应的归档发行整理，**两处线上站点已永久删除，源码尚未发布或归档**。它提供讲解、公式、图形和局部交互的实现，不包含可直接使用的 ChatGPT 托管服务、账户连接或一键安装流程。拟发布标签、插件元数据 `1.0.0` 与 Renderer 内部版本 `1.6.1-iteration.1` 是不同身份，见[发行说明](docs/release-preparation/RELEASE-NOTES.md)。
+所有者已决定停止使用并退役线上 ChatUI，只保留源码与离线 Gallery。**源码与离线 Gallery 已公开发行，仓库已归档；两处线上站点已永久删除。** 本地候选阶段的“尚未发布”记录仅描述当时状态，实际发行见 [GitHub Releases](https://github.com/JessToX/ChatUI/releases)。它提供讲解、公式、图形和局部交互的实现，不包含可直接使用的 ChatGPT 托管服务、账户连接或一键安装流程。归档发行标签、插件元数据 `1.0.0` 与 Renderer 内部版本 `1.6.1-iteration.1` 是不同身份，见[发行说明](docs/release-preparation/RELEASE-NOTES.md)。
 
 ## 六个工具
 
@@ -31,7 +31,7 @@ python3 -m http.server 4173 --bind 127.0.0.1 --directory renderer/public
 
 使用 Node.js **24.20.0** / npm **12.0.2**，完整验证建议 Python **3.12**。Pillow **13.0.0** 要求 Python **3.11 或更新版本**；Linux 绘图验证还需指南中的官方 Noto CJK 字体。按[安装说明](docs/installation.md)在源码外建立虚拟环境、安装固定依赖，然后运行 `python3 scripts/reproduce-package.py`。此脚本会执行 locked install、测试、types、lint、build、生成、许可和源文件保真检查；安装可能需要联网。公开 hosting 配置只是本地构建占位，不可直接部署。
 
-文档收尾基线为 `529460291eaa813e37146be3e082c81285c9944e`。[该提交的真实 PR CI](https://github.com/JessToX/ChatUI/actions/runs/41831613236) 已在 Ubuntu 24.04 通过：组件 **92**、Python **165**、Renderer **476**，零失败/跳过，并通过构建、生成、许可和保真检查。本次只修改发行文档及其清单，不声称后续文档候选已经获得新的 CI 结果。PR 尚未合并，GitHub 链接在仓库私有时需要访问权限。版本与证据绑定规则见[验证说明](docs/release-preparation/VALIDATION.md)。
+文档收尾基线为 `529460291eaa813e37146be3e082c81285c9944e`。[该提交的真实 PR CI](https://github.com/JessToX/ChatUI/actions/runs/41831613236) 已在 Ubuntu 24.04 通过：组件 **92**、Python **165**、Renderer **476**，零失败/跳过，并通过构建、生成、许可和保真检查。本次只修改发行文档及其清单，不声称后续文档候选已经获得新的 CI 结果。PR #1 已合并，仓库现为 public。最终原版 main 提交 `36eb479e38e7cbd2017be8d4a5f8777cb942026c` 的 [CI 也已通过](https://github.com/JessToX/ChatUI/actions/runs/42012671130)。版本与证据绑定规则见[验证说明](docs/release-preparation/VALIDATION.md)。
 
 `PACKAGE-MANIFEST.json` 记录输入文件摘要和来源；其中 `sourceCommit: null` 不否定基线已有提交或 CI。发行时由配套 `release.json` 绑定最终干净提交、树和附件哈希，避免清单自引用。文档收尾提交及其附件的精确身份以实际 Git HEAD 和同批 `release.json` 为准；不沿用基线 ZIP 的身份。
 
@@ -54,7 +54,7 @@ python3 -m http.server 4173 --bind 127.0.0.1 --directory renderer/public
 
 Source ZIP 包含源码、锁文件、测试和公开说明；Gallery ZIP 是离线演示。原开发 Git 历史、私人配置、旧构建和原始审计/宿主日志不属于附件。校验方法见[发行材料](docs/release-preparation/DISTRIBUTION.md)。已选择最终公开并归档现有仓库；两站退役已核实，执行前仍须完成最终发行核对。排除 Git 历史的 ZIP 不代表原仓库历史已清除。
 
-拟在发行完成后归档，但当前未归档。归档说明应明确停止常规维护的范围；归档不停止已有托管服务、不撤回外部副本，也不保证被冻结依赖未来安全。需要维护时由仓库所有者解除归档再处理。
+仓库已完成归档；本次仅为纠正文档状态临时解除归档，完成后恢复。归档说明应明确停止常规维护的范围；归档不停止已有托管服务、不撤回外部副本，也不保证被冻结依赖未来安全。需要维护时由仓库所有者解除归档再处理。
 
 ### OG 安全回补
 

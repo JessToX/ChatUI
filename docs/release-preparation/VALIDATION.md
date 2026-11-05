@@ -31,7 +31,7 @@ PYTHONDONTWRITEBYTECODE=1 python3 scripts/reproduce-package.py
 | 文档 | `git diff --check`、发行器的相对链接/隐私检查 | 历史文档必须标明其时点 |
 | 原创/第三方许可文案 | `python3 scripts/qa/audit-phase3-licenses.py --check`、`python3 -m unittest discover -s tests -p test_phase3_delivery.py` | 保留完整第三方版权和依赖清单 |
 | canonical 组件 | `python3 scripts/build_component_templates.py --check`、`npm run test:components` | 不能手改生成资源来通过 |
-| 插件元数据 | `python3 scripts/sync-plugin-metadata.py --check --candidate` | 当前数字是未发布候选元数据 |
+| 插件元数据 | `python3 scripts/sync-plugin-metadata.py --check --candidate` | 保留原候选版本及历史状态标识；实际公开状态见 Release |
 | Renderer | 在 renderer 中 `npm test`、types、lint、build 和 `node scripts/check-generation.mjs` | 需先安装锁定依赖并建立公开本地配置 |
 | 发行材料 | `python3 scripts/package-distribution.py --output <源码外的新目录>` | 干净提交原字节打包；再干净解压全验 |
 
