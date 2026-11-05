@@ -7,7 +7,7 @@
     "LICENSE": "b60bfbb38592da8958f442d88baa1f25b151a925d5bc0de4b2bb221028df5c0d",
     "NOTICE.txt": "591899aa7bcadb99cf103ca754ffb7a5771a53bdab263578239bc4d563ee89f0",
     "PACKAGE-README.md": "3bcc9442ee643a7e4c1f41f2128ebf71560d81139a34e2def26332f9dcb26aa4",
-    "README.md": "7373bab7d340643a30572cb41f71c4e6659db7d13148430652f5f1510455b806",
+    "README.md": "b0c348a7cb9f9de001d76dd9cb0e19db8d5f29c4d4b3777713840d32f34f78ff",
     "THIRD_PARTY_NOTICES.md": "f7541f1a754b8cfce63828bd744f3c135b7174344abff345a6bf9e94cc32369e",
     "docs/ENGINEERING.md": "3eb960ab2cdb7e2ba3b6f613ab9333558fe8ea23a006fb872aa91b1ed7d6a845",
     "docs/acceptance-v0.9.0.md": "c91c1068a2e29fd3ddf8933ce99b2273e32f0dd6398a35a0daa5cc77dc31d17d",
@@ -470,7 +470,7 @@
   },
   "licenseDecision": "MIT for original contributions, copyright Jess(T o X); third-party licenses unchanged; user approved",
   "note": "Documentation-only closeout based on reviewed commit 529460291eaa813e37146be3e082c81285c9944e. Baseline PR CI passed; the subsequent documentation commit has no new remote CI result. Runtime, tests, workflow and license bytes unchanged. Exact final commit/tree and archive hashes are bound in distribution release.json. Source release not published or archived; baseline renderer previously had a separate owner-only test deployment with limited authentication evidence; that site is now retired. Both online sites were permanently deleted after final confirmation. Official metadata reports not found and the former root/MCP endpoints return HTTP 404. Final scope is source and offline Gallery; unknown host/authentication conditions are not certified.",
-  "previousManifestSHA256": "afb8f28188733dbd27d74f24e3a9edb84ec6b0deb94026ff9bf218488dd5c804",
+  "previousManifestSHA256": "b29c99dc4ff70cba3659bddf76bdc06dd2f08697083a5920205d7acc3a335876",
   "sourceCommit": null,
   "status": "LOCAL_DOCUMENTATION_CANDIDATE_NOT_PUBLISHED"
 }
