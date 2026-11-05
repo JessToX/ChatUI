@@ -1,5 +1,5 @@
 # ChatUI source preview package
 
-See README.md for the six tools, offline Gallery, installation and known limits. This source/Gallery candidate is not a hosted service, published release or archived repository. Original contributions use MIT; third-party licenses and notices remain applicable.
+See README.md for the six tools, offline Gallery, installation and known limits. This source/Gallery candidate is not a hosted service, published release or archived repository. The owner has chosen to retire both online sites and retain source plus the offline Gallery. Retirement is pending; neither site has been deleted. Unverified host interactions and authentication boundaries remain unverified and must be resolved before any future hosting. Original contributions use MIT; third-party licenses and notices remain applicable.
 
 The documentation-closeout baseline is commit 529460291eaa813e37146be3e082c81285c9944e, whose exact PR CI passed. Later documentation edits have not acquired a new CI result. PACKAGE-MANIFEST.json records source-file hashes and provenance; its null sourceCommit avoids a self-reference and must not be read as a claim that the baseline was uncommitted. A generated distribution release.json binds the final clean Git commit/tree and archive bytes. It does not certify host behavior or production authentication.
