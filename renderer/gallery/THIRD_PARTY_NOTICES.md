@@ -6,9 +6,9 @@ The offline Document Gallery uses generated MathML, the existing ChatUI composit
 |---|---|---|---|
 | KaTeX | 0.19.0 | MIT | Server/build math compiler; fixed MathML output only in Gallery. |
 | marked | 18.1.0 | MIT and retained Markdown BSD notice | Server/build Markdown compiler; no library runtime in Gallery. |
-| sanitize-html | 2.18.0 | MIT | Server/build sanitizer; no library runtime in Gallery. |
+| sanitize-html | 2.18.1 | MIT | Server/build sanitizer; no library runtime in Gallery. |
 | esbuild | 0.28.2 | MIT | Build bundler; no library runtime in Gallery. |
-| DOMPurify | 3.4.16 | MPL-2.0 OR Apache-2.0; Apache notice selected below | Embedded only in sibling response resources in the Source ZIP; absent from this Document Gallery. |
+| DOMPurify | 3.4.17 | MPL-2.0 OR Apache-2.0; Apache notice selected below | Embedded only in sibling response resources in the Source ZIP; absent from this Document Gallery. |
 
 Original ChatUI contributions are licensed under MIT; Copyright (c) 2026 Jess(T o X). The distribution includes the full project LICENSE. Third-party code and assets retain their original licenses and copyright notices; the root MIT license does not relicense them.
 

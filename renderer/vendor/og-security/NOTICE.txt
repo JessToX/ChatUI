@@ -1,0 +1,6 @@
+Official Next.js v16.4.1 security backport for @vercel/og 1.0.1.
+The upstream patch is included without modification. Both patched entry files are byte-identical to Next.js 16.4.1 compiled OG files.
+Source: https://github.com/vercel/next.js/blob/v16.4.1/patches/%40vercel__og%401.0.1.patch
+Patch SHA256: 3d59af991a9f85bbc368d2891b4e965f10dd11c86b9786e79fc4a362bb01401b
+The OG code retains MPL-2.0; Next.js material retains its MIT notice. Both licenses are included.
+The standalone satori dependency is separately pinned to 0.33.5; that pin alone does not fix code already embedded in OG.

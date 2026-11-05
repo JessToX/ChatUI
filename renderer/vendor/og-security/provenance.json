@@ -1,0 +1,19 @@
+{
+  "providerVersion": "1.0.1",
+  "npmTarballSHA256": "c7f0946ae4b90f4a38615f69ceacfb5990e865c847b96475752b100b93e4e27f",
+  "npmSRIMatched": true,
+  "officialPatch": "https://github.com/vercel/next.js/blob/v16.4.1/patches/%40vercel__og%401.0.1.patch",
+  "patchSHA256": "3d59af991a9f85bbc368d2891b4e965f10dd11c86b9786e79fc4a362bb01401b",
+  "files": {
+    "dist/index.edge.js": {
+      "beforeSHA256": "e0092a4c78283ec9695592b30c9d34e0e3bb85e35d07f682b6852d9a7b3e6cce",
+      "afterSHA256": "fb80f4fc38dec1b6a517810d19dd5cf69e6c6c318432ea8347a936b8e1a3b5f6",
+      "byteIdenticalToNext1641Compiled": true
+    },
+    "dist/index.node.js": {
+      "beforeSHA256": "8488724bbb696225faa1612e2240b98e99d7bc845891fa6ea36d3aa2c034c914",
+      "afterSHA256": "ea30837b18ace5bdec33fe45fb90e238752f128f57364da08238980d43212ccb",
+      "byteIdenticalToNext1641Compiled": true
+    }
+  }
+}

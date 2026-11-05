@@ -1,6 +1,6 @@
 # 安装、运行与连接边界
 
-当前交付是源码和离线 Gallery，不是安装程序或已部署的 ChatGPT 插件。版本含义与已验范围见[发行说明草稿](release-preparation/RELEASE-NOTES.md)。以下命令从解压后的对应目录执行，不需要项目作者的账户或配置。
+当前交付是源码和离线 Gallery，不是安装程序或已部署的 ChatGPT 插件。版本含义与已验范围见[发行说明草稿](release-preparation/RELEASE-NOTES.md)。原线上站点与独立测试站点已永久删除；不提供持续在线入口或当前宿主兼容保证。以下命令从解压后的对应目录执行，不需要项目作者的账户或配置。
 
 ## 离线 Gallery
 
@@ -14,7 +14,7 @@ python3 -m http.server 4173 --bind 127.0.0.1 --directory gallery
 
 ## 完整源码验证
 
-使用 Node.js **24.20.0** / npm **12.0.2**。完整验证已在 macOS/Python **3.9.6** 与 Ubuntu **24.04**/Python **3.12** 执行；建议 Linux 对齐 CI 的 Python 3.12。其他 Python、操作系统和 Node 主版本尚不作保证。
+使用 Node.js **24.20.0** / npm **12.0.2**。本次依赖修复的完整本地验证使用 macOS/Python **3.12.16**。Pillow **13.0.0** 要求 Python **3.11 或更新版本**；建议使用 Python **3.12**。文档收尾基线 `529460291eaa813e37146be3e082c81285c9944e` 已通过 Ubuntu 24.04 / Python 3.12 的真实 PR CI，组件92、Python165、Renderer476，零跳过；见[验证说明](release-preparation/VALIDATION.md)。后续文档修改不自动继承为新提交已获 CI 通过。旧候选的 Python 3.9.6 结果不适用于当前 Pillow 依赖。其他 Python、操作系统和 Node 主版本尚不作保证。
 
 Ubuntu 24.04 上完整绘图回归需要官方 Noto CJK 字体和 fontconfig；这些是系统依赖，不捆绑进 ZIP：
 
@@ -58,7 +58,7 @@ npm start
 
 开发者使用自己管理的环境：先准备合规的 MCP 端点与认证，再通过 ChatGPT 的官方自定义 MCP 接入流程选择该端点，核对发现的工具及 UI 元数据，在新会话测试实际卡片与模型可见结果。官方文档允许 HTTPS 端点或用于私有开发测试的 Secure MCP Tunnel，具体账户/工作区政策以页面为准；公开插件目录提交与 GitHub 源码发行是不同流程。参见[官方连接与测试指南](https://developers.openai.com/plugins/deploy/connect-chatgpt)和[服务端要求](https://developers.openai.com/plugins/build/mcp-server)。
 
-账户、端点及凭据由使用者自行配置；不要把密钥填进聊天、提交到 Git、写入前端或发行包。离线预览不需要模型 API 密钥；官方 Tunnel 或自己的托管/认证服务可能另需凭据，不能把“离线无需密钥”理解成连接完全无需认证。生产部署必须保留服务端身份验证，不能公开一个信任任意身份请求头的服务；公开 hosting 占位不可部署。
+账户、端点及凭据由使用者自行配置；不要把密钥填进聊天、提交到 Git、写入前端或发行包。离线预览不需要模型 API 密钥；官方 Tunnel 或自己的托管/认证服务可能另需凭据，不能把“离线无需密钥”理解成连接完全无需认证。生产部署必须保留服务端身份验证，不能公开一个信任任意身份请求头的服务；公开 hosting 占位不可部署。当前没有取得生产代理清除/覆盖伪造与重复身份头、阻止直达源站绕过的充分证据。托管上线及真实宿主隐私/状态验收仍需独立完成，不因源码发行或 CI 成功而视为通过。
 
 ## 更新和回退
 

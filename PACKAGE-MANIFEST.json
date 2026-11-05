@@ -1,220 +1,14 @@
 {
-  "changes": {
-    "LICENSE": {
-      "packageSha256": "b60bfbb38592da8958f442d88baa1f25b151a925d5bc0de4b2bb221028df5c0d",
-      "reason": "packaging documentation, exact inventory or local reproduction script",
-      "sourceSha256": null
-    },
-    "NOTICE.txt": {
-      "packageSha256": "591899aa7bcadb99cf103ca754ffb7a5771a53bdab263578239bc4d563ee89f0",
-      "reason": "packaging documentation, exact inventory or local reproduction script",
-      "sourceSha256": null
-    },
-    "PACKAGE-README.md": {
-      "packageSha256": "aa3f416367d15f2d3e3432c8cb3994ee259e1a19abe92132b758fab1b0b01558",
-      "reason": "release documentation, approved license policy, deterministic distribution or regression coverage; runtime bytes unchanged",
-      "sourceSha256": null
-    },
-    "README.md": {
-      "packageSha256": "e0129c8287f148e34d146eb360e7d6b73331fcf9ce9a5e9764a2b8020ec71af6",
-      "reason": "release documentation, approved license policy, deterministic distribution or regression coverage; runtime bytes unchanged",
-      "sourceSha256": "7f17c588cfa6fc6f104ba74fb7d5ce83a2ee6674fb9d34eed68b91dea0289e74"
-    },
-    "THIRD_PARTY_NOTICES.md": {
-      "packageSha256": "68c272bdbc3121aef8a5b048a4e701c6e0c3620925bed10ce509ccacc3d477c8",
-      "reason": "release documentation, approved license policy, deterministic distribution or regression coverage; runtime bytes unchanged",
-      "sourceSha256": "3004daac495513c85281c4b77bd27f974ad0a998017745373f78b0faa933088e"
-    },
-    "docs/ENGINEERING.md": {
-      "packageSha256": "3eb960ab2cdb7e2ba3b6f613ab9333558fe8ea23a006fb872aa91b1ed7d6a845",
-      "reason": "release documentation, approved license policy, deterministic distribution or regression coverage; runtime bytes unchanged",
-      "sourceSha256": "b868f271a034c4eac5469ec7899064bf0d131833838b4e7bcdab82d93877bb5c"
-    },
-    "docs/acceptance-v0.9.0.md": {
-      "packageSha256": "c91c1068a2e29fd3ddf8933ce99b2273e32f0dd6398a35a0daa5cc77dc31d17d",
-      "reason": "release documentation, approved license policy, deterministic distribution or regression coverage; runtime bytes unchanged",
-      "sourceSha256": "9be0c5f77b99b42e0d152177e2371e940534edc001d7ae963f00134bc1933b09"
-    },
-    "docs/final-edition/b0.md": {
-      "packageSha256": "97ddeaae37580bfa4325091142479391a2f547a1a88688cda832bfaa254b055b",
-      "reason": "release documentation, approved license policy, deterministic distribution or regression coverage; runtime bytes unchanged",
-      "sourceSha256": "612728fa8c1a9727803379d8c7ce6ab7c8b3f4193139919c006bad7b1b77d0e6"
-    },
-    "docs/final-edition/b1.md": {
-      "packageSha256": "f28c8df2c87eea53eb1767a217a64829b45e65b840c4921be2289f1d5e651c25",
-      "reason": "release documentation, approved license policy, deterministic distribution or regression coverage; runtime bytes unchanged",
-      "sourceSha256": "a9435479734c3ad73dddda1bdb05b1d2fe8020d4a1cfde83130ca89a9f7dddfe"
-    },
-    "docs/final-edition/phase2a.md": {
-      "packageSha256": "aeaed5dec778094fe24db63a71b434ae328ce8e2b82d09b3be228168abbb1671",
-      "reason": "release documentation, approved license policy, deterministic distribution or regression coverage; runtime bytes unchanged",
-      "sourceSha256": "3356e0f11d7a44bfa046576b69fcd731cf4e867fabe3f56b1f46d4a5ea25e527"
-    },
-    "docs/final-edition/phase2a1.md": {
-      "packageSha256": "a2e45de0351484056f513d4f0a9416c17f1fea56632c85fdc2dd3ccfdce4b072",
-      "reason": "release documentation, approved license policy, deterministic distribution or regression coverage; runtime bytes unchanged",
-      "sourceSha256": "c3271b5aa5ab57398357e47bf0179f21456821fac599a95a8eb71b4fdc956180"
-    },
-    "docs/final-edition/phase3.md": {
-      "packageSha256": "681b80799755399ed0b811fb51d260e91590287be3e7c02479a08470c860274c",
-      "reason": "release documentation, approved license policy, deterministic distribution or regression coverage; runtime bytes unchanged",
-      "sourceSha256": "d692450bf5a5edd78c67ac99b5b4936da5741e62a938f1c7d17a5e7194426c06"
-    },
-    "docs/final-edition/release-and-archive-checklist.md": {
-      "packageSha256": "f86bef7ae2149f26f84569d097e5ffa1d1ac3c5dca322cf94cd02707ba95c941",
-      "reason": "release documentation, approved license policy, deterministic distribution or regression coverage; runtime bytes unchanged",
-      "sourceSha256": "3d1111c01d51175242657c0adada5e8fa9a6c261992de19b12423a309a42955c"
-    },
-    "docs/final-edition/release-candidate.md": {
-      "packageSha256": "c5cfff4bc0a8ff13cdcc54c29074b86c088440c6f10c2642502f5b83212492f5",
-      "reason": "release documentation, approved license policy, deterministic distribution or regression coverage; runtime bytes unchanged",
-      "sourceSha256": "cf13c684e9482f05753d44e7b044a383df87201851266700982197a3c31e89c5"
-    },
-    "docs/final-edition/security-and-limitations.md": {
-      "packageSha256": "833747de6cb7f22fd9a1849b23d55d5a4aee0775c5b51e63a749f690350260c7",
-      "reason": "release documentation, approved license policy, deterministic distribution or regression coverage; runtime bytes unchanged",
-      "sourceSha256": "2f634da8a121f5c036f680668f93ce88d0ec4aeec73c83c2c15e4148a8745ebf"
-    },
-    "docs/installation.md": {
-      "packageSha256": "aa0a96deae25febbafe29ca429893ab052012fd7503ebeb0a2b42f84faefea2e",
-      "reason": "release documentation, approved license policy, deterministic distribution or regression coverage; runtime bytes unchanged",
-      "sourceSha256": "4af738584feaf06e5e775940e36e351bef945b5ce3dadb006525d5840d8fd944"
-    },
-    "docs/release-preparation/DISTRIBUTION.md": {
-      "packageSha256": "0c8ed7a9d84b1e996d9694375834f78a7670aa35e7f494a135669ae1b6142d98",
-      "reason": "release documentation, approved license policy, deterministic distribution or regression coverage; runtime bytes unchanged",
-      "sourceSha256": null
-    },
-    "docs/release-preparation/GALLERY-DISTRIBUTION.txt": {
-      "packageSha256": "f5ee713e667bb858ab631acd7eb2280047168ad97eca890d312bfb2021692635",
-      "reason": "release documentation, approved license policy, deterministic distribution or regression coverage; runtime bytes unchanged",
-      "sourceSha256": null
-    },
-    "docs/release-preparation/GALLERY-NOTICE.txt": {
-      "packageSha256": "36cbe23562bbd18ebc7ef48b78543d5256ff2f4556fb6f26d3bb6b18782d0ab0",
-      "reason": "release documentation, approved license policy, deterministic distribution or regression coverage; runtime bytes unchanged",
-      "sourceSha256": null
-    },
-    "docs/release-preparation/RELEASE-NOTES.md": {
-      "packageSha256": "f6d3c33db43a49386f43e06c535413e10c5da7a90f7d1ee16197f31c60e58c2d",
-      "reason": "release documentation, approved license policy, deterministic distribution or regression coverage; runtime bytes unchanged",
-      "sourceSha256": null
-    },
-    "docs/release-preparation/VALIDATION.md": {
-      "packageSha256": "b68e91d4379cdafa8756c6f62ff471ead497abe9ad8893ca9c5cdabeccb6407d",
-      "reason": "release documentation, approved license policy, deterministic distribution or regression coverage; runtime bytes unchanged",
-      "sourceSha256": "f0c0a4832888873b2d71e060344f3757519f45ef62262af6caa4ee1920879288"
-    },
-    "docs/release-v0.9.0.md": {
-      "packageSha256": "90a4b1e431ad5e69c8407eabe41680beed6bfe18292c65e20f30462b9b42f55c",
-      "reason": "release documentation, approved license policy, deterministic distribution or regression coverage; runtime bytes unchanged",
-      "sourceSha256": "b634e9f182b473df1330c31abf2e2627ed516b52ac5cf3f7fc2466609cef2c28"
-    },
-    "docs/rich-document-v1-acceptance.md": {
-      "packageSha256": "6afec32041a7564b88f9be9793adfe107db230eb56e331bc785bf2532feadb95",
-      "reason": "release documentation, approved license policy, deterministic distribution or regression coverage; runtime bytes unchanged",
-      "sourceSha256": "7904fbb1119416217450d5a48f1761971d4d83955c0d0e0be259e1a0db386575"
-    },
-    "docs/rich-document-v1-production-migration/README.md": {
-      "packageSha256": "1b3baa9d178147c58bc94b32fbc7f30a24a1fb006754c7334a388172504dd13f",
-      "reason": "release documentation, approved license policy, deterministic distribution or regression coverage; runtime bytes unchanged",
-      "sourceSha256": "3fa1f16880452f2767154a7044a28740cfa9c72679662d4da02c82b80e463167"
-    },
-    "docs/rich-document-v1-release-candidate.md": {
-      "packageSha256": "c62ad7b7a07c10ba4b2618dfe4cd8e66201d0da40d436bf8004bff5d71252e9e",
-      "reason": "release documentation, approved license policy, deterministic distribution or regression coverage; runtime bytes unchanged",
-      "sourceSha256": "8b997dea9b16d904350f175540a9e950c6552d5492571658c72c549eb4117be3"
-    },
-    "plugins/chatui/.app.json": {
-      "packageSha256": "56942c89642c77a2b0444f7601621e5af902b0d9766766f8ca6c5c04237c22a6",
-      "reason": "generated public nonfunctional App placeholder; original binding not read",
-      "sourceSha256": null
-    },
-    "plugins/chatui/assets/icon.svg": {
-      "packageSha256": "19f7d88aa2a666aff0d5beecccda70530577ffa0265d9b2ef6a365cc43e92eee",
-      "reason": "new original geometric placeholder; unverified original icon excluded",
-      "sourceSha256": "f4cacf765d7ecaf5a6c712207cbdbb0095d2ee94f6041575c7c9f8a48141c8d9"
-    },
-    "renderer/README.md": {
-      "packageSha256": "3c0414b390a71c38e31bc7157f02d2a758de19dd1e07d83c6b9ff05e01ce37fd",
-      "reason": "release documentation, approved license policy, deterministic distribution or regression coverage; runtime bytes unchanged",
-      "sourceSha256": "0556a9f250dba86720d7d5daa17a9b72f02fe640081a644745a8766afbdfa078"
-    },
-    "renderer/gallery/THIRD_PARTY_NOTICES.md": {
-      "packageSha256": "f46ff559b3a82be82962d158c92f8638d8c235f7b1e9c7b61ab82133265b81c0",
-      "reason": "release documentation, approved license policy, deterministic distribution or regression coverage; runtime bytes unchanged",
-      "sourceSha256": "5dfd3e349b79995fc8f5e5b2dbd75da341e113774c9aeb8f82c3fdd9cba4ff77"
-    },
-    "renderer/public/favicon.svg": {
-      "packageSha256": "19f7d88aa2a666aff0d5beecccda70530577ffa0265d9b2ef6a365cc43e92eee",
-      "reason": "new original geometric placeholder; unverified original icon excluded",
-      "sourceSha256": "f4cacf765d7ecaf5a6c712207cbdbb0095d2ee94f6041575c7c9f8a48141c8d9"
-    },
-    "renderer/public/gallery/SHA256SUMS": {
-      "packageSha256": "61c5ce6058505ab07ced215fdda7307d1770a166a4ea08f3093b8d7f1ba21843",
-      "reason": "release documentation, approved license policy, deterministic distribution or regression coverage; runtime bytes unchanged",
-      "sourceSha256": "7a19ba0fd77aad0a27c7c34fe04dd27e0f6fcd01c95e335b71dd537147acc5e5"
-    },
-    "renderer/public/gallery/THIRD_PARTY_NOTICES.md": {
-      "packageSha256": "f46ff559b3a82be82962d158c92f8638d8c235f7b1e9c7b61ab82133265b81c0",
-      "reason": "release documentation, approved license policy, deterministic distribution or regression coverage; runtime bytes unchanged",
-      "sourceSha256": "5dfd3e349b79995fc8f5e5b2dbd75da341e113774c9aeb8f82c3fdd9cba4ff77"
-    },
-    "renderer/public/gallery/manifest.json": {
-      "packageSha256": "b9510148a6c8d666e8900073395457ce1aa0f1ca870fe9d52f77126e8fd92544",
-      "reason": "release documentation, approved license policy, deterministic distribution or regression coverage; runtime bytes unchanged",
-      "sourceSha256": "9ff9de639476c5e6f799d1864fa7723b22584fc7a44cc5a7cb293a112c18b1bf"
-    },
-    "scripts/package-distribution.py": {
-      "packageSha256": "c4113ce59ba46b909560e98d2813eba97afb4f7977934903499e71b782e81202",
-      "reason": "release documentation, approved license policy, deterministic distribution or regression coverage; runtime bytes unchanged",
-      "sourceSha256": null
-    },
-    "scripts/package-renderer.py": {
-      "packageSha256": "81cfa904f71da56f8edfd0e197ded19fab265f4c1b5e27eb511b5a3ecd6b9088",
-      "reason": "release documentation, approved license policy, deterministic distribution or regression coverage; runtime bytes unchanged",
-      "sourceSha256": "efdf05eec1a3bfee8f9b18e721b8ec2347ce26d3754060260c5bd5540b2c4e70"
-    },
-    "scripts/qa/audit-phase3-licenses.py": {
-      "packageSha256": "ea6f56684fca6307c5f2757f269dd3b363d716cfdbff84bd0a0c02d5144065bf",
-      "reason": "release documentation, approved license policy, deterministic distribution or regression coverage; runtime bytes unchanged",
-      "sourceSha256": "b7a7029568656b9b40b9af00a8744daf04b42421cc7c5dcf8e05d196c1a2732e"
-    },
-    "scripts/release-allowlist.json": {
-      "packageSha256": "ddee39aa964fafdaee891fe1d6b8a596a2d215259f44e5bbccdc1051330b7817",
-      "reason": "release documentation, approved license policy, deterministic distribution or regression coverage; runtime bytes unchanged",
-      "sourceSha256": "d043a63f3bc37b48003b43c3545be4e2f95db2bd12fb21d5581f6cda8862ac38"
-    },
-    "scripts/reproduce-package.py": {
-      "packageSha256": "7b50318e4b99c9a0d5d6d340e1a5dc3307b2e1f3368cd7d4c3839cbc61dcee33",
-      "reason": "packaging documentation, exact inventory or local reproduction script",
-      "sourceSha256": null
-    },
-    "tests/test_distribution.py": {
-      "packageSha256": "fecdc17b81c039febe355e86699bb78bb0fad046d39aef7af7e15f583f72c34d",
-      "reason": "release documentation, approved license policy, deterministic distribution or regression coverage; runtime bytes unchanged",
-      "sourceSha256": null
-    },
-    "tests/test_phase3_delivery.py": {
-      "packageSha256": "57daf09cae7565cd36ba0c8de5b3ed7cc59424099634a4eea0f0272974718456",
-      "reason": "release documentation, approved license policy, deterministic distribution or regression coverage; runtime bytes unchanged",
-      "sourceSha256": "48e80c6be68da0c1a925e82db285adbcd0146ed75fb4a61a37bc5394146aba6c"
-    },
-    "tests/test_standalone_package.py": {
-      "packageSha256": "d5540cb0809f5aac9699c152e59808ef5c300ab438f5437dd70ea8a4e5b3aca3",
-      "reason": "release documentation, approved license policy, deterministic distribution or regression coverage; runtime bytes unchanged",
-      "sourceSha256": "1398eb96d68420b9987d25c25506234b23d48a1afa8515faedd61eb521c8af63"
-    }
-  },
+  "baseCandidate": "80b8207b661ad2c48e6c00d400a500fc1d3f93e2",
   "files": {
     ".github/scripts/check-runtime.py": "c82c0981591aea84233a361095e8259b12b8792ffead0f0da05974b0f0991ea4",
     ".github/workflows/clean-candidate.yml": "40d1de0282f7d6ce8e29bc2a8955dea5a77cd7371f12411b2a7440150034e4cd",
     ".gitignore": "0d277a18d221453cd420e6a333d83669e78d0b944d7676eefeb228fbe0bda35f",
     "LICENSE": "b60bfbb38592da8958f442d88baa1f25b151a925d5bc0de4b2bb221028df5c0d",
     "NOTICE.txt": "591899aa7bcadb99cf103ca754ffb7a5771a53bdab263578239bc4d563ee89f0",
-    "PACKAGE-README.md": "aa3f416367d15f2d3e3432c8cb3994ee259e1a19abe92132b758fab1b0b01558",
-    "README.md": "e0129c8287f148e34d146eb360e7d6b73331fcf9ce9a5e9764a2b8020ec71af6",
-    "THIRD_PARTY_NOTICES.md": "68c272bdbc3121aef8a5b048a4e701c6e0c3620925bed10ce509ccacc3d477c8",
+    "PACKAGE-README.md": "3bcc9442ee643a7e4c1f41f2128ebf71560d81139a34e2def26332f9dcb26aa4",
+    "README.md": "b0c348a7cb9f9de001d76dd9cb0e19db8d5f29c4d4b3777713840d32f34f78ff",
+    "THIRD_PARTY_NOTICES.md": "f7541f1a754b8cfce63828bd744f3c135b7174344abff345a6bf9e94cc32369e",
     "docs/ENGINEERING.md": "3eb960ab2cdb7e2ba3b6f613ab9333558fe8ea23a006fb872aa91b1ed7d6a845",
     "docs/acceptance-v0.9.0.md": "c91c1068a2e29fd3ddf8933ce99b2273e32f0dd6398a35a0daa5cc77dc31d17d",
     "docs/feature-completeness/continuation-stimuli.json": "4916e58121e8eb92b2c1f92acd5e11c2952885bfab632282b9a5977ab59537ce",
@@ -230,24 +24,24 @@
     "docs/final-edition/release-and-archive-checklist.md": "f86bef7ae2149f26f84569d097e5ffa1d1ac3c5dca322cf94cd02707ba95c941",
     "docs/final-edition/release-candidate.md": "c5cfff4bc0a8ff13cdcc54c29074b86c088440c6f10c2642502f5b83212492f5",
     "docs/final-edition/security-and-limitations.md": "833747de6cb7f22fd9a1849b23d55d5a4aee0775c5b51e63a749f690350260c7",
-    "docs/final-edition/third-party-dependencies.json": "bea4d258e766d5d1cbb3f4818cf29617b9095082a433936de4bf8b1334dc21e0",
-    "docs/installation.md": "aa0a96deae25febbafe29ca429893ab052012fd7503ebeb0a2b42f84faefea2e",
+    "docs/final-edition/third-party-dependencies.json": "9fbf482e517df40d5a84dd03df97754fe63a15d8fe3bddeaba4c3c7fdb588293",
+    "docs/installation.md": "eb2f0ba7550bcc943b2679a9b315ec636687a6b9fd6e5f3024ff8045871ed84e",
     "docs/native-ui-iteration-1/SCENE-CONTRACT.md": "82a0745a5f2606cc960540e4d1d6a5bb908719ea644aff77ef336100f53b846c",
-    "docs/release-preparation/DISTRIBUTION.md": "0c8ed7a9d84b1e996d9694375834f78a7670aa35e7f494a135669ae1b6142d98",
+    "docs/release-preparation/DISTRIBUTION.md": "518c50a960c1f00677dbe6f4840715783ab2d7228ebb1b5d217e2c12aed2771c",
     "docs/release-preparation/FORCE-RESTORE-CONTRACT.md": "0ca7351f5aad6263133d5e2ac3b72eaac3d1972488a04691ff3bd972e3608bca",
     "docs/release-preparation/GALLERY-DISTRIBUTION.txt": "f5ee713e667bb858ab631acd7eb2280047168ad97eca890d312bfb2021692635",
     "docs/release-preparation/GALLERY-NOTICE.txt": "36cbe23562bbd18ebc7ef48b78543d5256ff2f4556fb6f26d3bb6b18782d0ab0",
     "docs/release-preparation/NEXTJS-TEMPLATE-LICENSE.txt": "ee765244e2d59f5234d474f62e0766fa0c8b99af967fdd4c0cb8dcb0c76ea224",
-    "docs/release-preparation/RELEASE-NOTES.md": "f6d3c33db43a49386f43e06c535413e10c5da7a90f7d1ee16197f31c60e58c2d",
-    "docs/release-preparation/VALIDATION.md": "b68e91d4379cdafa8756c6f62ff471ead497abe9ad8893ca9c5cdabeccb6407d",
+    "docs/release-preparation/RELEASE-NOTES.md": "847e38fb378d2a84454252d748d3bf6b7e3b2b77adb7b3b457c80da58732658b",
+    "docs/release-preparation/VALIDATION.md": "f32ec78f642d3dd916228bb36cdf046b3cc6cb84857dac2fa54b5beb7a412779",
     "docs/release-v0.9.0.md": "90a4b1e431ad5e69c8407eabe41680beed6bfe18292c65e20f30462b9b42f55c",
     "docs/rich-document-v1-acceptance.md": "6afec32041a7564b88f9be9793adfe107db230eb56e331bc785bf2532feadb95",
     "docs/rich-document-v1-production-migration/README.md": "1b3baa9d178147c58bc94b32fbc7f30a24a1fb006754c7334a388172504dd13f",
     "docs/rich-document-v1-release-candidate.md": "c62ad7b7a07c10ba4b2618dfe4cd8e66201d0da40d436bf8004bff5d71252e9e",
     "docs/rich-document-v1-spec.md": "6ed2b5a1778eec45e4e7e36ea079bb4c25505766cd4f35d9a680b495ca5a575d",
     "docs/visual-spec-v0.7.md": "f1c181d2e201a2de511f687aff6c993c4d20307c3b93fba7619b9cc98ff211cd",
-    "package-lock.json": "447256f187663299f78c06fdf37ca094acc3437ee6d5dea779517f04be615433",
-    "package.json": "a82e67430f4a637c3176092b6f8cfaf898a4113c5f591f6f4a740f1a0d34fe46",
+    "package-lock.json": "6a773d58a8220c87b0fbd78fdaba56168969441f713765eb2b5b56f101175288",
+    "package.json": "6c9ab5689c7ef26ec61ef1d9ab37d4624a641f51a5e8fa33ff273dbec8483568",
     "plugins/chatui/.app.json": "56942c89642c77a2b0444f7601621e5af902b0d9766766f8ca6c5c04237c22a6",
     "plugins/chatui/.codex-plugin/plugin.json": "ed778178d3e44130fa48af5401a726180eeb6ef340bdd86113aae369c8221a6a",
     "plugins/chatui/assets/icon.svg": "19f7d88aa2a666aff0d5beecccda70530577ffa0265d9b2ef6a365cc43e92eee",
@@ -401,7 +195,7 @@
     "renderer/examples/rc-fixtures.mjs": "813247119dc6f12e7df4cf300c6f1cb0fcf4768777c4be1bf6615f5c4e42e948",
     "renderer/examples/responses.mjs": "95e5c60e5608de1a932be175d44a9cea701a9dd75590b17ec154d8aa9514c985",
     "renderer/examples/vertical-experience.mjs": "5dc056e4d387966a56d4d0d95ec77ee42f05d756ed5863f3f2010edaa1ee01d8",
-    "renderer/gallery/THIRD_PARTY_NOTICES.md": "f46ff559b3a82be82962d158c92f8638d8c235f7b1e9c7b61ab82133265b81c0",
+    "renderer/gallery/THIRD_PARTY_NOTICES.md": "3806f27cd97bf9696aede72806e14516dd0be6be4f4edec2f4dd72c1ebbdc2cd",
     "renderer/gallery/frame.js": "1508dc0a6fa81b9545da4f7a1eefe8451ae99b35af020810c3303e35d1abfb14",
     "renderer/gallery/host.css": "6f0eed46352c6edf54d811285106d6a35e90515096a441d47ac6a2484d6d1eff",
     "renderer/gallery/host.js": "1b8e026d1874bdc8f1b5b067d0c27d3545c12fbc089a3c804e5709e6e0a89931",
@@ -438,7 +232,7 @@
     "renderer/lib/response-output-schema.mjs": "c2273b6b85dfaa611903686dbe8d3eb3e3697cfa41745f449975a273396ae8f1",
     "renderer/lib/response-text.mjs": "6defaeaa662bb474d9a911830521413f1bb21cc510612d0b466d7eb63d724a3c",
     "renderer/lib/response-validation.mjs": "c41be5f1b7bc0e08fa56207da7b02f507aaa5649d8d2a813fd5e69617c1e6d01",
-    "renderer/lib/response.generated.mjs": "eb63db5e38eeed101551a33f6da9920ff293936a62469438add5bb4d6ad41a4e",
+    "renderer/lib/response.generated.mjs": "2db6a52a35f1943d97ac6435127d469d7a59d22eb323e5d9de5acc852907043f",
     "renderer/lib/scene-runtime.mjs": "84a09c88e0a34874593de98ad54dee085c4723069b1d0fd70dd6d7d0cea91f90",
     "renderer/lib/scene-schema.mjs": "eb7103f39d6cdccc30cb9324d1e7cec549a0bee99ca95fc9f9f59932e0717002",
     "renderer/lib/scene-surface.js": "c0e12870884a6b635bbc37ddde1bb69124258765fc281c524a6c666bb3c5cca1",
@@ -451,8 +245,8 @@
     "renderer/lib/widget-bridge.js": "430abf611b532b7bb297a99845d3b741c4d57e10c00283edb345efe3639a4afd",
     "renderer/lib/widget.generated.mjs": "9d26cee8d24a6d0b3a204af4bb118050affa001af9ed4bb870cc2907d5a5ce16",
     "renderer/next.config.ts": "614bce25b089c3f19b1e17a6346c74b858034040154c6621e7d35303004767cc",
-    "renderer/package-lock.json": "a40ce19c88f9ec50c5ab4a3e22473cc615f70ae3dc03d2b9d49d1790ce727c2a",
-    "renderer/package.json": "18850d74b74abfa2b819baf535c392bdb32df79cafae51f6a6cf81d4a44599ca",
+    "renderer/package-lock.json": "1bcbee766528b1ebb682f3069c5009ba0bbffda02e3e1bd778157ce3a835a3a6",
+    "renderer/package.json": "ada57fecd997f8ec8a5b5f43a500dc3c74add3add4b4783731ff572d8814ba66",
     "renderer/postcss.config.mjs": "dfac7ac2d86d326a0e5adb024e7943c181393ed17a5fcb8f0315b24c7da6ddde",
     "renderer/preview/document-comparison.html": "fab7f943d835b0d46a3179350da59132575128984d2327c18d108c119185363b",
     "renderer/preview/generative-view.html": "1bd6d75e8932f71be758c6a962a8bf9135a1332b80d1faabced77d20a7e4916c",
@@ -462,7 +256,7 @@
     "renderer/public/chatui-component.html": "6ae91cb4a5c62cefaacc26f6d8ce0239ff46e354c82a070cc4cc9a484b1a4218",
     "renderer/public/chatui-document.html": "63057e3cbedf39a4ef411ab16c8cb2d4304c0662dded05cad11e59bfc9be8ba5",
     "renderer/public/chatui-explanation.html": "5dc1198de2db605b31a8453375669ff6095523b14492352b1d7d2b712f91b7bf",
-    "renderer/public/chatui-response.html": "a25c10863dd0184ef937c7fee53b9ba1e4ee1a99172ade2109f5947aa40b2c96",
+    "renderer/public/chatui-response.html": "24e72bac3bc915686654eb905059193b0799036833f6ffac4c1af82f18b55f3f",
     "renderer/public/document-comparison.html": "fab7f943d835b0d46a3179350da59132575128984d2327c18d108c119185363b",
     "renderer/public/examples/benchmark-comparison-html.json": "b164153224e80e662061fde74b768c8320ca97260f29b9c9573113590078eabf",
     "renderer/public/examples/benchmark-comparison-render_document.input.json": "ae69ce8c6df0a7553c30d039e40478d165d11c05b341e5ed12e200f81b8867b7",
@@ -526,26 +320,27 @@
     "renderer/public/favicon.svg": "19f7d88aa2a666aff0d5beecccda70530577ffa0265d9b2ef6a365cc43e92eee",
     "renderer/public/file.svg": "1e0ae4d1a1ddfa36752988647b731e4abf150c414d069ec83c96fb0aaeff0307",
     "renderer/public/gallery/README.md": "a7d283165e8ca8b923a514600ff528e095d27edca0cdd8d10ebf47f8b677ba01",
-    "renderer/public/gallery/SHA256SUMS": "61c5ce6058505ab07ced215fdda7307d1770a166a4ea08f3093b8d7f1ba21843",
-    "renderer/public/gallery/THIRD_PARTY_NOTICES.md": "f46ff559b3a82be82962d158c92f8638d8c235f7b1e9c7b61ab82133265b81c0",
+    "renderer/public/gallery/SHA256SUMS": "6ad399d9d64ca13fb72a74b30bf750145d52e08c0dfb31896de484196a9fa610",
+    "renderer/public/gallery/THIRD_PARTY_NOTICES.md": "3806f27cd97bf9696aede72806e14516dd0be6be4f4edec2f4dd72c1ebbdc2cd",
     "renderer/public/gallery/fixtures.json": "3e09a77c50ac32aa66f4361aaccbb8e5b81fb1f223d43d2b3d3f7059acd2b802",
     "renderer/public/gallery/index.html": "80dc94c159c459d0dd7f857b920f9dd421a486738e26d09cb197c92baa502e53",
-    "renderer/public/gallery/manifest.json": "b9510148a6c8d666e8900073395457ce1aa0f1ca870fe9d52f77126e8fd92544",
+    "renderer/public/gallery/manifest.json": "dc0022beb6ac8ac782c8c204b27c7dac49595c86930c6d7499df26c736ab08de",
     "renderer/public/gallery/renderer.html": "40e069f07c32e4954f7b892d6251dcf576b946ff6133c05f8b77f293cac16b63",
     "renderer/public/generative-view-cases.json": "8b628de64dd827b243aa7d4ac5c8ce58895ede446fd25908589aaf02fabfac44",
-    "renderer/public/generative-view.html": "ccb737041ae85eb6ff757c43bc1f1076b5e3d7fb90f3211a45cf99ee3ada9cb9",
+    "renderer/public/generative-view.html": "87bcd3ff4d255029194b4ecf566dbae0ba7c855ba3829a0d871c8d2b9c432e29",
     "renderer/public/globe.svg": "d051a8c47936990a9085693d307bb7cea1bc1b6d7ed956bcbaacf674f4ec96b9",
     "renderer/public/preview-examples.mjs": "e21b9a43b147e39987b3b8f5a3d104e45e8e3accea977b4d133ac26432ad4d59",
     "renderer/public/preview-host.js": "bab6a0c0530dacde23f1dc370160833aea486bb6d8e20ceaa12203f4529eaedf",
     "renderer/public/preview.css": "7d78b6d033d15d4c39993fd42f3b4bdd937a641a979bd7e89acb8b4b213b9cd4",
     "renderer/public/preview.html": "060ccf5c0a6fbfc994c47964e76f8de44655f8a770fb5046dbeabee7fcbdebb3",
     "renderer/public/window.svg": "decf1cf7bb22b5c99c4857cfcd5718ce5465c4454166317589c83fc73df74b66",
+    "renderer/scripts/apply-og-security-patch.mjs": "7620f73401e165c1f8f7851b62aad85410bf9ade87897073e4780dd12e676d33",
     "renderer/scripts/benchmark-document.mjs": "46d9b4d9f85b075564c144acd2bc1db437f2f8350d6377df64ed9e476a065f27",
     "renderer/scripts/build-verified.sh": "2ae5329ac860076070c9217a43106a15cb5ecf907a0f7baeb9ef903f76b53c68",
     "renderer/scripts/check-generation.mjs": "f9cc44260a5d4f377bd5defd2ed30a7eb4663d1ba9b17ed9dd667e4556d707de",
     "renderer/scripts/connector-preview/connector-preview-session.mjs": "57224ad185a25115a14fccc68d3217e55b199260c3dd98a2c807beffec1a0a9b",
     "renderer/scripts/connector-preview/host-binding.mjs": "9e44ab6864133a5c82f834a5904ebb7d6104cb783c24efba3c0fe1a161182cea",
-    "renderer/scripts/connector-preview/protocol.mjs": "111e062ebf08d3f180130f5bc3dcb3c1414c1d7be3c032c9d675a61c0c7513a8",
+    "renderer/scripts/connector-preview/protocol.mjs": "ff55873dacd7c0ad65f6e6510e7d449fabd118876b39375a410d95b1a859a014",
     "renderer/scripts/document-comparison-fixtures.mjs": "559ca7d09fe8aedbdb9b0a78ea248c0e90cb1c3f8bff6913303cf9ae7da1633c",
     "renderer/scripts/execution-profile.mjs": "2e71116f4d2b70cff8bb70436f8dd5c709ec7ff62893424530f404e0193d3630",
     "renderer/scripts/generate-document-comparisons.mjs": "88746f6c2a65bbe80ff1e30fc1418ebf931c120b50ae92d32188d0d3df18f232",
@@ -578,6 +373,7 @@
     "renderer/scripts/run-framework.mjs": "9bf9f41a29314cabe0238b8e9c540ec3f7b5a6adafc7c8fb6c3940722d061dca",
     "renderer/scripts/sites-env.mjs": "5de99d6806b01f0ee0b941af3684d75dcf1afbbcff22cb95bfa2e584c5dafa88",
     "renderer/scripts/sites-env.sh": "df86ebfc27d2f00860036658e933ac0ddd7b5f6879aa5d51218f0863c7e1fb60",
+    "renderer/tests/dependency-security-compatibility.test.mjs": "08eb886e46b17c3d855a76ce1c9f81bf8b0b57ee4f35a17d53a1a18087a49322",
     "renderer/tests/document-reading.test.mjs": "e0a8d577e8fd67b465ccdfe8fa8f973513d7e921c71c15ecca7b600223883751",
     "renderer/tests/document-routing.test.mjs": "89ffeb251172cfa2a38c40909109285463f487d0cb9107fd330f6e205f0c2008",
     "renderer/tests/document.test.mjs": "9b8b407a5dd1324e0cbb5edd9691900f5b0e5d1276c671e68aa2d35f9c28e6df",
@@ -597,6 +393,7 @@
     "renderer/tests/math-physics-golden.test.mjs": "c742ca709c78d034b75c84917f3bfbf3e5711b5300ba9f15ec85644d1bd61388",
     "renderer/tests/mcp.test.mjs": "9f4eadec0e8b24f6a696b31e102f881819a2d74fe525031e9b1ef6f33590bc97",
     "renderer/tests/model-context-relay-lifecycle.test.mjs": "561c3e7526214519e972db690711cddd74aac4b14448dbdc1c9848fb62db7bce",
+    "renderer/tests/og-security-backport.test.mjs": "512d971dc174ccf42f916e1707b539b1a0e277bf3eaaf843b1320ef1b309b0f0",
     "renderer/tests/output-schema.test.mjs": "3c12c71cf9a9962d4f811c0baef5308520bc430eef81e650d929c7f8c22f18db",
     "renderer/tests/physics.test.mjs": "200f77fe0fedfedeff5f5faafd289402d04d44d75fbc7d16a077c02445f38255",
     "renderer/tests/quiz-boundary.test.mjs": "0013aded969cf77fedded27dadc029243b9732f8089a2347ecdd9d8481578523",
@@ -611,16 +408,21 @@
     "renderer/tests/success-fallback-presentation.test.mjs": "4576a7055ee1378097f5dd1b5e234f5cb9a6e5179ff6b565f78f4a9313f4dd47",
     "renderer/tests/widget.test.mjs": "c0d03b8da44f879ca488b8eec1f8c07ea0dfc4394f225af64a8489788d109361",
     "renderer/tsconfig.json": "7199c6e4e400921e8049729840165a39f1476fa97901bed00239e7697bfe8da4",
+    "renderer/vendor/og-security/LICENSE-NEXT-MIT.txt": "ee765244e2d59f5234d474f62e0766fa0c8b99af967fdd4c0cb8dcb0c76ea224",
+    "renderer/vendor/og-security/LICENSE-OG-MPL-2.0.txt": "1f256ecad192880510e84ad60474eab7589218784b9a50bc7ceee34c2b91f1d5",
+    "renderer/vendor/og-security/NOTICE.txt": "7219c5b80a411b1c0c1dfd6177e34dbfb9dcafe71b57035c6371c4bcefb3b535",
+    "renderer/vendor/og-security/next-16.4.1.patch": "3d59af991a9f85bbc368d2891b4e965f10dd11c86b9786e79fc4a362bb01401b",
+    "renderer/vendor/og-security/provenance.json": "7f7560bbcc02c165dcdc590bd4489d251eebf63fc6ccb31116983494a577b8ca",
     "renderer/vendor/shadcn-tailwind-4.13.0.LICENSE.md": "1564074e13439397221ffd522e2e504d56561994a23d371aa5e3ad43e4f5423f",
     "renderer/vendor/shadcn-tailwind-4.13.0.css": "bc7d83425702955b4cb67cb14ede9d603f9d912376d57a2d81d661094d2a782a",
     "renderer/vite.config.ts": "6f6d890794fbe23f3e35cceb327f49d5977432a5aaf715e040a6408932da395b",
-    "requirements-phase3.txt": "3da36d446f68724280cedaf07721a7044aa5b5d8736c9648d7fd0e828f552dd0",
+    "requirements-phase3.txt": "8c58961160194c549ef2f0347e71bd275199233898f11f288209c4312a090c9d",
     "scripts/build_component_templates.py": "9b61e1a64e8e726aa5006edac849c2323716d192fe40c24d79075645b0a0631a",
     "scripts/offline_final_identity.py": "b3f0333dfb16aa3167a5f66b15de3066bd6581abac99346a6ecb0261658cf44b",
     "scripts/package-distribution.py": "c4113ce59ba46b909560e98d2813eba97afb4f7977934903499e71b782e81202",
     "scripts/package-renderer.py": "81cfa904f71da56f8edfd0e197ded19fab265f4c1b5e27eb511b5a3ecd6b9088",
     "scripts/package.py": "508e1dac7e709c07243fdb264dde7d3c4a9c2bdad2093534404b2b16f2d0f1c0",
-    "scripts/qa/audit-phase3-licenses.py": "ea6f56684fca6307c5f2757f269dd3b363d716cfdbff84bd0a0c02d5144065bf",
+    "scripts/qa/audit-phase3-licenses.py": "f250c17a12e44d47348669354f40bb79dc24e342052e542fd3a59b1832410708",
     "scripts/qa/package-phase2b.py": "cb74d88fc18399cff016fabb7980efcdf31e9e72b6704301db0cf2138cf18942",
     "scripts/qa/package-phase3-review.py": "0cfbf3674f195d596f969b9fc21b2aba4ed0d9496605e2e1eb976ac7f87f27d5",
     "scripts/qa/package-phase3.py": "9886cf036551c5227eb78469c9349b9a357d711459af94e65b9c3643a72fd441",
@@ -667,22 +469,8 @@
     "tests/test_standalone_package.py": "d5540cb0809f5aac9699c152e59808ef5c300ab438f5437dd70ea8a4e5b3aca3"
   },
   "licenseDecision": "MIT for original contributions, copyright Jess(T o X); third-party licenses unchanged; user approved",
-  "publicationCleanup": {
-    "ci": "Main push and pull_request to main, plus exact temporary push-only acceptance branch; read-only token; full reproduction gate; no secrets/deployment; superseded runs cancelled per event/ref",
-    "dependencyRepair": "six1.15.0 to1.16.0: modern meta-path importer; no product/resource changes",
-    "description": "public support/limitations updated; development Git history excluded; product bytes unchanged",
-    "linuxEnvironment": "Ubuntu official CJK fonts plus pinned dependency imports and actual glyph coverage preflight; full original tests unchanged",
-    "releasePackaging": "Current public guides and license statements reconciled; historical reports labeled; clean-commit Source/Gallery packaging with exact manifests; no product metadata/runtime changes or publication.",
-    "removedInternalDocuments": [
-      "docs/release-preparation/COMPLETION-GATES.md",
-      "docs/release-preparation/HOST-MIXED-PLAN.md",
-      "docs/release-preparation/LICENSING-PRIVACY.md",
-      "docs/release-preparation/STATUS.md",
-      "docs/release-preparation/SOURCE-PACKAGE-README.txt",
-      "docs/release-preparation/RELEASE-CANDIDATE.md",
-      "docs/release-preparation/LICENSE-MIT-DRAFT.txt"
-    ]
-  },
-  "sourceCommit": "69c9fc07fcd2588480c64612d765ce5044bdd2be",
-  "status": "LOCAL_CLEAN_ROOT_CANDIDATE_NOT_PUBLISHED"
+  "note": "Documentation-only closeout based on reviewed commit 529460291eaa813e37146be3e082c81285c9944e. Baseline PR CI passed; the subsequent documentation commit has no new remote CI result. Runtime, tests, workflow and license bytes unchanged. Exact final commit/tree and archive hashes are bound in distribution release.json. Source release not published or archived; baseline renderer previously had a separate owner-only test deployment with limited authentication evidence; that site is now retired. Both online sites were permanently deleted after final confirmation. Official metadata reports not found and the former root/MCP endpoints return HTTP 404. Final scope is source and offline Gallery; unknown host/authentication conditions are not certified.",
+  "previousManifestSHA256": "b29c99dc4ff70cba3659bddf76bdc06dd2f08697083a5920205d7acc3a335876",
+  "sourceCommit": null,
+  "status": "LOCAL_DOCUMENTATION_CANDIDATE_NOT_PUBLISHED"
 }

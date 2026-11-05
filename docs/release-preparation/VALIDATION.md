@@ -2,6 +2,12 @@
 
 先记录实际 HEAD、工作树和包清单。测试结果绑定实际输入；新候选不能继承旧提交的云 CI 结论。版本、支持范围和证据边界见[发行说明草稿](RELEASE-NOTES.md)。
 
+## 当前精确基线
+
+文档收尾基线 `529460291eaa813e37146be3e082c81285c9944e` 已通过 [PR CI run 41831613236](https://github.com/JessToX/ChatUI/actions/runs/41831613236)：组件92、Python165、Renderer476，零跳过/失败，以及 types/lint/build/生成/许可/源字节与模式保真。Ubuntu 24.04 的字体与依赖预检同样通过。合并测试提交 `6f93d088d28afd03c20c2d1c99faeac8cc61dda4` 的树与基线相同，均为 `ab52ce8c8edb497dbc13d5750093c607972d511f`。
+
+本次后续收尾仅改公开文档及文件清单，未改运行时代码、锁文件、测试或 CI 门槛。已有基线 CI 不等于后续文档提交获得了新 CI。最终发行需绑定实际提交与附件；已有结果不能覆盖新增源码变化。本地检查、CI、真实宿主验收和生产认证是不同证据：Response/HTML 变更资源的真实交互、select 键盘往返仍未验证。独立 owner-only 候选站点两种匿名请求已得到401拒绝；已登录身份头覆盖、原始重复头与直达源站隔离仍未知，不能由匿名拒绝推断通过。所有者已选择退役线上服务，仅保留源码与离线 Gallery；两站已按最终确认永久删除；官方元数据返回不存在，原站点根路径及 MCP 入口均为404。本次不再循环启动临时宿主会话。以上未知项不改判通过，未来重新托管须独立验证。
+
 ## 完整发行验证
 
 从全新源码解包目录，按[安装说明](../installation.md)准备 Node/npm、隔离 Python 环境及中文字体，执行：
@@ -16,7 +22,7 @@ PYTHONDONTWRITEBYTECODE=1 python3 scripts/reproduce-package.py
 
 当前 `.github/workflows/clean-candidate.yml` 使用 Ubuntu 24.04、Node24.20.0、Python3.12、固定 Python 依赖和官方 Noto CJK。触发为 main push、pull_request 到 main，以及精确临时验收分支 push；只有 contents:read，没有部署或 secrets。临时验收分支按约定不同时开 PR，避免一次 push 触发两次。并发仅按 workflow/event/ref 取消被替代的旧运行。
 
-精确基线 a90c8d3f03a567db99186b25d144b017564158cc 的 main push 已通过，组件92/Python159/Renderer472，零跳过；更早两次失败仍属于真实历史。PR 配置审查不等于实际 PR 事件已执行。当前后续候选必须记录自己的结果。
+精确基线 a90c8d3f03a567db99186b25d144b017564158cc 的 main push 已通过，组件92/Python159/Renderer472，零跳过；更早两次失败仍属于真实历史。后续安全修复候选 `448a8e0b5ac7b45d87085efe9252e3fcac2d955b` 已通过真实 pull_request CI [run 41828357173](https://github.com/JessToX/ChatUI/actions/runs/41828357173)，组件92/Python165/Renderer476，零跳过，并完成 types/lint/build/生成/许可/源文件保真。PR 合并测试提交 `71fc75bf34e02f8f55640da625844489c39c8852` 的树与候选相同，均为 `5338ddc2d8e3bf4972d29352440186c14fb85f2b`。这些是该精确候选的历史验证事实，不能用作后续修改提交已通过 CI 的证明。后续候选须更新清单、重新提交、打包并记录其自身 CI。
 
 ## 定向维护
 
